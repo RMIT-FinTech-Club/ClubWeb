@@ -3,7 +3,7 @@ class Header extends HTMLElement {
     super();
   }
 
-	connectedCallback() {
+  connectedCallback() {
     this.innerHTML = `
       <style>
         nav {
@@ -45,6 +45,4 @@ class Header extends HTMLElement {
   }
 }
 
-customElements.define('header-component', Header);
-
-
+customElements.define("header-component", Header);
