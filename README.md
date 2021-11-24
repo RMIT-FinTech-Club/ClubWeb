@@ -70,3 +70,5 @@ We won't strictly checking commit message, however, try to provide a clean and m
 | styles      | Contains css styling. Can be written in css or scss  |
 | pages       | Contains html pages. Example: about-us.html          |
 | assets      | Contains images,icons, sounds and fonts.             |
+
+hello world
