@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+#moments {
+  padding: 2rem;
+  font-family: "Montserrat";
+  width: 100%;
+}
+
+#moments .header {
+  font-family: "Bebas Neue";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #2b305e;
+  font-weight: 400;
+  width: 100%;
+}
+#moments .header::before,
+#moments .header::after {
+  content: "";
+  background-color: #77878b;
+  width: 20%;
+  height: 2px;
+  margin: 0 2rem;
+}
+
+.moment {
+  display: flex;
+  margin: 1rem auto;
+  width: 80%;
+}
+
+.moment-left {
+  width: 15%;
+}
+
+.moment-left h2 {
+  font-size: 16px;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.moment-right h2 {
+  font-size: 18px;
+}
+
+.moment-right {
+  width: 80%;
+}
+
+.divider {
+  position: relative;
+  width: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  height: 25px;
+  width: 25px;
+  border: 1px solid #77878b;
+  border-radius: 50%;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.line {
+  border-left: 1px solid #77878b;
+  height: 100%;
+}
+
+.moment img {
+  border-radius: 15px;
+}
