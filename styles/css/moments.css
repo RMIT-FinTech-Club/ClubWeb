@@ -102,4 +102,5 @@ body {
   border-radius: 15px;
   height: auto;
   object-fit: contain;
+  margin: 5px;
 }
