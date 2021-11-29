@@ -1,0 +1,61 @@
+html {
+  font-size: 62.5%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+$yellow: #DBB968;
+$blue: #2B305E;
+
+.sub-header {
+  color: $yellow;
+}
+
+.main-header {
+  color: $blue;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.paragraph {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.content-col-2 {
+  display: flex;
+}
+
+.content-col-2 > * {
+  flex-basis: 100%;
+}
+
+.btn-primary {
+  &:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+    cursor: pointer;
+  }
+  border-radius: 15px;
+  color: white;
+  background-color: $yellow;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px 24px;
+  border: none;
+}
+
+.btn-av {
+  &:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+    cursor: pointer;
+  }
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: $yellow;
+  border: none;
+}
+
+.board {
+  display: flex;
+}
+
+.board > * {
+  flex-basis: 20%;
+}

@@ -1,0 +1,60 @@
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.sub-header {
+  color: #DBB968;
+}
+
+.main-header {
+  color: #2B305E;
+  font-family: "Bebas Neue", cursive;
+}
+
+.paragraph {
+  font-family: "Montserrat", sans-serif;
+}
+
+.content-col-2 {
+  display: flex;
+}
+
+.content-col-2 > * {
+  flex-basis: 100%;
+}
+
+.btn-primary {
+  border-radius: 15px;
+  color: white;
+  background-color: #DBB968;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px 24px;
+  border: none;
+}
+.btn-primary:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+  cursor: pointer;
+}
+
+.btn-av {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: #DBB968;
+  border: none;
+}
+.btn-av:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+  cursor: pointer;
+}
+
+.board {
+  display: flex;
+}
+
+.board > * {
+  flex-basis: 20%;
+}
+
+/*# sourceMappingURL=style.css.map */
