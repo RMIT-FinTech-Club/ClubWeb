@@ -20,12 +20,15 @@ $blue: #2B305E;
 }
 
 .content-col-2 {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+
 }
 
-.content-col-2 > * {
-  flex-basis: 100%;
-}
+// .content-col-2 > * {
+//   flex-basis: 100%;
+// }
 
 .btn-primary {
   &:hover{
@@ -40,22 +43,29 @@ $blue: #2B305E;
   border: none;
 }
 
-.btn-av {
+.btn-avatar {
   &:hover{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+    opacity: 0.8;
     cursor: pointer;
   }
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  background-color: $yellow;
+  width: 20px;
+  border-radius:100%;
+  background-color: none;
   border: none;
 }
 
 .board {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .board > * {
-  flex-basis: 20%;
+  flex: 1 0 21%;
+  margin: 5px;
+}
+
+.img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }

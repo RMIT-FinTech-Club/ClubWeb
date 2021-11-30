@@ -17,11 +17,9 @@ html {
 }
 
 .content-col-2 {
-  display: flex;
-}
-
-.content-col-2 > * {
-  flex-basis: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
 }
 
 .btn-primary {
@@ -37,24 +35,31 @@ html {
   cursor: pointer;
 }
 
-.btn-av {
-  width: 100px;
-  height: 100px;
+.btn-avatar {
+  width: 20px;
   border-radius: 100%;
-  background-color: #DBB968;
+  background-color: none;
   border: none;
 }
-.btn-av:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+.btn-avatar:hover {
+  opacity: 0.8;
   cursor: pointer;
 }
 
 .board {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .board > * {
-  flex-basis: 20%;
+  flex: 1 0 21%;
+  margin: 5px;
+}
+
+.img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 /*# sourceMappingURL=style.css.map */
