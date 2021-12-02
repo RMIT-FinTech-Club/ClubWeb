@@ -1,46 +1,159 @@
 <!DOCTYPE html>
 <html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="manifest" href="site.webmanifest" />
-    <link rel="apple-touch-icon" href="icon.png" />
-    <!-- Place favicon.ico in the root directory -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
 
-    <link rel="stylesheet" href="styles/css/normalize.css" />
-    <link rel="stylesheet" href="styles/css/main.css" />
-    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> -->
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="apple-touch-icon" href="icon.png" />
+  <!-- Place favicon.ico in the root directory -->
 
-    <meta name="theme-color" content="#fafafa" />
-    <script src="components/header.js" type="text/javascript" defer></script>
-  </head>
+  <link rel="stylesheet" href="styles/css/normalize.css" />
+  <link rel="stylesheet" href="styles/css/main.css" />
 
-  <body>
-    <!-- Add your site or application content here -->
-    <header-component></header-component>
-    <p>Hello world! This is HTML5 Boilerplateeee.</p>
-    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-      window.ga = function () {
-        ga.q.push(arguments);
-      };
-      ga.q = [];
-      ga.l = +new Date();
-      ga("create", "UA-XXXXX-Y", "auto");
-      ga("set", "anonymizeIp", true);
-      ga("set", "transport", "beacon");
-      ga("send", "pageview");
-    </script>
-    <script src="https://www.google-analytics.com/analytics.js" async></script>
-  </body>
+  <!--Fonts Links-->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,500&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> -->
+
+  <!--Icon Links-->
+  <link rel="stylesheet" href="assets/icons/font-awesome-4.7.0/css/font-awesome.min.css">
+  <meta name="theme-color" content="#fafafa" />
+  <script src="components/header.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+  <!--Research & Projects start here-->
+  <div class="project-research-header">
+    <hr class="hl">
+    <p>OUR PROJECTS & RESEARCH</p>
+    <hr class="hl">
+  </div>
+
+  <!--Fintech Magazine starts here-->
+  <div class="fintech-magazine">
+    <div class="left-container">
+      <p>FINTECH MAGAZINE</p>
+      <img src="assets/images/magazine-cover.jpg" alt="fintech-magazine-special-edition">
+    </div>
+    <div class="right-container">
+      <div class="info">
+        <p class="title">Fintech Magazine - Special Edition</p>
+        <p class="subtitle">xx/2021 &nbsp;&nbsp; &#9679; &nbsp;&nbsp;5 minutes</p>
+        <p class="brief-summary">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+          piece of classical Latin
+          literature from 45 BC, making it over 2000 years old.</p>
+      </div>
+      <div class="buttons">
+        <button onclick="window.location.href='index.html';">READ NOW</button>
+        <button onclick="window.location.href='index.html';">SEE ALL</button>
+      </div>
+    </div>
+  </div>
+
+  <!--Fintech Podcast starts here-->
+  <div class="fintech-podcast">
+    <div class="left-container">
+      <p>FINTECH PODCAST</p>
+      <img src="assets/images/podcast-cover.jpg" alt="fintech-podcast-episode-3">
+    </div>
+    <div class="right-container">
+      <div class="info">
+        <p class="title">Episode 3: Stablecoin & Tether</p>
+
+        <div class="duration">
+          <p>0:00</p>
+          <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+          <p>38:45</p>
+        </div>
+
+        <div class="audio-buttons">
+          <button onclick="previous_podcast()" id="pre"><i class="fa fa-backward" aria-hidden="true"></i></button>
+          <button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+          <button onabort="next_podcast()" id="next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+        </div>
+      </div>
+      <div class="buttons">
+        <button onclick="window.location.href='index.html';">SEE ALL</button>
+      </div>
+    </div>
+  </div>
+
+  <!--Fintech Podcast starts here-->
+  <div class="cafefin">
+    <div class="left-container">
+      <p>CAFEFIN</p>
+      <img src="assets/images/cafefin-cover.png" alt="cafefin-digibank">
+    </div>
+    <div class="right-container">
+      <div class="info">
+        <p class="title">DigiBank - The Inevitable Trend</p>
+        <p class="subtitle">xx/2021 &nbsp;&nbsp; &#9679; &nbsp;&nbsp;5 minutes</p>
+        <p class="brief-summary">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+          piece of classical Latin
+          literature from 45 BC, making it over 2000 years old.</p>
+      </div>
+      <div class="buttons">
+        <button onclick="window.location.href='index.html';">READ NOW</button>
+        <button onclick="window.location.href='index.html';">SEE ALL</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="left-footer">
+      <img src="assets/images/club-logo.png" alt="club-logo">
+      <p>RMIT VIETNAM FINTECH CLUB</p>
+      <ul>
+        <li onclick="window.location.href='index.html';">About us</li>
+        <li onclick="window.location.href='index.html';">Projects</li>
+        <li onclick="window.location.href='index.html';">Events</li>
+        <li onclick="window.location.href='index.html';">Join us</li>
+        <li onclick="window.location.href='index.html';">Blog</li>
+      </ul>
+    </div>
+
+    <div class="mid-footer">
+      <a href="mailto:fintechclub.sgs@rmit.edu.vn">fintechclub.sgs@rmit.edu.vn</a>
+      <p>702 Nguyen Van Linh, Tan Hung, Dist 7, Ho Chi Minh City, Viet Nam</p>
+      <p>Copyright © 2021. RMIT Fintech Club. All rights reserved.</p>
+    </div>
+    <div class="right-footer">
+      <i class="fa fa-facebook" aria-hidden="true" onclick="window.location.href='index.html';"></i>
+      <i class="fa fa-instagram" aria-hidden="true" onclick="window.location.href='index.html';"></i>
+      <i class="fa fa-linkedin-square" aria-hidden="true" onclick="window.location.href='index.html';"></i>
+    </div>
+  </footer>
+
+  <script src="js/vendor/modernizr-3.11.2.min.js">
+  </script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    window.ga = function () {
+      ga.q.push(arguments);
+    };
+    ga.q = [];
+    ga.l = +new Date();
+    ga("create", "UA-XXXXX-Y", "auto");
+    ga("set", "anonymizeIp", true);
+    ga("set", "transport", "beacon");
+    ga("send", "pageview");
+
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
 </html>
