@@ -3,6 +3,10 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 
+body {
+  margin: 0;
+}
+
 .sub-header-1 {
   color: #DBB968;
 }
@@ -106,27 +110,24 @@ html {
 }
 
 .second-page-container {
-  float: left;
   width: 100%;
   height: 100%;
-}
-
-.second-page-container .front {
-  display: block;
-  z-index: 2;
   position: relative;
 }
 
-.second-page-container .behind-container {
+.front {
+  display: block;
+  z-index: 9;
   position: relative;
-  background-color: #DBB968;
 }
 
-.second-page-container .behind {
-  display: block;
-  height: 200px;
+.behind {
   background-color: #DBB968;
-  z-index: 1;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
