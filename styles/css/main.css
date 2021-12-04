@@ -283,7 +283,7 @@ header {
   margin: auto;
   position: absolute;
   height: 80px;
-  width: 100%;
+  width: 100vw;
   background-color: rgba(43, 48, 94, 0.85);
   top: 0;
   left: 0;
@@ -301,7 +301,7 @@ header nav ul {
   justify-content: space-evenly;
   align-items: center;
   margin: 0;
-  width: 60%;
+  width: 60vw;
 }
 
 header nav ul li {
