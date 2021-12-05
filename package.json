@@ -22,6 +22,7 @@
     "sass": "^1.43.4"
   },
   "dependencies": {
+    "dotenv": "^10.0.0",
     "firebase": "^9.6.0"
   }
 }
