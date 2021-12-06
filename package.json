@@ -20,5 +20,9 @@
     "parcel-bundler": "^1.12.4",
     "prettier": "2.4.1",
     "sass": "^1.43.4"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "firebase": "^9.6.0"
   }
 }
