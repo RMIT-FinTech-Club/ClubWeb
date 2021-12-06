@@ -1,6 +1,7 @@
 :root {
     --primary-yellow: rgb(219, 185, 104);
     --primary-blue: rgb(43, 48, 94);
+    --primary-grey: #77878B;
     --light-blue: #C9D6EA;
 }
 
@@ -34,10 +35,10 @@ button {
     background-color: var(--primary-yellow);
 }
 
-input, button, submit
-{
+button {
   border:none;
 }
+
 
 /* ------------------------------------------------- */
 /* Tools */
@@ -51,12 +52,12 @@ input, button, submit
     justify-content: center;
 }
 
-.flex.centerY {
+.flex_centerY {
     display: flex;
     align-items: center;
 }
 
-.flex.centerXY {
+.flex_centerXY {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,7 +77,16 @@ input, button, submit
     color: var(--primary-yellow);
     font-size: 2.2rem;
     font-family: "Montserrat";
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.4rem;
+}
+
+h1 {
+    font-family: "Bebas Neue";
+    font-size: 9rem;
+    line-height: 8rem;
+    font-weight: normal;
+
+    margin-bottom: 2rem;
 }
 
 /* ------------------------------------------------- */
@@ -124,6 +134,9 @@ input, button, submit
 
 header {
     height: 100%;
+    box-shadow: 0 0 5rem 0rem black;
+    z-index: 2;
+    position: relative;
 }
 
 #header_left {
@@ -177,7 +190,6 @@ header {
     font-size: 9rem;
     color: var(--primary-blue);
     line-height: 8rem;
-
     margin-bottom: 2rem;
 }
 
@@ -247,5 +259,167 @@ header {
     z-index: 2;
 
     border: 0.3rem solid white;
+}
+
+/* ------------------------------------------------- */
+/* Upcoming Events */ 
+
+#UPCOMING_EVENTS {
+    position: relative;
+    height: 75rem;
+    width: 100%;
+
+    background-image: url(../../assets/images/upcoming-events-main-image-4.jpg);
+    background-size: cover;
+
+    z-index: 1;
+    overflow: hidden;
+}
+
+#upcoming_left {
+    width: 25%;
+    height: 100%;
+}
+
+#upcoming_right {
+    width: 75%;
+    height: 100%;
+    padding: 10rem;
+}
+
+
+#statistic_1 {
+    height: 33.3333333%;
+    width: 100%;
+    background-color: var(--primary-yellow);
+    transform: translateY(-100%);
+    transition-duration: 1s;
+    box-shadow: 0 0 5rem 0 black;
+    position:relative;
+    z-index: 3;
+
+    border-radius: 0 0 5rem 0;
+}
+
+#statistic_2 {
+    height: 33.3333333%;
+    width: 100%;
+    background-color: var(--light-blue);
+    transform: translateY(-200%);
+    transition-duration: 1s;
+    box-shadow: 0 0 5rem 0 black;
+    position:relative;
+    z-index: 2;
+
+    border-radius: 0 5rem 5rem 0;
+}
+
+#statistic_3 {
+    height: 33.3333333%;
+    width: 100%;
+    background-color: var(--primary-grey);
+    transform: translateY(-300%);
+    transition-duration: 1s;
+    box-shadow: 0 0 5rem 0 black;
+    position:relative;
+    z-index: 1;
+
+    border-radius: 0 5rem 5rem 0;
+}
+
+.statistic_container {
+    margin-left: 7.5rem;
+}
+
+#upcoming_left .big_stat_titles {
+    font-family: "Bebas Neue";
+    font-size: 9rem;
+    color: white;
+    line-height: 8rem;
+}
+
+#upcoming_left .small_stat_titles {
+    font-family: "Montserrat";
+    font-size: 2rem;
+    color:white;
+}
+
+#upcoming_right h1 {
+    color: var(--primary-blue);
+}
+
+#upcoming_right .secondary_heading {
+    margin-bottom: 2rem;
+}
+
+#UPCOMING_EVENTS .overlay {
+    background-color: rgb(0, 0, 0, 0.4);
+}
+
+#upcoming_event_splotlight {
+    position: absolute;
+    top: 6rem;
+    right: 10rem;
+    width: 50rem;
+    height: 2rem;
+    background-color: white;
+    transform: scaleX(0);   
+    transition-duration: 1s;
+    border-radius: 1rem;
+
+    box-shadow: 0 1rem 4rem 1rem white;
+}
+
+#upcoming_events_container {
+    width: 100%;
+    height: 70%;
+    margin-top: 8rem;
+}
+
+#upcoming_events_content_left {
+    flex-basis: 60%;
+    margin-right: 2rem;
+}
+
+#upcoming_events_content_right_SLOT1 img,
+#upcoming_events_content_left img {
+    height: 100%;
+    width: 100%;
+    border-radius: 2.5rem;
+    box-shadow: 0 0 5rem 0 black;
+    transition-duration: 0.5s;
+}
+
+#upcoming_events_content_right_SLOT2 img {
+    height: 100%;
+    width: 47%;
+    border-radius: 2.5rem;
+    box-shadow: 0 0 5rem 0 black;
+    transition-duration: 0.5s;
+}
+
+#upcoming_right img:hover {
+    box-shadow: 0 0 5rem 0 white;
+}
+
+#upcoming_events_content_right_SLOT2 img:nth-child(1) {
+    margin-right: 2rem;
+}
+
+
+#upcoming_events_content_right {
+    flex-basis: 38%;
+}
+
+
+
+#upcoming_events_content_right_SLOT1,
+#upcoming_events_content_right_SLOT2 {
+    height: 47.75%;
+    width: 100%;
+}
+
+#upcoming_events_content_right_SLOT1 {
+    margin-bottom: 2rem;
 }
 
