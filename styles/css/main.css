@@ -277,11 +277,95 @@ main:after {
   height: 100px;
 }
 
+/*Navbar starts here*/
+header {
+  display: block;
+  margin: auto;
+  position: absolute;
+  height: 80px;
+  width: 100vw;
+  background-color: rgba(43, 48, 94, 0.85);
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  width: 60vw;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+header nav ul li a:hover {
+  color: #DBB968;
+}
+
+header nav ul li #home {
+  color: #DBB968;
+}
+
+header button {
+  display: block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  background-color: #DBB968;
+  border: none;
+  border-radius: 25px;
+  width: 100px;
+  height: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #E5E5E5;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  height: 70px;
+  width: 85px;
+}
+
+#logo>img {
+  height: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+}
+
+
 /*Research & Projects start here*/
 .project-research-header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 80px;
 }
 
 hr.hl {
@@ -312,9 +396,10 @@ hr.hl {
   margin-left: 50px;
 }
 
+/*TODO: Fixed font-size*/
 .left-container p {
   font-family: 'Bebas Neue';
-  font-size: 45px;
+  font-size: 40px;
   margin-left: 40px;
   margin-top: 0;
   margin-bottom: 0;
@@ -322,7 +407,7 @@ hr.hl {
 
 .left-container img {
   float: left;
-  width: 332px;
+  width: 300px;
   height: fit-content;
   margin-left: 40px;
   margin-top: 20px;
@@ -342,20 +427,23 @@ hr.hl {
   font-family: 'Montserrat', sans-serif;
 }
 
+/*TODO: Fixed font-size*/
 .title {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 600;
   margin-bottom: 0;
   margin-top: 0;
   text-transform: uppercase;
 }
 
+/*TODO: Fixed font-size*/
 .subtitle {
   font-size: 19px;
   font-weight: 600;
   line-height: 36px;
 }
 
+/*TODO: Fixed font-size*/
 .brief-summary {
   font-size: 17px;
   font-weight: 400;
@@ -369,15 +457,16 @@ hr.hl {
   margin-top: 50px;
 }
 
+/*TODO: Fixed font-size*/
 .buttons button {
   border-radius: 20px;
   background-color: #DBB968;
-  width: 286px;
-  height: 70px;
+  width: 250px;
+  height: 60px;
   border-style: none;
   color: #fff;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -409,6 +498,7 @@ hr.hl {
   align-items: baseline;
 }
 
+/*TODO: Fixed font-size*/
 .duration p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -462,6 +552,7 @@ hr.hl {
   margin-top: 30px;
 }
 
+/*TODO: Fixed font-size*/
 .audio-buttons button {
   background-color: #DBB968;
   width: 70px;
@@ -512,6 +603,7 @@ footer {
   align-items: center;
 }
 
+/*TODO: Fixed font-size*/
 .left-footer>p {
   font-family: 'Bebas Neue';
   font-size: 20px;
@@ -527,6 +619,7 @@ footer {
   padding: 0;
 }
 
+/*TODO: Fixed font-size*/
 .left-footer ul li {
   list-style: none;
   line-height: 40px;
@@ -553,6 +646,7 @@ footer {
   align-items: center;
 }
 
+/*TODO: Fixed font-size*/
 .mid-footer a {
   text-decoration: none;
   color: #fff;
@@ -571,6 +665,7 @@ footer {
   font-size: 18px;
 }
 
+/*TODO: Fixed font-size*/
 .mid-footer p:last-of-type {
   font-family: 'DM Sans', sans-serif;
   font-size: 15px;
@@ -586,6 +681,7 @@ footer {
   padding-bottom: 30px;
 }
 
+/*TODO: Fixed font-size*/
 .right-footer i {
   font-size: 30px;
   cursor: pointer;
