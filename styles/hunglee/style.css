@@ -6,6 +6,28 @@ body {
   margin: 0;
 }
 
+.main-header {
+  padding: 0;
+}
+.main-header-1 {
+  color: #2B305E;
+  font-size: 90px;
+  font-weight: bold;
+  font-family: "Bebas Neue", cursive;
+  margin-top: 71px;
+  margin-bottom: 0px;
+  margin-left: 90px;
+  margin-right: 90px;
+}
+.main-header-2 {
+  color: white;
+  font-size: 90px;
+  font-family: "Bebas Neue", cursive;
+  margin-top: 60px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
 .sub-header-1 {
   color: #DBB968;
   font-size: 40px;
@@ -19,22 +41,14 @@ body {
   padding: 0;
 }
 
-.main-header-1 {
-  color: #2B305E;
-  font-size: 90px;
-  font-family: "Bebas Neue", cursive;
-}
-.main-header-2 {
-  color: white;
-  font-size: 90px;
-  font-family: "Bebas Neue", cursive;
-  margin-top: 60px;
-  margin-bottom: 0;
+.sub-header-1-container {
   padding: 0;
 }
 
 .paragraph {
   font-family: "Montserrat", sans-serif;
+  margin-left: 90px;
+  margin-right: 90px;
 }
 
 .content-col-2 {
@@ -56,6 +70,9 @@ body {
   font-family: "Montserrat", sans-serif;
   padding: 10px 24px;
   border: none;
+  margin-bottom: 60px;
+  margin-left: 90px;
+  margin-right: 90px;
 }
 .btn-primary:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
@@ -92,8 +109,8 @@ body {
 .tabs-container {
   display: flex;
   font-size: 90px;
-  position: absolute;
   bottom: 0px;
+  margin-left: 100px;
 }
 .tabs-container > * {
   font-family: "Bebas Neue", cursive;
@@ -106,6 +123,15 @@ body {
 .tabs-container > *:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
   cursor: pointer;
+}
+.tabs-container > * > * {
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  z-index: 100;
 }
 
 .tab-1 {
@@ -122,7 +148,7 @@ body {
 }
 
 .circle-1 {
-  background-color: #DBB968;
+  background-color: #2B305E;
 }
 
 .second-page-container {

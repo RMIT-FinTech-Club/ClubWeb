@@ -1,0 +1,123 @@
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main-header-1 {
+  color: #2B305E;
+  font-size: 90px;
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Bebas Neue", cursive;
+}
+
+.sub-header-1 {
+  color: #DBB968;
+  font-style: normal;
+  font-size: 40px;
+  font-weight: 700;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.line {
+  width: 100px;
+  height: 0px;
+  border-bottom: 2px solid #77878B;
+}
+
+.sub-h-w-lines {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 60px;
+}
+.tabs input {
+  display: none;
+}
+.tabs input:checked + label + .tab {
+  display: block;
+}
+
+.tab {
+  width: 100%;
+  display: none;
+  order: 1;
+}
+
+.labl {
+  width: 100px;
+  height: 100px;
+  font-family: "Bebas Neue", cursive;
+  color: white;
+  font-size: 90px;
+  transform: rotate(-90deg);
+  text-align: center;
+}
+.labl-1 {
+  background-color: #2B305E;
+}
+.labl-2 {
+  background-color: #DBB968;
+}
+.labl-3 {
+  background-color: #C9D6EA;
+}
+.labl-4 {
+  background-color: #77878B;
+}
+.labl:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+  cursor: pointer;
+}
+
+.primary-btn {
+  border-radius: 15px;
+  color: white;
+  background-color: #DBB968;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px 24px;
+  border: none;
+}
+.primary-btn:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+  cursor: pointer;
+}
+
+.img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.second-page-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.front {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  z-index: 9;
+  position: relative;
+}
+
+.behind {
+  background-color: #DBB968;
+  width: 100%;
+  height: 230px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
