@@ -13,5 +13,6 @@ const config = {
 };
 
 // Initialize Firebase
-const app = initializeApp(config);
+export const app = initializeApp(config);
 const analytics = getAnalytics(app);
+
