@@ -29,6 +29,7 @@ loginForm.addEventListener("submit", e => {
   const email = document.querySelector("#email").value;
   const pwd = document.querySelector("#pwd").value;
   (0, _auth.signInWithEmailAndPassword)(auth, email, pwd).then(credential => {
+    window.location.href = "../../test/admin.html";
     const user = credential.user; // get info about user
 
     console.log(user);
