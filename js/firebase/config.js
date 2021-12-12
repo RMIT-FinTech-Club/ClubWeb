@@ -1,6 +1,7 @@
 // import functions from SDKs that we need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 const config = {
   apiKey: process.env.API_KEY,
@@ -12,7 +13,32 @@ const config = {
   measurementId: process.env.MEASUREMENT_ID
 };
 
+
 // Initialize Firebase
-export const app = initializeApp(config);
+const app = initializeApp(config);
 const analytics = getAnalytics(app);
+const auth = getAuth()
+
+// login
+const loginForm = document.querySelector("#login-form")
+loginForm.addEventListener("submit", (e) => {
+  e.preventDefault()
+  const email = document.querySelector("#email").value
+  const pwd = document.querySelector("#pwd").value
+
+  signInWithEmailAndPassword(auth, email, pwd)
+    .then((credential) => {
+      const user = credential.user;    // get info about user
+      console.log(user)
+    })
+    .catch((error) => {
+      // see error
+      console.log(error.code)
+      console.log(error.message)
+    });
+})
+
+
+
+
 
