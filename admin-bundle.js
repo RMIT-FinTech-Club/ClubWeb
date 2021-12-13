@@ -1,6 +1,49 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
+var _auth = require("firebase/auth");
+
+var _script = require("./script");
+
+const auth = (0, _auth.getAuth)();
+const pwdBtn = document.querySelector("#create-user-btn");
+pwdBtn.addEventListener("click", () => {
+  const email = document.querySelector("#email").value;
+  const randomPwd = Math.random().toString(36).slice(-10);
+  (0, _auth.createUserWithEmailAndPassword)(auth, email, randomPwd).then(userCredential => {
+    console.log(userCredential.user);
+  }).catch(error => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(errorCode);
+    console.log(errorMessage);
+  });
+}); //
+// const userSignOut = () => {
+//   signOut(auth).then(() => {
+//     console.log("user signed out")
+//   }).catch((error) => {
+//     console.log(error.code)
+//     console.log(error.message)
+//   });
+// }
+//
+// const sendResetPwdEmail = (email) => {
+//   sendPasswordResetEmail(auth, email)
+//     .then(() => {
+//       console.log("email sent successfully!")
+//     })
+//     .catch((error) => {
+//       const errorCode = error.code;
+//       const errorMessage = error.message;
+//       console.log(errorCode)
+//       console.log(errorMessage)
+//     });
+// }
+
+},{"./script":2,"firebase/auth":13}],2:[function(require,module,exports){
+"use strict";
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -46,7 +89,7 @@ if (loginForm) {
   });
 }
 
-},{"firebase/analytics":10,"firebase/app":11,"firebase/auth":12}],2:[function(require,module,exports){
+},{"firebase/analytics":11,"firebase/app":12,"firebase/auth":13}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1366,7 +1409,7 @@ function registerAnalytics() {
 
 registerAnalytics();
 
-},{"@firebase/app":3,"@firebase/component":6,"@firebase/installations":7,"@firebase/logger":8,"@firebase/util":9}],3:[function(require,module,exports){
+},{"@firebase/app":4,"@firebase/component":7,"@firebase/installations":8,"@firebase/logger":9,"@firebase/util":10}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2075,7 +2118,7 @@ function registerCoreComponents(variant) {
 
 registerCoreComponents('');
 
-},{"@firebase/component":6,"@firebase/logger":8,"@firebase/util":9}],4:[function(require,module,exports){
+},{"@firebase/component":7,"@firebase/logger":9,"@firebase/util":10}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14126,7 +14169,7 @@ registerAuth("Browser"
 /* BROWSER */
 );
 
-},{"@firebase/app":3,"@firebase/component":6,"@firebase/logger":8,"@firebase/util":9,"tslib":14}],5:[function(require,module,exports){
+},{"@firebase/app":4,"@firebase/component":7,"@firebase/logger":9,"@firebase/util":10,"tslib":15}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14613,7 +14656,7 @@ require("@firebase/logger");
 
 require("@firebase/component");
 
-},{"./index-8593558d.js":4,"@firebase/app":3,"@firebase/component":6,"@firebase/logger":8,"@firebase/util":9,"tslib":14}],6:[function(require,module,exports){
+},{"./index-8593558d.js":5,"@firebase/app":4,"@firebase/component":7,"@firebase/logger":9,"@firebase/util":10,"tslib":15}],7:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15091,7 +15134,7 @@ class ComponentContainer {
 
 exports.ComponentContainer = ComponentContainer;
 
-},{"@firebase/util":9}],7:[function(require,module,exports){
+},{"@firebase/util":10}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16485,7 +16528,7 @@ registerInstallations();
 
 (0, _app.registerVersion)(name, version, 'esm2017');
 
-},{"@firebase/app":3,"@firebase/component":6,"@firebase/util":9,"idb":13}],8:[function(require,module,exports){
+},{"@firebase/app":4,"@firebase/component":7,"@firebase/util":10,"idb":14}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16744,7 +16787,7 @@ function setUserLogHandler(logCallback, options) {
   }
 }
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 (function (global){(function (){
 "use strict";
 
@@ -18917,7 +18960,7 @@ function getModularInstance(service) {
 }
 
 }).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -18936,7 +18979,7 @@ Object.keys(_analytics).forEach(function (key) {
   });
 });
 
-},{"@firebase/analytics":2}],11:[function(require,module,exports){
+},{"@firebase/analytics":3}],12:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -18975,7 +19018,7 @@ var version = "9.6.0";
 
 (0, _app.registerVersion)(name, version, 'app');
 
-},{"@firebase/app":3}],12:[function(require,module,exports){
+},{"@firebase/app":4}],13:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -18994,7 +19037,7 @@ Object.keys(_auth).forEach(function (key) {
   });
 });
 
-},{"@firebase/auth":5}],13:[function(require,module,exports){
+},{"@firebase/auth":6}],14:[function(require,module,exports){
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -19312,7 +19355,7 @@ Object.keys(_auth).forEach(function (key) {
 
 }));
 
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

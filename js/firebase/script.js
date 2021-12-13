@@ -3,15 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
-const config = {
-  // apiKey: process.env.API_KEY,
-  // authDomain: process.env.AUTH_DOMAIN,
-  // projectId: process.env.PROJECT_ID,
-  // storageBucket: process.env.STORAGE_BUCKET,
-  // messagingSenderId: process.env.MESSAGING_SENDER_ID,
-  // appId: process.env.APP_ID,
-  // measurementId: process.env.MEASUREMENT_ID
-
+const firebaseConfig = {
   apiKey: "AIzaSyAxeZlaswV1d8mk5YC7oPKcKROiF7bQ4kk",
   authDomain: "rmit-fintech-club-web.firebaseapp.com",
   projectId: "rmit-fintech-club-web",
@@ -21,39 +13,30 @@ const config = {
   measurementId: "G-4E3JCYWVYW"
 };
 
-
 // Initialize Firebase
-const app = initializeApp(config);
+export const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const auth = getAuth()
+const auth = getAuth();
 
 // login
 const loginForm = document.querySelector("#login-form")
-loginForm.addEventListener("submit", (e) => {
-  e.preventDefault()
-  const email = document.querySelector("#email").value
-  const pwd = document.querySelector("#pwd").value
+if (loginForm) {
+  loginForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    const email = document.querySelector("#email").value
+    const pwd = document.querySelector("#pwd").value
 
-  signInWithEmailAndPassword(auth, email, pwd)
-    .then((credential) => {
-      window.location.href = "../../test/admin.html"
-      const user = credential.user;    // get info about user
-      console.log(user)
-    })
-    .catch((error) => {
-      // see error
-      console.log(error.code)
-      console.log(error.message)
-    });
-})
-
-const userSignOut = () => {
-  signOut(auth).then(() => {
-    console.log("user signed out")
-  }).catch((error) => {
-    console.log(error.code)
-    console.log(error.message)
-  });
+    signInWithEmailAndPassword(auth, email, pwd)
+      // redirect to next page if successful
+      .then((cred) => {
+        console.log(cred.user)
+      })
+      .catch((error) => {
+        // see error
+        console.log(error.code);
+        console.log(error.message);
+      });
+  })
 }
 
 
