@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #ececec;
+  background: #ffffff;
 }
 
 .dialog-container {
@@ -10,7 +10,7 @@ body {
   margin: 100px auto;
   top: 50%;
   left: 50%;
-  background: #f7f7f7;
+  background: #ffffff;
   text-align: center;
 }
 
@@ -64,7 +64,7 @@ body {
 
 .level a {
   margin: 0 10px;
-  color: #555555;
+  color: #ffffff;
 }
 
 /* mouse over link */

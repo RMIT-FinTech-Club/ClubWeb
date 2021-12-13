@@ -1,6 +1,6 @@
 .dialog-container input[type="text"]:focus, .dialog-container input[type="password"]:focus {
   width: 280px;
-  border-color: #eb5e28;
+  border-color: #DBB968;
 }
 
 #wrong-pwd {
