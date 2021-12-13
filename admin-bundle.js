@@ -69,7 +69,15 @@ const firebaseConfig = {
 const app = (0, _app.initializeApp)(firebaseConfig);
 exports.app = app;
 const analytics = (0, _analytics.getAnalytics)(app);
-const auth = (0, _auth.getAuth)(); // login
+const auth = (0, _auth.getAuth)();
+(0, _auth.onAuthStateChanged)(auth, user => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    console.log(user.uid);
+  } else {
+    console.log("not sign in");
+  }
+}); // login
 
 const loginForm = document.querySelector("#login-form");
 
