@@ -1,5 +1,8 @@
 html {
   font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  line-height: 1.4;
+  height: 100%;
 }
 
 body {
@@ -8,8 +11,13 @@ body {
   background: #ffffff;
 }
 
+h1 {
+  font-size: 3em;
+  margin: 2em -10em;
+}
+
 .dialog-container {
-  width: 600px;
+  width: 1000px;
   padding: 40px;
   margin: 100px auto;
   top: 50%;
@@ -62,8 +70,8 @@ body {
 }
 
 .level {
-  margin-bottom:1.5rem;
-  font-size: 0.75rem;
+  margin-bottom:3rem;
+  font-size: 1rem;
 }
 
 .level a {
