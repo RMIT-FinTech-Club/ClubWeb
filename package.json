@@ -23,7 +23,12 @@
     "sass": "^1.43.4"
   },
   "dependencies": {
+    "axios": "^0.24.0",
+    "babelify": "^10.0.0",
     "dotenv": "^10.0.0",
-    "firebase": "^9.6.0"
+    "esmify": "^2.1.1",
+    "firebase": "^9.6.0",
+    "uuid": "^8.3.2",
+    "watchify": "^4.0.0"
   }
 }
