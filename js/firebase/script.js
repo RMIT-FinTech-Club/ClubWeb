@@ -13,7 +13,6 @@ import {
   getAuth,
   signInWithEmailAndPassword,
   signOut,
-  createUserWithEmailAndPassword,
   onAuthStateChanged,
 } from "firebase/auth";
 import axios from "axios";
