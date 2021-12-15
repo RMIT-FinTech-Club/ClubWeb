@@ -31,7 +31,7 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth();
-const db = getFirestore(app);
+export const db = getFirestore(app);
 // track user's authentication state
 onAuthStateChanged(auth, (user) => {
   if (user) {
