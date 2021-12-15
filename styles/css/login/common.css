@@ -14,6 +14,7 @@ body {
 h1 {
   font-size: 3em;
   margin: 2em -10em;
+  color: #272C55;
 }
 
 .dialog-container {
@@ -70,7 +71,7 @@ h1 {
 }
 
 .level {
-  margin-bottom:3rem;
+  margin-bottom: -10rem;
   font-size: 1rem;
 }
 
