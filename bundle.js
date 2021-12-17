@@ -39,15 +39,32 @@ const app = (0, _app.initializeApp)(firebaseConfig);
 exports.app = app;
 const analytics = (0, _analytics.getAnalytics)(app);
 const auth = (0, _auth.getAuth)();
-const db = (0, _firestore.getFirestore)(app); // track user's authentication state
-
+const db = (0, _firestore.getFirestore)(app);
 exports.db = db;
+const headerBtn = document.querySelector("#header-btn"); // track user's authentication state
+
 (0, _auth.onAuthStateChanged)(auth, user => {
   if (user) {
-    console.log(user.email);
+    console.log(user.email); // sign out
+
+    if (headerBtn) {
+      headerBtn.innerHTML = "Sign out";
+      headerBtn.addEventListener("click", () => {
+        (0, _auth.signOut)(auth).then(() => {
+          console.log("user signed out");
+        }).catch(error => {
+          console.log(error.code);
+          console.log(error.message);
+        });
+      });
+    }
   } else {
     // redirect to login when not signed in
-    console.log("User is no longer signed in"); // window.location.href = "../../test/login.html"
+    console.log("User is no longer signed in"); // window.location.href = "../../pages/login.html"
+
+    if (headerBtn) {
+      headerBtn.innerHTML = "Sign in";
+    }
   }
 }); // Login
 
@@ -60,23 +77,10 @@ if (loginForm) {
     const pwd = document.querySelector("#pwd").value;
     (0, _auth.signInWithEmailAndPassword)(auth, email, pwd) // redirect to next page if successful
     .then(cred => {
-      console.log(cred.user.email + " signed in"); // window.location.href = "../../test/admin.html"
+      console.log(cred.user.email + " signed in");
+      window.location.href = "../../../ClubWeb/index.html";
     }).catch(error => {
       // see error
-      console.log(error.code);
-      console.log(error.message);
-    });
-  });
-} // Sign out
-
-
-const signOutBtn = document.querySelector("#signout");
-
-if (signOutBtn) {
-  signOutBtn.addEventListener("click", () => {
-    (0, _auth.signOut)(auth).then(() => {
-      console.log("user signed out");
-    }).catch(error => {
       console.log(error.code);
       console.log(error.message);
     });
@@ -28929,7 +28933,7 @@ module.exports = function xhrAdapter(config) {
 
     // HTTP basic authentication
     if (config.auth) {
-      var username = config.auth.email || '';
+      var username = config.auth.username || '';
       var password = config.auth.password ? unescape(encodeURIComponent(config.auth.password)) : '';
       requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
     }

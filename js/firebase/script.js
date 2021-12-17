@@ -34,14 +34,34 @@ const auth = getAuth();
 export const db = getFirestore(app);
 
 
+const headerBtn = document.querySelector("#header-btn");
+
 // track user's authentication state
 onAuthStateChanged(auth, (user) => {
   if (user) {
     console.log(user.email);
+
+    // sign out
+    if (headerBtn) {
+      headerBtn.innerHTML = "Sign out"
+      headerBtn.addEventListener("click", () => {
+        signOut(auth)
+          .then(() => {
+            console.log("user signed out");
+          })
+          .catch((error) => {
+            console.log(error.code);
+            console.log(error.message);
+          });
+      });
+    }
   } else {
     // redirect to login when not signed in
     console.log("User is no longer signed in");
-    // window.location.href = "../../test/login.html"
+    // window.location.href = "../../pages/login.html"
+    if (headerBtn) {
+      headerBtn.innerHTML = "Sign in"
+    }
   }
 });
 
@@ -58,26 +78,10 @@ if (loginForm) {
       // redirect to next page if successful
       .then((cred) => {
         console.log(cred.user.email + " signed in");
-        // window.location.href = "../../test/admin.html"
+        window.location.href = "../../../ClubWeb/index.html"
       })
       .catch((error) => {
         // see error
-        console.log(error.code);
-        console.log(error.message);
-      });
-  });
-}
-
-
-// Sign out
-const signOutBtn = document.querySelector("#signout");
-if (signOutBtn) {
-  signOutBtn.addEventListener("click", () => {
-    signOut(auth)
-      .then(() => {
-        console.log("user signed out");
-      })
-      .catch((error) => {
         console.log(error.code);
         console.log(error.message);
       });
