@@ -12,6 +12,10 @@ $grey: #77878B;
   grid-template-columns: 1fr 1fr;
 }
 
+.column{
+  height: 45rem;
+}
+
 // HEADERS SECTION
 .main-header{
   &-1{
@@ -50,7 +54,8 @@ $grey: #77878B;
 .tabs{
   display: flex;
   flex-wrap: wrap;
-  margin: 60px;
+  margin-left: 60px;
+  margin-right: 60px;
   & input{
     display: none;
   }
@@ -73,17 +78,23 @@ $grey: #77878B;
   font-size: 90px;
   transform: rotate(-90deg);
   text-align: center;
+  position: absolute;
+  bottom: -6.5rem;
   &-1 {
     background-color: $blue;
+    left: 70px;
   }
   &-2 {
     background-color: $yellow;
+    left: 170px;
   }
   &-3 {
     background-color: $light-blue;
+    left: 270px;
   }
   &-4 {
     background-color: $grey;
+    left: 370px;
   }
   &:hover {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);

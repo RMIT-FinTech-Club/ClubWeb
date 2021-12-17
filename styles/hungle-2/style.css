@@ -7,6 +7,10 @@ html {
   grid-template-columns: 1fr 1fr;
 }
 
+.column {
+  height: 45rem;
+}
+
 .main-header-1 {
   color: #2B305E;
   font-size: 90px;
@@ -39,7 +43,8 @@ html {
 .tabs {
   display: flex;
   flex-wrap: wrap;
-  margin: 60px;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 .tabs input {
   display: none;
@@ -62,18 +67,24 @@ html {
   font-size: 90px;
   transform: rotate(-90deg);
   text-align: center;
+  position: absolute;
+  bottom: -6.5rem;
 }
 .labl-1 {
   background-color: #2B305E;
+  left: 70px;
 }
 .labl-2 {
   background-color: #DBB968;
+  left: 170px;
 }
 .labl-3 {
   background-color: #C9D6EA;
+  left: 270px;
 }
 .labl-4 {
   background-color: #77878B;
+  left: 370px;
 }
 .labl:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
