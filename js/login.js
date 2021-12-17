@@ -45,7 +45,7 @@ const LOGIN_FORM = document.getElementById("login-form");
 // Check entered password with correct password
 LOGIN_FORM.addEventListener("submit", function (event) {
   // Get email and password values, and wrong password message
-  const ENTERED_EMAIL = LOGIN_FORM.username.value;
+  const ENTERED_EMAIL = LOGIN_FORM.email.value;
   const ENTERED_PWD = LOGIN_FORM.password.value;
   const WRONG_PWD_MSG = document.getElementById("wrong-pwd");
 

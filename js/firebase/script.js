@@ -32,6 +32,8 @@ export const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth();
 export const db = getFirestore(app);
+
+
 // track user's authentication state
 onAuthStateChanged(auth, (user) => {
   if (user) {
@@ -42,6 +44,7 @@ onAuthStateChanged(auth, (user) => {
     // window.location.href = "../../test/login.html"
   }
 });
+
 
 // Login
 const loginForm = document.querySelector("#login-form");
@@ -65,6 +68,7 @@ if (loginForm) {
   });
 }
 
+
 // Sign out
 const signOutBtn = document.querySelector("#signout");
 if (signOutBtn) {
@@ -80,6 +84,8 @@ if (signOutBtn) {
   });
 }
 
+
+// get all members' data
 const getAllMembersFromContact = async () => {
   try {
     const data = await axios.get(
@@ -90,6 +96,7 @@ const getAllMembersFromContact = async () => {
     console.log(error.message);
   }
 };
+
 
 // Create new user
 const createUserBtn = document.querySelector("#create-user-btn");

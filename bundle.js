@@ -81,7 +81,8 @@ if (signOutBtn) {
       console.log(error.message);
     });
   });
-}
+} // get all members' data
+
 
 const getAllMembersFromContact = async () => {
   try {
@@ -28928,7 +28929,7 @@ module.exports = function xhrAdapter(config) {
 
     // HTTP basic authentication
     if (config.auth) {
-      var username = config.auth.username || '';
+      var username = config.auth.email || '';
       var password = config.auth.password ? unescape(encodeURIComponent(config.auth.password)) : '';
       requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
     }
