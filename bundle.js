@@ -4,7 +4,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.app = void 0;
+exports.db = exports.app = void 0;
 
 var _app = require("firebase/app");
 
@@ -41,6 +41,7 @@ const analytics = (0, _analytics.getAnalytics)(app);
 const auth = (0, _auth.getAuth)();
 const db = (0, _firestore.getFirestore)(app); // track user's authentication state
 
+exports.db = db;
 (0, _auth.onAuthStateChanged)(auth, user => {
   if (user) {
     console.log(user.email);
@@ -145,7 +146,18 @@ if (createUserBtn) {
     //   });
     // Store to Sheety
   });
-}
+} // const sendResetPwdEmail = (email) => {
+//   sendPasswordResetEmail(auth, email)
+//     .then(() => {
+//       console.log("email sent successfully!")
+//     })
+//     .catch((error) => {
+//       const errorCode = error.code;
+//       const errorMessage = error.message;
+//       console.log(errorCode)
+//       console.log(errorMessage)
+//     });
+// }
 
 },{"@firebase/firestore":7,"axios":12,"firebase/analytics":41,"firebase/app":42,"firebase/auth":43,"uuid":47}],2:[function(require,module,exports){
 "use strict";
