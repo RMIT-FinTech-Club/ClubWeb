@@ -60,7 +60,7 @@ const headerBtn = document.querySelector("#header-btn"); // track user's authent
     }
   } else {
     // redirect to login when not signed in
-    console.log("User is no longer signed in"); // window.location.href = "../../pages/login.html"
+    console.log("User is no longer signed in");
 
     if (headerBtn) {
       headerBtn.innerHTML = "Sign in";
@@ -68,21 +68,26 @@ const headerBtn = document.querySelector("#header-btn"); // track user's authent
   }
 }); // Login
 
-const loginForm = document.querySelector("#login-form");
+const LOGIN_FORM = document.querySelector("#login-form");
 
-if (loginForm) {
-  loginForm.addEventListener("submit", e => {
+if (LOGIN_FORM) {
+  LOGIN_FORM.addEventListener("submit", e => {
     e.preventDefault();
     const email = document.querySelector("#email").value;
     const pwd = document.querySelector("#pwd").value;
-    (0, _auth.signInWithEmailAndPassword)(auth, email, pwd) // redirect to next page if successful
-    .then(cred => {
-      console.log(cred.user.email + " signed in");
+    (0, _auth.signInWithEmailAndPassword)(auth, email, pwd).then(cred => {
+      console.log(cred.user.email + " signed in"); // redirect to main page if successful
+
       window.location.href = "../../../ClubWeb/index.html";
     }).catch(error => {
-      // see error
-      console.log(error.code);
-      console.log(error.message);
+      console.log(error.code); // Display wrong email or password message
+
+      const WRONG_MSG = document.querySelector("#wrong-pwd");
+
+      if (error.code === "auth/user-not-found" || error.code === "auth/wrong-password") {
+        console.log("wrong email or pwd");
+        WRONG_MSG.setAttribute("style", "display: block");
+      }
     });
   });
 } // get all members' data
