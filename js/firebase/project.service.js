@@ -10,42 +10,42 @@ import {
 } from "firebase/firestore";
 import { db } from "./script.js";
 
-const PROJECT_PATH = "projects";
-const projectCollection = collection(db, PROJECT_PATH);
+const ITEM_PATH = "projects";
+const itemCollection = collection(db, ITEM_PATH);
 
-function getProjectDocRef(id) {
-  return doc(db, PROJECT_PATH, id);
+function getItemDocRef(id) {
+  return doc(db, ITEM_PATH, id);
 }
 
-export async function getAllProjects() {
-  const q = query(projectCollection);
+export async function getAllItems() {
+  const q = query(itemCollection);
   const snapshot = await getDocs(q);
   return snapshot.docs.map((doc) => doc.data());
 }
 
-export async function getProjectById(id) {
-  const docRef = getProjectDocRef(id);
+export async function getItemById(id) {
+  const docRef = getItemDocRef(id);
   const snapshot = await getDoc(docRef);
   return snapshot.get();
 }
 
 // Firestore is schemaless so it is up to front-end to decide which fields to save
 
-export async function createProject(project) {
-  const docRef = await addDoc(projectCollection, {
-    ...project,
+export async function createItem(item) {
+  const docRef = await addDoc(itemCollection, {
+    ...item,
   });
-  return { id: docRef.id, ...project };
+  return { id: docRef.id, ...item };
 }
 
-export async function updateProject(id, project) {
-  const docRef = getProjectDocRef(id);
+export async function updateItem(id, item) {
+  const docRef = getItemDocRef(id);
   await updateDoc(docRef, {
-    ...project,
+    ...item,
   });
 }
 
-export async function deleteProject(id) {
-  const docRef = getProjectDocRef(id);
+export async function deleteItem(id) {
+  const docRef = getItemDocRef(id);
   await deleteDoc(docRef);
 }
