@@ -12,8 +12,10 @@ import {
 import {
   getAuth,
   signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 import axios from "axios";
 
@@ -33,7 +35,6 @@ const analytics = getAnalytics(app);
 const auth = getAuth();
 export const db = getFirestore(app);
 
-
 const headerBtn = document.querySelector("#header-btn");
 
 // track user's authentication state
@@ -43,7 +44,7 @@ onAuthStateChanged(auth, (user) => {
 
     // sign out
     if (headerBtn) {
-      headerBtn.innerHTML = "Sign out"
+      headerBtn.innerHTML = "Sign out";
       headerBtn.addEventListener("click", () => {
         signOut(auth)
           .then(() => {
@@ -59,11 +60,10 @@ onAuthStateChanged(auth, (user) => {
     // redirect to login when not signed in
     console.log("User is no longer signed in");
     if (headerBtn) {
-      headerBtn.innerHTML = "Sign in"
+      headerBtn.innerHTML = "Sign in";
     }
   }
 });
-
 
 // Login
 const LOGIN_FORM = document.querySelector("#login-form");
@@ -77,20 +77,22 @@ if (LOGIN_FORM) {
       .then((cred) => {
         console.log(cred.user.email + " signed in");
         // redirect to main page if successful
-        window.location.href = "../../../ClubWeb/index.html"
+        window.location.href = "../../../ClubWeb/index.html";
       })
       .catch((error) => {
-        console.log(error.code)
+        console.log(error.code);
         // Display wrong email or password message
-        const WRONG_MSG = document.querySelector("#wrong-pwd")
-        if (error.code === "auth/user-not-found" || error.code === "auth/wrong-password") {
-          console.log("wrong email or pwd")
+        const WRONG_MSG = document.querySelector("#wrong-pwd");
+        if (
+          error.code === "auth/user-not-found" ||
+          error.code === "auth/wrong-password"
+        ) {
+          console.log("wrong email or pwd");
           WRONG_MSG.setAttribute("style", "display: block");
         }
       });
   });
 }
-
 
 // get all members' data
 const getAllMembersFromContact = async () => {
@@ -104,14 +106,11 @@ const getAllMembersFromContact = async () => {
   }
 };
 
-
 // Create new user
 const createUserBtn = document.querySelector("#create-user-btn");
 if (createUserBtn) {
   createUserBtn.addEventListener("click", async () => {
-    const email = document.querySelector("#email").value;
     // create 10-character random password
-    const randomPwd = Math.random().toString(36).slice(-10);
     const listOfUsers = collection(db, "users");
     const listOfUsersSnapshot = await getDocs(listOfUsers);
     const listOfUsersList = listOfUsersSnapshot.docs.map((doc) => doc.data());
@@ -119,6 +118,15 @@ if (createUserBtn) {
     const members = await getAllMembersFromContact();
     members.map(async (member) => {
       console.log(members, member);
+      const randomPwd = Math.random().toString(36).slice(-10);
+      createUserWithEmailAndPassword(auth, member.email, randomPwd)
+        .then((cred) => {
+          console.log("Successful sign up " + cred.user.email);
+        })
+        .catch((error) => {
+          console.log(error.code);
+          console.log(error.message);
+        });
       await setDoc(
         doc(db, "users", member.email),
         {
@@ -138,44 +146,18 @@ if (createUserBtn) {
         { merge: true }
       );
     });
-    // Store to firestore
-
-    // db.collection("users")
-    //   .add({
-    //     name: "Phan Le Minh An",
-    //     school: "SBM",
-    //     major: "Econ Fin",
-    //     studentId: "s3818487",
-    //     subscribe: false,
-    //     createdAt: new Date(),
-    //   })
-    //   .then((doc) => {
-    //     console.log("successful sign up " + doc);
-    //   });
-
-    // createUserWithEmailAndPassword(auth, email, randomPwd)
-    //   .then((cred) => {
-    //     console.log("successful sign up " + cred.user.email);
-    //   })
-    //   .catch((error) => {
-    //     console.log(error.code)
-    //     console.log(error.message)
-    //   });
-
-    // Store to Sheety
   });
 }
 
-
-// const sendResetPwdEmail = (email) => {
-//   sendPasswordResetEmail(auth, email)
-//     .then(() => {
-//       console.log("email sent successfully!")
-//     })
-//     .catch((error) => {
-//       const errorCode = error.code;
-//       const errorMessage = error.message;
-//       console.log(errorCode)
-//       console.log(errorMessage)
-//     });
-// }
+export const sendResetPwdEmail = (email) => {
+  sendPasswordResetEmail(auth, email)
+    .then(() => {
+      console.log("email sent successfully!");
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode);
+      console.log(errorMessage);
+    });
+};

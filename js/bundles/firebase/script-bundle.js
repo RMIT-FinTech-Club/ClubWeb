@@ -107,9 +107,7 @@ const createUserBtn = document.querySelector("#create-user-btn");
 
 if (createUserBtn) {
   createUserBtn.addEventListener("click", async () => {
-    const email = document.querySelector("#email").value; // create 10-character random password
-
-    const randomPwd = Math.random().toString(36).slice(-10);
+    // create 10-character random password
     const listOfUsers = (0, _firestore.collection)(db, "users");
     const listOfUsersSnapshot = await (0, _firestore.getDocs)(listOfUsers);
     const listOfUsersList = listOfUsersSnapshot.docs.map(doc => doc.data());
@@ -117,7 +115,8 @@ if (createUserBtn) {
     const members = await getAllMembersFromContact();
     members.map(async member => {
       console.log(members, member);
-      createUserWithEmailAndPassword(auth, email, randomPwd).then(cred => {
+      const randomPwd = Math.random().toString(36).slice(-10);
+      (0, _auth.createUserWithEmailAndPassword)(auth, member.email, randomPwd).then(cred => {
         console.log("Successful sign up " + cred.user.email);
       }).catch(error => {
         console.log(error.code);
@@ -144,7 +143,7 @@ if (createUserBtn) {
 }
 
 const sendResetPwdEmail = email => {
-  sendPasswordResetEmail(auth, email).then(() => {
+  (0, _auth.sendPasswordResetEmail)(auth, email).then(() => {
     console.log("email sent successfully!");
   }).catch(error => {
     const errorCode = error.code;

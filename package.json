@@ -6,7 +6,8 @@
   "license": "",
   "author": "",
   "scripts": {
-    "bundle": "watchify -v -t babelify js/firebase/script.js -p esmify -o bundle.js",
+    "bundle-firebase-script": "watchify -v -t babelify js/firebase/script.js -p esmify -o js/bundles/firebase/script-bundle.js",
+    "bundle-login": "watchify -v -t babelify js/login.js -p esmify -o js/bundles/login-bundle.js",
     "build": "parcel build index.html",
     "dev": "parcel index.html --open",
     "start": "npm run build && npm run dev",

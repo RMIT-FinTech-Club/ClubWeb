@@ -107,8 +107,7 @@ const createUserBtn = document.querySelector("#create-user-btn");
 
 if (createUserBtn) {
   createUserBtn.addEventListener("click", async () => {
-    const email = document.querySelector("#email").value; // create 10-character random password
-
+    // create 10-character random password
     const randomPwd = Math.random().toString(36).slice(-10);
     const listOfUsers = (0, _firestore.collection)(db, "users");
     const listOfUsersSnapshot = await (0, _firestore.getDocs)(listOfUsers);
@@ -144,7 +143,7 @@ if (createUserBtn) {
 }
 
 const sendResetPwdEmail = email => {
-  sendPasswordResetEmail(auth, email).then(() => {
+  (0, _auth.sendPasswordResetEmail)(auth, email).then(() => {
     console.log("email sent successfully!");
   }).catch(error => {
     const errorCode = error.code;
@@ -156,7 +155,89 @@ const sendResetPwdEmail = email => {
 
 exports.sendResetPwdEmail = sendResetPwdEmail;
 
-},{"@firebase/firestore":7,"axios":12,"firebase/analytics":41,"firebase/app":42,"firebase/auth":43,"uuid":47}],2:[function(require,module,exports){
+},{"@firebase/firestore":8,"axios":13,"firebase/analytics":42,"firebase/app":43,"firebase/auth":44,"uuid":48}],2:[function(require,module,exports){
+"use strict";
+
+var _script = require("./firebase/script");
+/*
+ * In the current document, if the amount of .toggle-password-visibility elements matches that of .password-field
+ * elements, then add an eventListener to each .password-field element listening for the "input" event. On that event,
+ * display the matching .toggle-password-visibility element.
+ *
+ * Each .toggle-password-visibility element works as a button that listens for "click" event to toggle its matching
+ * .password-field type between type="text" and type="password". I.e. toggling the password visibility.
+ * */
+
+
+const PWD_VIS_TOGGLES = document.querySelectorAll(".toggle-password-visibility");
+const PWD_FIELDS = document.querySelectorAll(".password-field");
+
+if (PWD_FIELDS.length === PWD_VIS_TOGGLES.length) {
+  // Setting up eventListeners and handler logic for all .password-field elements
+  for (let index = 0; index < PWD_FIELDS.length; index++) {
+    PWD_FIELDS[index].addEventListener("input", function () {
+      PWD_VIS_TOGGLES[index].setAttribute("style", "display: inline;");
+    });
+  } // Setting up eventListeners and handler logic for all .toggle-password-visibility elements
+
+
+  for (let index = 0; index < PWD_VIS_TOGGLES.length; index++) {
+    PWD_VIS_TOGGLES[index].addEventListener("click", function () {
+      if (PWD_FIELDS[index].getAttribute("type") === "password") {
+        PWD_FIELDS[index].setAttribute("type", "text");
+      } else if (PWD_FIELDS[index].getAttribute("type") === "text") {
+        PWD_FIELDS[index].setAttribute("type", "password");
+      }
+    });
+  }
+} else {
+  // Disable password toggling feature and display a console error message
+  console.log("ERROR: Number of .password-field elements must be equal to number of .toggle-password-visibility elements. All .toggle-password-visibility elements are disabled.");
+}
+
+const RESET_PASSWORD_FORM = document.querySelector("#forgot-pw-input");
+console.log(RESET_PASSWORD_FORM);
+
+if (RESET_PASSWORD_FORM) {
+  RESET_PASSWORD_FORM.addEventListener("submit", e => {
+    e.preventDefault();
+    console.log(e);
+    const emailInput = document.querySelector("#email-phone-input").value;
+    console.log(emailInput);
+
+    if (emailInput) {
+      (0, _script.sendResetPwdEmail)(emailInput);
+    }
+  });
+} // // localStorage initialization
+// if (localStorage.getItem("isLoggedIn") === null) {
+//   localStorage.setItem("isLoggedIn", "false");
+// }
+// const CORRECT_PWD = "password";
+// const LOGIN_FORM = document.getElementById("login-form");
+// Check entered password with correct password
+// LOGIN_FORM.addEventListener("submit", function (event) {
+//   // Get email and password values, and wrong password message
+//   const ENTERED_EMAIL = LOGIN_FORM.email.value;
+//   const ENTERED_PWD = LOGIN_FORM.password.value;
+//   const WRONG_PWD_MSG = document.getElementById("wrong-pwd");
+//
+//   // Set email value as local storage item
+//   localStorage.setItem("email", ENTERED_EMAIL);
+//
+//   if (ENTERED_PWD !== CORRECT_PWD) {
+//     // Display wrong password message
+//     WRONG_PWD_MSG.setAttribute("style", "display: block");
+//     event.preventDefault();   // Stop form from submitting
+//     return false;
+//   } else {
+//     // Set login status to 'true'
+//     localStorage["isLoggedIn"] = "true";
+//     return true;
+//   }
+// })
+
+},{"./firebase/script":1}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1476,7 +1557,7 @@ function registerAnalytics() {
 
 registerAnalytics();
 
-},{"@firebase/app":3,"@firebase/component":6,"@firebase/installations":8,"@firebase/logger":9,"@firebase/util":10}],3:[function(require,module,exports){
+},{"@firebase/app":4,"@firebase/component":7,"@firebase/installations":9,"@firebase/logger":10,"@firebase/util":11}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2185,7 +2266,7 @@ function registerCoreComponents(variant) {
 
 registerCoreComponents('');
 
-},{"@firebase/component":6,"@firebase/logger":9,"@firebase/util":10}],4:[function(require,module,exports){
+},{"@firebase/component":7,"@firebase/logger":10,"@firebase/util":11}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14236,7 +14317,7 @@ registerAuth("Browser"
 /* BROWSER */
 );
 
-},{"@firebase/app":3,"@firebase/component":6,"@firebase/logger":9,"@firebase/util":10,"tslib":46}],5:[function(require,module,exports){
+},{"@firebase/app":4,"@firebase/component":7,"@firebase/logger":10,"@firebase/util":11,"tslib":47}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14723,7 +14804,7 @@ require("@firebase/logger");
 
 require("@firebase/component");
 
-},{"./index-8593558d.js":4,"@firebase/app":3,"@firebase/component":6,"@firebase/logger":9,"@firebase/util":10,"tslib":46}],6:[function(require,module,exports){
+},{"./index-8593558d.js":5,"@firebase/app":4,"@firebase/component":7,"@firebase/logger":10,"@firebase/util":11,"tslib":47}],7:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15201,7 +15282,7 @@ class ComponentContainer {
 
 exports.ComponentContainer = ComponentContainer;
 
-},{"@firebase/util":10}],7:[function(require,module,exports){
+},{"@firebase/util":11}],8:[function(require,module,exports){
 (function (process){(function (){
 "use strict";Object.defineProperty(exports,"__esModule",{value:true});exports._cast=Tc;exports._debugAssert=U;exports._isBase64Available=gt;exports._logWarn=O;exports._validateIsNotUsedTogether=mc;exports.addDoc=Th;exports.arrayRemove=Dh;exports.arrayUnion=Sh;exports.clearIndexedDbPersistence=Qc;exports.collection=Vc;exports.collectionGroup=Sc;exports.connectFirestoreEmulator=Rc;exports.deleteDoc=ph;exports.deleteField=vh;exports.disableNetwork=zc;exports.doc=Dc;exports.documentId=tu;exports.enableIndexedDbPersistence=qc;exports.enableMultiTabIndexedDbPersistence=Kc;exports.enableNetwork=Gc;exports.endAt=th;exports.endBefore=Zu;exports.ensureFirestoreConfigured=Bc;exports.executeWrite=Ah;exports.getDoc=hh;exports.getDocFromCache=fh;exports.getDocFromServer=dh;exports.getDocs=wh;exports.getDocsFromCache=_h;exports.getDocsFromServer=mh;exports.getFirestore=Lc;exports.increment=Ch;exports.initializeFirestore=Mc;exports.limit=Gu;exports.limitToLast=zu;exports.loadBundle=Jc;exports.namedQuery=Yc;exports.onSnapshot=Eh;exports.onSnapshotsInSync=Ih;exports.orderBy=Qu;exports.query=Uu;exports.queryEqual=Nc;exports.refEqual=Cc;exports.runTransaction=bh;exports.serverTimestamp=Vh;exports.setDoc=gh;exports.setLogLevel=x;exports.snapshotEqual=Mu;exports.startAfter=Yu;exports.startAt=Ju;exports.terminate=Hc;exports.updateDoc=yh;exports.waitForPendingWrites=Wc;exports.where=Ku;exports.writeBatch=Nh;exports._FieldPath=exports._EmptyAuthCredentialsProvider=exports._EmptyAppCheckTokenProvider=exports._DocumentKey=exports._DatabaseId=exports.WriteBatch=exports.Transaction=exports.Timestamp=exports.SnapshotMetadata=exports.QuerySnapshot=exports.QueryDocumentSnapshot=exports.QueryConstraint=exports.Query=exports.LoadBundleTask=exports.GeoPoint=exports.FirestoreError=exports.Firestore=exports.FieldValue=exports.FieldPath=exports.DocumentSnapshot=exports.DocumentReference=exports.CollectionReference=exports.CACHE_SIZE_UNLIMITED=exports.Bytes=exports.AbstractUserDataWriter=void 0;var _app=require("@firebase/app");var _component=require("@firebase/component");var _logger=require("@firebase/logger");var _util=require("@firebase/util");var _webchannelWrapper=require("@firebase/webchannel-wrapper");const S="@firebase/firestore";/**
  * @license
@@ -22241,7 +22322,7 @@ return new mu("arrayRemove",t);}/**
 (0,_app.registerVersion)(S,"3.4.0","esm2017");}();
 
 }).call(this)}).call(this,require('_process'))
-},{"@firebase/app":3,"@firebase/component":6,"@firebase/logger":9,"@firebase/util":10,"@firebase/webchannel-wrapper":11,"_process":45}],8:[function(require,module,exports){
+},{"@firebase/app":4,"@firebase/component":7,"@firebase/logger":10,"@firebase/util":11,"@firebase/webchannel-wrapper":12,"_process":46}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -23635,7 +23716,7 @@ registerInstallations();
 
 (0, _app.registerVersion)(name, version, 'esm2017');
 
-},{"@firebase/app":3,"@firebase/component":6,"@firebase/util":10,"idb":44}],9:[function(require,module,exports){
+},{"@firebase/app":4,"@firebase/component":7,"@firebase/util":11,"idb":45}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -23894,7 +23975,7 @@ function setUserLogHandler(logCallback, options) {
   }
 }
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 (function (global){(function (){
 "use strict";
 
@@ -26067,7 +26148,7 @@ function getModularInstance(service) {
 }
 
 }).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 (function (global){(function (){
 "use strict";
 
@@ -28885,9 +28966,9 @@ var XhrIo = esm.XhrIo = X;
 exports.XhrIo = XhrIo;
 
 }).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 module.exports = require('./lib/axios');
-},{"./lib/axios":14}],13:[function(require,module,exports){
+},{"./lib/axios":15}],14:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -29101,7 +29182,7 @@ module.exports = function xhrAdapter(config) {
   });
 };
 
-},{"../cancel/Cancel":15,"../core/buildFullPath":20,"../core/createError":21,"../defaults":27,"./../core/settle":25,"./../helpers/buildURL":30,"./../helpers/cookies":32,"./../helpers/isURLSameOrigin":35,"./../helpers/parseHeaders":37,"./../utils":40}],14:[function(require,module,exports){
+},{"../cancel/Cancel":16,"../core/buildFullPath":21,"../core/createError":22,"../defaults":28,"./../core/settle":26,"./../helpers/buildURL":31,"./../helpers/cookies":33,"./../helpers/isURLSameOrigin":36,"./../helpers/parseHeaders":38,"./../utils":41}],15:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -29157,7 +29238,7 @@ module.exports = axios; // Allow use of default import syntax in TypeScript
 
 module.exports.default = axios;
 
-},{"./cancel/Cancel":15,"./cancel/CancelToken":16,"./cancel/isCancel":17,"./core/Axios":18,"./core/mergeConfig":24,"./defaults":27,"./env/data":28,"./helpers/bind":29,"./helpers/isAxiosError":34,"./helpers/spread":38,"./utils":40}],15:[function(require,module,exports){
+},{"./cancel/Cancel":16,"./cancel/CancelToken":17,"./cancel/isCancel":18,"./core/Axios":19,"./core/mergeConfig":25,"./defaults":28,"./env/data":29,"./helpers/bind":30,"./helpers/isAxiosError":35,"./helpers/spread":39,"./utils":41}],16:[function(require,module,exports){
 'use strict';
 
 /**
@@ -29178,7 +29259,7 @@ Cancel.prototype.__CANCEL__ = true;
 
 module.exports = Cancel;
 
-},{}],16:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 'use strict';
 
 var Cancel = require('./Cancel');
@@ -29299,14 +29380,14 @@ CancelToken.source = function source() {
 
 module.exports = CancelToken;
 
-},{"./Cancel":15}],17:[function(require,module,exports){
+},{"./Cancel":16}],18:[function(require,module,exports){
 'use strict';
 
 module.exports = function isCancel(value) {
   return !!(value && value.__CANCEL__);
 };
 
-},{}],18:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -29456,7 +29537,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = Axios;
 
-},{"../helpers/buildURL":30,"../helpers/validator":39,"./../utils":40,"./InterceptorManager":19,"./dispatchRequest":22,"./mergeConfig":24}],19:[function(require,module,exports){
+},{"../helpers/buildURL":31,"../helpers/validator":40,"./../utils":41,"./InterceptorManager":20,"./dispatchRequest":23,"./mergeConfig":25}],20:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -29512,7 +29593,7 @@ InterceptorManager.prototype.forEach = function forEach(fn) {
 
 module.exports = InterceptorManager;
 
-},{"./../utils":40}],20:[function(require,module,exports){
+},{"./../utils":41}],21:[function(require,module,exports){
 'use strict';
 
 var isAbsoluteURL = require('../helpers/isAbsoluteURL');
@@ -29534,7 +29615,7 @@ module.exports = function buildFullPath(baseURL, requestedURL) {
   return requestedURL;
 };
 
-},{"../helpers/combineURLs":31,"../helpers/isAbsoluteURL":33}],21:[function(require,module,exports){
+},{"../helpers/combineURLs":32,"../helpers/isAbsoluteURL":34}],22:[function(require,module,exports){
 'use strict';
 
 var enhanceError = require('./enhanceError');
@@ -29554,7 +29635,7 @@ module.exports = function createError(message, config, code, request, response) 
   return enhanceError(error, config, code, request, response);
 };
 
-},{"./enhanceError":23}],22:[function(require,module,exports){
+},{"./enhanceError":24}],23:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -29643,7 +29724,7 @@ module.exports = function dispatchRequest(config) {
   });
 };
 
-},{"../cancel/Cancel":15,"../cancel/isCancel":17,"../defaults":27,"./../utils":40,"./transformData":26}],23:[function(require,module,exports){
+},{"../cancel/Cancel":16,"../cancel/isCancel":18,"../defaults":28,"./../utils":41,"./transformData":27}],24:[function(require,module,exports){
 'use strict';
 
 /**
@@ -29688,7 +29769,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
   return error;
 };
 
-},{}],24:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -29789,7 +29870,7 @@ module.exports = function mergeConfig(config1, config2) {
   return config;
 };
 
-},{"../utils":40}],25:[function(require,module,exports){
+},{"../utils":41}],26:[function(require,module,exports){
 'use strict';
 
 var createError = require('./createError');
@@ -29816,7 +29897,7 @@ module.exports = function settle(resolve, reject, response) {
   }
 };
 
-},{"./createError":21}],26:[function(require,module,exports){
+},{"./createError":22}],27:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -29840,7 +29921,7 @@ module.exports = function transformData(data, headers, fns) {
   return data;
 };
 
-},{"./../defaults":27,"./../utils":40}],27:[function(require,module,exports){
+},{"./../defaults":28,"./../utils":41}],28:[function(require,module,exports){
 (function (process){(function (){
 'use strict';
 
@@ -29978,11 +30059,11 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 module.exports = defaults;
 
 }).call(this)}).call(this,require('_process'))
-},{"./adapters/http":13,"./adapters/xhr":13,"./core/enhanceError":23,"./helpers/normalizeHeaderName":36,"./utils":40,"_process":45}],28:[function(require,module,exports){
+},{"./adapters/http":14,"./adapters/xhr":14,"./core/enhanceError":24,"./helpers/normalizeHeaderName":37,"./utils":41,"_process":46}],29:[function(require,module,exports){
 module.exports = {
   "version": "0.24.0"
 };
-},{}],29:[function(require,module,exports){
+},{}],30:[function(require,module,exports){
 'use strict';
 
 module.exports = function bind(fn, thisArg) {
@@ -29995,7 +30076,7 @@ module.exports = function bind(fn, thisArg) {
   };
 };
 
-},{}],30:[function(require,module,exports){
+},{}],31:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -30067,7 +30148,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
   return url;
 };
 
-},{"./../utils":40}],31:[function(require,module,exports){
+},{"./../utils":41}],32:[function(require,module,exports){
 'use strict';
 
 /**
@@ -30083,7 +30164,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
     : baseURL;
 };
 
-},{}],32:[function(require,module,exports){
+},{}],33:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -30138,7 +30219,7 @@ module.exports = (
     })()
 );
 
-},{"./../utils":40}],33:[function(require,module,exports){
+},{"./../utils":41}],34:[function(require,module,exports){
 'use strict';
 
 /**
@@ -30154,7 +30235,7 @@ module.exports = function isAbsoluteURL(url) {
   return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
 };
 
-},{}],34:[function(require,module,exports){
+},{}],35:[function(require,module,exports){
 'use strict';
 
 /**
@@ -30167,7 +30248,7 @@ module.exports = function isAxiosError(payload) {
   return (typeof payload === 'object') && (payload.isAxiosError === true);
 };
 
-},{}],35:[function(require,module,exports){
+},{}],36:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -30237,7 +30318,7 @@ module.exports = (
     })()
 );
 
-},{"./../utils":40}],36:[function(require,module,exports){
+},{"./../utils":41}],37:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -30251,7 +30332,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
   });
 };
 
-},{"../utils":40}],37:[function(require,module,exports){
+},{"../utils":41}],38:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -30306,7 +30387,7 @@ module.exports = function parseHeaders(headers) {
   return parsed;
 };
 
-},{"./../utils":40}],38:[function(require,module,exports){
+},{"./../utils":41}],39:[function(require,module,exports){
 'use strict';
 
 /**
@@ -30335,7 +30416,7 @@ module.exports = function spread(callback) {
   };
 };
 
-},{}],39:[function(require,module,exports){
+},{}],40:[function(require,module,exports){
 'use strict';
 
 var VERSION = require('../env/data').version;
@@ -30419,7 +30500,7 @@ module.exports = {
   validators: validators
 };
 
-},{"../env/data":28}],40:[function(require,module,exports){
+},{"../env/data":29}],41:[function(require,module,exports){
 'use strict';
 
 var bind = require('./helpers/bind');
@@ -30770,7 +30851,7 @@ module.exports = {
   stripBOM: stripBOM
 };
 
-},{"./helpers/bind":29}],41:[function(require,module,exports){
+},{"./helpers/bind":30}],42:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -30789,7 +30870,7 @@ Object.keys(_analytics).forEach(function (key) {
   });
 });
 
-},{"@firebase/analytics":2}],42:[function(require,module,exports){
+},{"@firebase/analytics":3}],43:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -30828,7 +30909,7 @@ var version = "9.6.0";
 
 (0, _app.registerVersion)(name, version, 'app');
 
-},{"@firebase/app":3}],43:[function(require,module,exports){
+},{"@firebase/app":4}],44:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -30847,7 +30928,7 @@ Object.keys(_auth).forEach(function (key) {
   });
 });
 
-},{"@firebase/auth":5}],44:[function(require,module,exports){
+},{"@firebase/auth":6}],45:[function(require,module,exports){
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -31165,7 +31246,7 @@ Object.keys(_auth).forEach(function (key) {
 
 }));
 
-},{}],45:[function(require,module,exports){
+},{}],46:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -31351,7 +31432,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],46:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31837,7 +31918,7 @@ function __classPrivateFieldSet(receiver, privateMap, value) {
   return value;
 }
 
-},{}],47:[function(require,module,exports){
+},{}],48:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31917,7 +31998,7 @@ var _stringify = _interopRequireDefault(require("./stringify.js"));
 var _parse = _interopRequireDefault(require("./parse.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./nil.js":49,"./parse.js":50,"./stringify.js":54,"./v1.js":55,"./v3.js":56,"./v4.js":58,"./v5.js":59,"./validate.js":60,"./version.js":61}],48:[function(require,module,exports){
+},{"./nil.js":50,"./parse.js":51,"./stringify.js":55,"./v1.js":56,"./v3.js":57,"./v4.js":59,"./v5.js":60,"./validate.js":61,"./version.js":62}],49:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32141,7 +32222,7 @@ function md5ii(a, b, c, d, x, s, t) {
 
 var _default = md5;
 exports.default = _default;
-},{}],49:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32150,7 +32231,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _default = '00000000-0000-0000-0000-000000000000';
 exports.default = _default;
-},{}],50:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32196,7 +32277,7 @@ function parse(uuid) {
 
 var _default = parse;
 exports.default = _default;
-},{"./validate.js":60}],51:[function(require,module,exports){
+},{"./validate.js":61}],52:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32205,7 +32286,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _default = /^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000)$/i;
 exports.default = _default;
-},{}],52:[function(require,module,exports){
+},{}],53:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32232,7 +32313,7 @@ function rng() {
 
   return getRandomValues(rnds8);
 }
-},{}],53:[function(require,module,exports){
+},{}],54:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32337,7 +32418,7 @@ function sha1(bytes) {
 
 var _default = sha1;
 exports.default = _default;
-},{}],54:[function(require,module,exports){
+},{}],55:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32377,7 +32458,7 @@ function stringify(arr, offset = 0) {
 
 var _default = stringify;
 exports.default = _default;
-},{"./validate.js":60}],55:[function(require,module,exports){
+},{"./validate.js":61}],56:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32485,7 +32566,7 @@ function v1(options, buf, offset) {
 
 var _default = v1;
 exports.default = _default;
-},{"./rng.js":52,"./stringify.js":54}],56:[function(require,module,exports){
+},{"./rng.js":53,"./stringify.js":55}],57:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32502,7 +32583,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const v3 = (0, _v.default)('v3', 0x30, _md.default);
 var _default = v3;
 exports.default = _default;
-},{"./md5.js":48,"./v35.js":57}],57:[function(require,module,exports){
+},{"./md5.js":49,"./v35.js":58}],58:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32586,7 +32667,7 @@ function _default(name, version, hashfunc) {
   return generateUUID;
 }
 
-},{"./parse.js":50,"./stringify.js":54}],58:[function(require,module,exports){
+},{"./parse.js":51,"./stringify.js":55}],59:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32624,7 +32705,7 @@ function v4(options, buf, offset) {
 
 var _default = v4;
 exports.default = _default;
-},{"./rng.js":52,"./stringify.js":54}],59:[function(require,module,exports){
+},{"./rng.js":53,"./stringify.js":55}],60:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32641,7 +32722,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const v5 = (0, _v.default)('v5', 0x50, _sha.default);
 var _default = v5;
 exports.default = _default;
-},{"./sha1.js":53,"./v35.js":57}],60:[function(require,module,exports){
+},{"./sha1.js":54,"./v35.js":58}],61:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32659,7 +32740,7 @@ function validate(uuid) {
 
 var _default = validate;
 exports.default = _default;
-},{"./regex.js":51}],61:[function(require,module,exports){
+},{"./regex.js":52}],62:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32681,4 +32762,4 @@ function version(uuid) {
 
 var _default = version;
 exports.default = _default;
-},{"./validate.js":60}]},{},[1]);
+},{"./validate.js":61}]},{},[2]);
