@@ -1,0 +1,35 @@
+<!-- SECOND PAGE -->
+    <div class="second-page-container">
+      <!-- The yellow box behind -->
+      <div class="behind"></div>
+
+      <!-- The content infront -->
+      <div class="grid-2 front">
+        <!-- Column 1 -->
+        <div class="column">
+          <h1 class="main-header-1">BUSINESS DEPARMENT</h1>
+          <p>
+            This is the content for the Business Department of the Fintech club.
+            This is for testing purposes only, not finalized.
+          </p>
+          <button class="primary-btn">Join Us</button>
+        </div>
+        <!-- End column 1 -->
+
+        <!-- Column 2 -->
+        <div class="column">
+          <h1 class="main-header-1">BUSINESS DEPARMENT</h1>
+          <p>
+            This is the content for the Business Department of the Fintech club. This is for testing purposes only,
+            not finalized.
+          </p>
+          <button class="primary-btn">Join Us</button>
+        </div>
+        <!-- End column 2 -->
+      </div>
+    </div>
+    <!-- END SECOND PAGE -->
+
+
+
+
