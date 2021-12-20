@@ -41,32 +41,42 @@
   <header>
     <nav>
       <ul>
-        <li><a href="#" id="home">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
+        <li><a href="#" id="projects">Projects</a></li>
         <li><span id="logo"><img src="../assets/images/club-logo.png" alt="fintech-logo"></span></li>
         <li><a href="#">Events</a></li>
         <li><a href="#">Blog</a></li>
         <li><a href="#">More</a></li>
       </ul>
-      <button onclick="window.location.href='index.html';">Sign in</button>
     </nav>
+    <button onclick="window.location.href='index.html';">Sign Out</button>
   </header>
 
-  <p>PROJECTS</p>
-  <div class="projects">
 
+  <div class="projects-heading">
     <div class="dropdown">
-      <select name="drop-menu" id="choices">
-        <option value="0" selected>Latest</option>
+      <select name="drop-menu" class="drop-menu">
+
+        <option value="0" disabled="disabled" selected="selected">All projects</option>
         <option value="1" selected>Internal Trainings</option>
         <option value="2" selected>External Events</option>
         <option value="3" selected>Signature Events</option>
-      </select><br>
+
+      </select>
     </div>
 
+
+
+    <div class="registration">
+      <img src="../assets/images/Smile.png">
+      <button>Project registration</button>
+    </div>
+  </div>
+
+
+  <div class="registration-form">
     <form method="GET" action="projects.html">
-      <p>PROJECT REGISTRATION</p>
       <!-- input name -->
       <div class="input-field">
         <label for="name" class="form-group">Your Name</label><br>
@@ -100,19 +110,19 @@
       <!-- input projects -->
       <label for="options" class="form-group">Select a project (1st preference)</label>
       <select name="project">
-        <option value="0" selected>Choose a project</option>
+        <option value="0" disabled="disabled" selected="selected">Choose a project</option>
       </select><br>
       <label for="options" class="form-group">Select a project (2nd preference)</label>
       <select name="project">
-        <option value="0" selected>Choose a project</option>
+        <option value="0" disabled="disabled" selected="selected">Choose a project</option>
       </select><br>
       <label for="options" class="form-group">Select a project (3rd preference)</label>
       <select name="project">
-        <option value="0" selected>Choose a project</option>
+        <option value="0" disabled="disabled" selected="selected">Choose a project</option>
       </select><br>
       <label for="options" class="form-group">Select a project (4th preference)</label>
       <select name="project">
-        <option value="0" selected>Choose a project</option>
+        <option value="0" disabled="disabled" selected="selected">Choose a project</option>
       </select><br>
       <button type="submit">REGISTER</button>
     </form>
@@ -150,6 +160,8 @@
   <script src="../js/vendor/modernizr-3.11.2.min.js">
   </script>
   <script src="../js/plugins.js"></script>
+  <script src="../js/projects.js"></script>
+
   <script>
     window.ga = function () {
       ga.q.push(arguments);
