@@ -17,6 +17,11 @@ body {
   width: 100%;
 }
 
+.column-60 {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
 .main-header-1 {
   color: #2B305E;
   font-size: 90px;
@@ -125,6 +130,7 @@ body {
   width: 100%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-bottom: 5rem;
+  gap: 10px;
 }
 
 .av-btn {

@@ -21,10 +21,10 @@ $grey: #77878B;
   width: 100%;
 }
 
-// .column-60 {
-//   padding-left: 10px;
-//   padding-right: 30px;
-// }
+.column-60 {
+  padding-left: 60px;
+  padding-right: 60px;
+}
 
 // HEADERS SECTION
 .main-header{
@@ -147,6 +147,7 @@ $grey: #77878B;
   width: 100%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-bottom: 5rem;
+  gap: 10px;
 }
 
 .av-btn {
