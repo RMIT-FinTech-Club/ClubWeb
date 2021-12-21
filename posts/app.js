@@ -24,24 +24,36 @@ String.prototype.replaceAll = function (find, replace) {
 };
 
 // NOTE: focus on this function only
-const generateDynamicHtml = (template, post) => {
+const generatePostHtml = (post, template) => {
   const { slug, title, author, description, coverUrl, content } = post;
   const { name, avatarUrl, username, bio } = author || {};
   if (!slug) return;
-  const html = template
-    .replaceAll("{{title}}", title)
-    .replaceAll("{{coverUrl}}", coverUrl)
-    .replaceAll("{{description}}", description)
-    .replaceAll("{{author.name}}", name)
-    .replaceAll("{{author.avatarUrl}}", avatarUrl)
-    .replaceAll("{{author.username}}", username)
-    .replaceAll("{{author.bio}}", bio)
-    .replaceAll("{{content}}", marked.parse(content));
+  return replaceAllInMap(template, {
+    "{{title}}": title,
+    "{{coverUrl}}": coverUrl,
+    "{{description}}": description,
+    "{{author.username}}": username,
+    "{{author.bio}}": bio,
+    "{{content}}": marked.parse(content),
+    "{{author.name}}": name,
+    "{{author.avatarUrl}}": avatarUrl,
+  });
+};
+
+const replaceAllInMap = (template, map) => {
+  let html = template;
+  for (const [key, value] of Object.entries(map)) {
+    html = html.replaceAll(key, value);
+  }
   return html;
 };
 
 const main = async () => {
-  const template = await readFile(path.join(__dirname, "template.html"));
+  const postTemplate = await readFile(
+    path.join(__dirname, "post.template.html")
+  );
+  const tagTemplate = await readFile(path.join(__dirname, "tag.template.html"));
+
   try {
     const res = await api.get(POSTS_ROUTE, { params: { _sort } });
     const posts = res.data || [];
@@ -51,7 +63,7 @@ const main = async () => {
       try {
         const postRes = await api.get(`${POSTS_ROUTE}/${slug}`);
         const post = postRes.data;
-        const html = generateDynamicHtml(template, post);
+        const html = generatePostHtml(post, postTemplate);
         await writeFile(path.join(__dirname, `${slug}.html`), html);
       } catch (e) {
         console.log(e);
