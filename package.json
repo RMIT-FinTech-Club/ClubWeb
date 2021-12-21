@@ -11,7 +11,7 @@
     "build": "parcel build index.html",
     "build:blog": "node posts/app.js",
     "dev": "parcel index.html --open",
-    "start": "npm run build && npm run dev",
+    "start": "npm run build && npm run build:blog && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {

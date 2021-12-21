@@ -32,11 +32,11 @@ const generateDynamicHtml = (template, post) => {
     .replaceAll("{{title}}", title)
     .replaceAll("{{coverUrl}}", coverUrl)
     .replaceAll("{{description}}", description)
-    .replaceAll("{{content}}", marked.parse(content))
     .replaceAll("{{author.name}}", name)
     .replaceAll("{{author.avatarUrl}}", avatarUrl)
     .replaceAll("{{author.username}}", username)
-    .replaceAll("{{author.bio}}", bio);
+    .replaceAll("{{author.bio}}", bio)
+    .replaceAll("{{content}}", marked.parse(content));
   return html;
 };
 
