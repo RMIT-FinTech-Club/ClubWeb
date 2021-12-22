@@ -43,7 +43,8 @@ header nav ul li a:hover {
 }
 
 header nav ul li #home,
-header nav ul li #projects {
+header nav ul li #projects,
+header nav ul li #events {
   color: #DBB968;
 }
 
