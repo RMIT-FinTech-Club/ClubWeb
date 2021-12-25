@@ -9,8 +9,9 @@
     "bundle-firebase-script": "watchify -v -t babelify js/firebase/script.js -p esmify -o js/bundles/firebase/script-bundle.js",
     "bundle-login": "watchify -v -t babelify js/login.js -p esmify -o js/bundles/login-bundle.js",
     "build": "parcel build index.html",
+    "build:blog": "node posts/app.js",
     "dev": "parcel index.html --open",
-    "start": "npm run build && npm run dev",
+    "start": "npm run build && npm run build:blog && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
@@ -29,6 +30,7 @@
     "dotenv": "^10.0.0",
     "esmify": "^2.1.1",
     "firebase": "^9.6.0",
+    "marked": "^4.0.8",
     "uuid": "^8.3.2",
     "watchify": "^4.0.0"
   }
