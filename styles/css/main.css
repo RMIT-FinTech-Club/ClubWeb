@@ -313,7 +313,7 @@ hr.hl {
 }
 
 /*TODO: Fixed font-size*/
-.left-container p, .fintech-podcast p {
+.left-container p {
   font-family: 'Bebas Neue';
   font-size: 40px;
   margin-left: 40px;
