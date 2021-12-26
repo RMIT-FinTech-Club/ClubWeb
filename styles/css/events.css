@@ -1,37 +1,65 @@
 h1 {
   text-align: center;
-  margin-top: 150px;
+  margin-top: 20vh;
   font-family: 'Bebas Neue';
   color: #2B305E;
   font-size: 65px;
   font-weight: 600;
+  letter-spacing: 4px;
 }
 
 .container {
   font-family: 'Montserrat';
+  display: flex;
+  justify-content: space-around;
+  margin: 0px 10px;
+
 }
 
 .calendar {
   width: 70%;
+  max-height: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  background: rgba(43, 48, 94, 0.03);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.calendar .calendar>img {
+  position: absolute;
+  z-index: 1;
+}
+
+iframe {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+  margin-top: 100px;
+  overflow: hidden;
+  margin-top: -76px;
+
 }
 
 .upcoming {
-  width: 30%;
+  width: 25%;
 }
 
 h2 {
   color: #DBB968;
-  font-size: 40px;
+  font-size: 35px;
   margin: 0;
-  padding-bottom: 10px;
+  padding: 10px 0px 20px 0px;
 }
 
 h3 {
   color: #9590A0;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
   margin: 0;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 
 /* Works on Firefox */
@@ -43,7 +71,7 @@ h3 {
   overflow-x: hidden;
   scrollbar-width: 15px;
   scrollbar-color: #2B305E;
-  padding: 0px 40px 0px 0px;
+  padding: 0px 20px 0px 0px;
 }
 
 
@@ -79,7 +107,7 @@ h3 {
 
 .event-photo {
   float: right;
-  padding-right: 25px;
+  padding-right: 15px;
   padding-top: 25px;
   width: fit-content;
   height: fit-content;
@@ -92,7 +120,7 @@ h3 {
 }
 
 .event-info {
-  margin-left: 30px;
+  margin-left: 15px;
   font-family: 'Montserrat';
 }
 
@@ -115,4 +143,108 @@ h3 {
   margin-bottom: 25px;
   width: 45px;
   height: fit-content;
+}
+
+.past {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin: 0px;
+  -webkit-box-shadow: 0px 35px 32px -13px rgba(0, 0, 0, 0.34) inset;
+  -moz-box-shadow: 0px 35px 32px -13px rgba(0, 0, 0, 0.34) inset;
+  box-shadow: 0px 35px 32px -13px rgba(0, 0, 0, 0.34) inset;
+}
+
+hr.hl {
+  border: 2px solid #77878B;
+  background-color: #77878B;
+  width: 35%;
+  margin-top: 100px;
+}
+
+.past>p {
+  font-family: 'Bebas Neue';
+  text-align: center;
+  font-size: 50px;
+  color: #DBB968;
+  margin: 0;
+  letter-spacing: 2px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.past-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 90vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0;
+}
+
+/* Works on Chrome, Edge, and Safari */
+.past-list::-webkit-scrollbar {
+  width: 15px;
+  border-radius: 100px;
+  height: 10px;
+  scroll-behavior: smooth;
+
+}
+
+
+.past-list::-webkit-scrollbar-track {
+  color: #2B305E;
+  background: transparent;
+}
+
+.past-list::-webkit-scrollbar-thumb {
+  background-color: #2B305E;
+  border-radius: 100px;
+  border: 3px solid #2B305E;
+}
+
+.past-events {
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin-top: 35px;
+  font-family: 'Montserrat';
+  width: 80%;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.left-container {
+  float: left;
+  width: 65%;
+  margin-left: 35px;
+}
+
+.right-container {
+  float: right;
+  margin-right: 35px;
+}
+
+.left-container p:first-child {
+  font-weight: 600;
+  font-size: 20px;
+  color: #3A3F45;
+}
+
+.left-container p:last-child {
+  color: #2B305E;
+}
+
+.right-container>p {
+  color: #2B305E;
+  font-size: 20px;
+}
+
+.past-events:hover {
+  border-radius: 10px;
+  border-color: #DBB968;
 }

@@ -50,12 +50,16 @@
         <li><a href="#">More</a></li>
       </ul>
     </nav>
-    <button onclick="window.location.href='index.html';">Sign Out</button>
+    <button onclick="window.location.href='index.html';">Sign In</button>
   </header>
 
   <h1>CALENDER</h1>
   <div class="container">
     <div class="calendar">
+      <img src="../assets/images/Smile.png">
+      <iframe
+        src="https://outlook.office365.com/owa/calendar/3d35b30c4fee45aaadfb71c403436fd8@rmit.edu.vn/cf6b928925824c9e9ec19eb94709071813520838050078851553/calendar.html"
+        frameborder="0"></iframe>
     </div>
     <div class="upcoming">
       <h2>Upcoming Events</h2>
@@ -104,6 +108,81 @@
   </div>
 
 
+  <div class="past">
+    <hr class="hl">
+    <p>PAST EVENTS</p>
+    <hr class="hl">
+  </div>
+
+  <div class="past-list">
+    <div class="past-events">
+      <div class="left-container">
+        <p>Event Name</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia, diam pretium imperdiet mattis, orci
+          lacus varius lacus, ac commodo sapien orci vel ante. </p>
+      </div>
+      <div class="right-container">
+        <p class="date">Sep 10, 2021</p>
+        <img src="../assets/images/event.png" alt="Event logo">
+      </div>
+    </div>
+    <div class="past-events" id="select-div">
+      <div class="left-container">
+        <p>Event Name</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia, diam pretium imperdiet mattis, orci
+          lacus varius lacus, ac commodo sapien orci vel ante. </p>
+      </div>
+      <div class="right-container">
+        <p>Sep 10, 2021</p>
+        <img src="../assets/images/event.png" alt="Event logo">
+      </div>
+    </div>
+    <div class="past-events">
+      <div class="left-container">
+        <p>Event Name</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia, diam pretium imperdiet mattis, orci
+          lacus varius lacus, ac commodo sapien orci vel ante. </p>
+      </div>
+      <div class="right-container">
+        <p class="date">Sep 10, 2021</p>
+        <img src="../assets/images/event.png" alt="Event logo">
+      </div>
+    </div>
+    <div class="past-events" id="select-div">
+      <div class="left-container">
+        <p>Event Name</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia, diam pretium imperdiet mattis, orci
+          lacus varius lacus, ac commodo sapien orci vel ante. </p>
+      </div>
+      <div class="right-container">
+        <p>Sep 10, 2021</p>
+        <img src="../assets/images/event.png" alt="Event logo">
+      </div>
+    </div>
+    <div class="past-events">
+      <div class="left-container">
+        <p>Event Name</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia, diam pretium imperdiet mattis, orci
+          lacus varius lacus, ac commodo sapien orci vel ante. </p>
+      </div>
+      <div class="right-container">
+        <p class="date">Sep 10, 2021</p>
+        <img src="../assets/images/event.png" alt="Event logo">
+      </div>
+    </div>
+    <div class="past-events" id="select-div">
+      <div class="left-container">
+        <p>Event Name</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia, diam pretium imperdiet mattis, orci
+          lacus varius lacus, ac commodo sapien orci vel ante. </p>
+      </div>
+      <div class="right-container">
+        <p>Sep 10, 2021</p>
+        <img src="../assets/images/event.png" alt="Event logo">
+      </div>
+    </div>
+  </div>
+
   <footer>
     <div class="left-footer">
       <img src="../assets/images/club-logo.png" alt="club-logo">
@@ -132,7 +211,15 @@
   <script src="../js/vendor/modernizr-3.11.2.min.js">
   </script>
   <script src="../js/plugins.js"></script>
+  <script>
+    document.querySelectorAll("div.past-events").forEach(function (element) {
+      element.onclick = function () {
+        element.style.border = "2px solid #DBB968";
+        element.style.borderLeft = "20px solid #DBB968";
+      };
+    })
 
+  </script>
   <script>
     window.ga = function () {
       ga.q.push(arguments);

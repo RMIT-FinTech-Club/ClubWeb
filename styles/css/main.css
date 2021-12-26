@@ -282,7 +282,7 @@ main:after {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 hr.hl {
@@ -297,7 +297,6 @@ hr.hl {
   font-size: 40px;
   color: #DBB968;
   margin: 0;
-  margin-top: 20px;
 }
 
 
