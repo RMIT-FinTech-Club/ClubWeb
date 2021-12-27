@@ -11,23 +11,29 @@
 </head>
 
 <body>
-    <h1>
-        {{title}}
-    </h1>
-    <h2>
-        {{description}}
-    </h2>
-    <img src="{{coverUrl}}">
-    <div>
-        {{content}}
+    <div class='blog'>
+        <h1>
+            {{title}}
+        </h1>
+        <h2>
+            {{description}}
+        </h2>
+        <img src="{{coverUrl}}">
+        <div class='content'>
+            {{content}}
+        </div>
+        <div>
+            <h2>Author</h2>
+            <p>{{author.username}}</p>
+            <p>{{author.name}}</p>
+            <p>{{author.bio}}</p>
+            <img src="{{author.avatarUrl}}">
+        </div>
+        <div>
+            {{tags}}
+        </div>
     </div>
-    <div>
-        <h2>Author</h2>
-        <p>{{author.username}}</p>
-        <p>{{author.name}}</p>
-        <p>{{author.bio}}</p>
-        <img src="{{author.avatarUrl}}">
-    </div>
+
 </body>
 
 </html>
