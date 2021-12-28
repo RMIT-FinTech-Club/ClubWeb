@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <title>FinTech | Login</title>
+  <title>FinTech | Blog</title>
   <meta name="description" content=""/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
@@ -60,15 +60,40 @@
 </header>
 
 <main class="dialog-container">
+  <h1>BLOG</h1>
   <section id="hero">
-    <picture>
-      <source srcset="../../assets/images/blockchain-forum.png" media="(min-width: 839px)"/>
-      <source srcset="../../assets/images/blockchain-forum.png" media="(min-width: 301px)"/>
-      <img src="../../assets/images/blockchain-forum.png" alt="Rainbow hero image banner."/>
-    </picture>
+    <div id="nav-search-filter">Filter<i class="fas fa-caret-down ml-10"></i>
+      <div id="nav-search-filter-level-1">
+        <div class="nav-search-filter-option">All</div>
+        <hr>
+        <div class="nav-search-filter-option">DEPARTMENT</div>
+          <div id="nav-search-filter-level-2-1">
+            <div class="nav-search-filter-option">Technology</div>
+            <hr>
+            <div class="nav-search-filter-option">Business</div>
+          </div>
+        </div>
+        <hr>
+        <div class="nav-search-filter-option">EVENTS</div>
+          <div id="nav-search-filter-level-2-2">
+            <div class="nav-search-filter-option">Latest</div>
+            <hr>
+            <div class="nav-search-filter-option">Archived</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="nav-search">
+      <form action="browse" method="get" target="_blank">
+        <label for="q"></label>
+        <input class="nav-seach-bar" id="q" name="q" type="search" placeholder="Search" value="">
+      </form>
+    </div>
+    <div class="nav-search-bttn"><i class="fas fa-search"></i></div>
   </section>
+
   <section id="mission">
-    <h1>OUR MISSION</h1>
+    <h2>OUR MISSION</h2>
     <div class="missiontext">
       <img src="../../assets/images/magazine-cover.jpg" alt="Logo for Wall of Wonder." class="missionimg"/>
       <p>
@@ -76,84 +101,134 @@
       </p>
     </div>
   </section>
-  <div class="stripe">
+  <div class="stripe container">
     <section id="popular">
-      <h1>OUR PICKS</h1>
+      <h2>OUR PICKS</h2>
       <ul>
         <li>
-          <figure class="color8">
-            <img src="../../assets/images/upcoming-event-temp-image-2.PNG" alt="Fork on green background"/>
-            <figcaption><a href="#">Fork It Up</a></figcaption>
+          <figure class="color8 card">
+            <div class="face face1">
+              <div class="content">
+                <img src="../../assets/images/upcoming-event-temp-image-2.PNG" alt="Fork on green background"/>
+                <h3><a href="#">Fork It Up</a></h3>
+              </div>
+            </div>
+            <div class="face face2">
+              <div class="content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab repudiandae, explicabo voluptate et hic cum ratione a. Officia delectus illum perferendis maiores quia molestias vitae fugiat aspernatur alias corporis?
+                </p>
+                <a href="#" type="button">Read More</a>
+              </div>
+            </div>
           </figure>
         </li>
         <li>
-          <figure class="color7">
-            <img src="../../assets/images/upcoming-event-temp-image-1.PNG"
+          <figure class="color7 card">
+            <div class="face face1">
+              <div class="content">
+            <img src="../../assets/images/upcoming-event-temp-image-2.PNG"
                  alt="Viewing part of an orange car with an oversized headlight."/>
-            <figcaption><a href="#">Eyeing You</a></figcaption>
+            <h3><a href="#">Eyeing You</a></h3>
+              </div>
+            </div>
+            <div class="face face2">
+              <div class="content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab repudiandae, explicabo voluptate et hic cum ratione a. Officia delectus illum perferendis maiores quia molestias vitae fugiat aspernatur alias corporis?
+                </p>
+                <a href="#" type="button">Read More</a>
+              </div>
+            </div>
           </figure>
         </li>
         <li>
-          <figure class="color4">
+          <figure class="color4 card">
+            <div class="face face1">
+              <div class="content">
             <img src="../../assets/images/upcoming-event-temp-image-2.PNG" alt="Vespa scooter parked on a street."/>
-            <figcaption><a href="#">Let's Scoot</a></figcaption>
+            <h3><a href="#">Let's Scoot</a></h3>
+              </div>
+            </div>
+            <div class="face face2">
+              <div class="content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab repudiandae, explicabo voluptate et hic cum ratione a. Officia delectus illum perferendis maiores quia molestias vitae fugiat aspernatur alias corporis?
+                </p>
+                <a href="#" type="button">Read More</a>
+              </div>
+            </div>
           </figure>
         </li>
       </ul>
     </section>
   </div>
-  <section id="featured">
-    <h1>Featured Print</h1>
+  <section id="featured" class="container">
+    <h2>Featured Print</h2>
 
-    <figure class="color6">
+    <figure class="color6 card">
+      <div class="face face1">
+        <div class="content">
       <img sizes="(min-width: 300px) 33.3vw, 100vw" srcset="
-            ../../assets/images/upcoming-events-main-image.jpg   300w,
-            ../../assets/images/upcoming-events-main-image.jpg   740w,
-            ../../assets/images/upcoming-events-main-image.jpg 1058w,
-            ../../assets/images/upcoming-events-main-image.jpg 1200w
-          " src="../../assets/images/upcoming-events-main-image.jpg"
-           alt="Closeup of woman in sunglasses showing eyes, nose, and fingers over mouth."/>
+            ../../assets/images/blockchain-forum.png   300w,
+            ../../assets/images/blockchain-forum.png   740w,
+            ../../assets/images/blockchain-forum.png 1058w,
+            ../../assets/images/blockchain-forum.png 1200w
+          " src="../../assets/images/blockchain-forum.png"
+           alt="Blockchain forum."/>
 
-      <figcaption><a href="#">Too Cool for School</a></figcaption>
+      <h3><a href="#">Too Cool for School</a></h3>
+          <div class="face face2">
+            <div class="content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab repudiandae, explicabo voluptate et hic cum ratione a. Officia delectus illum perferendis maiores quia molestias vitae fugiat aspernatur alias corporis?
+              </p>
+              <a href="#" type="button">Read More</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </figure>
   </section>
   <section id="collections">
-    <h1>Collections</h1>
+
+    <h2>Collections</h2>
     <ul>
       <li>
-        <figure class="color7">
+        <figure class="color7 card">
           <img src="../../assets/images/upcoming-event-temp-image-2.PNG" alt="Pop Art: This must be the place"/>
-          <figcaption><a href="#">Pop Art</a></figcaption>
+          <h3><a href="#">Pop Art</a></h3>
         </figure>
       </li>
       <li>
-        <figure class="color2">
+        <figure class="color2 card">
           <img src="../../assets/images/upcoming-event-temp-image-2.PNG" alt="Abstract: grey and green squares."/>
-          <figcaption><a href="#">Abstract</a></figcaption>
+          <h3><a href="#">Abstract</a></h3>
         </figure>
       </li>
       <li>
-        <figure class="color6">
+        <figure class="color6 card">
           <img src="../../assets/images/upcoming-event-temp-image-2.PNG" alt="Tree on island in lake with purple sunrise."/>
-          <figcaption><a href="#">Vivid</a></figcaption>
+          <h3><a href="#">Vivid</a></h3>
         </figure>
       </li>
       <li>
-        <figure class="color8">
+        <figure class="color8 card">
           <img src="../../assets/images/upcoming-event-temp-image-2.PNG" alt="Music: guitar leaning against wall."/>
-          <figcaption><a href="#">Music</a></figcaption>
+          <h3><a href="#">Music</a></h3>
         </figure>
       </li>
       <li>
-        <figure class="color4">
+        <figure class="color4 card">
           <img src="../../assets/images/upcoming-event-temp-image-2.PNG" alt="Vehicles: 1930's car on street."/>
-          <figcaption><a href="#">Vehicles</a></figcaption>
+          <h3><a href="#">Vehicles</a></h3>
         </figure>
       </li>
       <li>
-        <figure class="color3">
+        <figure class="color3 card">
           <img src="../../assets/images/upcoming-event-temp-image-2.PNG" alt="Landscape: moonrise over tree-covered mountains."/>
-          <figcaption><a href="#">Landscape</a></figcaption>
+          <h3><a href="#">Landscape</a></h3>
         </figure>
       </li>
     </ul>
