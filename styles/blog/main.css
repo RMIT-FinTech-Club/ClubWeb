@@ -329,7 +329,7 @@ a {
 .container .card .face.face2 .content a:hover {
   background: #333;
   color: whitesmoke;
-  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -350,6 +350,19 @@ p {
 .missionimg {
   max-height: 100px;
   display: block;
+}
+
+/*scroll to top button*/
+#scrollToTopBtn {
+  background-color: var(--color3);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 48px;
+  width: 48px;
+  margin-left: 69rem;
 }
 
 /* turn on flexbox here - prior to this, elements stacked individually as blocks */
