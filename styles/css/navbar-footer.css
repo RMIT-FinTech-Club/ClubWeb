@@ -47,7 +47,8 @@ header nav ul li #projects {
   color: #DBB968;
 }
 
-header>button {
+header>button,
+#header-btn {
   display: block;
   position: relative;
   float: right;
