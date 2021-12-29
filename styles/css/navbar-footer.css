@@ -4,7 +4,7 @@ header {
   margin: auto;
   position: absolute;
   height: 80px;
-  width: 100vw;
+  width: 100%;
   background-color: rgba(43, 48, 94, 0.85);
   top: 0;
   left: 0;
