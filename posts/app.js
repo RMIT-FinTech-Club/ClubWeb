@@ -8,6 +8,7 @@ const api = axios.create({
 });
 const POSTS_ROUTE = "/posts";
 const _sort = "created_at:DESC";
+const templatePath = path.join(__dirname, "templates");
 
 const readFile = async (path) => {
   const file = await fs.promises.readFile(path, "utf-8");
@@ -34,10 +35,8 @@ const templatize = (template, map) => {
 };
 
 const main = async () => {
-  const postTemplate = await readFile(
-    path.join(__dirname, "post.template.html")
-  );
-  const tagTemplate = await readFile(path.join(__dirname, "tag.template.html"));
+  const postTemplate = await readFile(path.join(templatePath, "post.html"));
+  const tagTemplate = await readFile(path.join(templatePath, "tag.html"));
 
   const generateTagHtml = (tag) => {
     const { name, slug } = tag;
