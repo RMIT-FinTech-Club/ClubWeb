@@ -8,6 +8,7 @@ const api = axios.create({
 });
 const POSTS_ROUTE = "/posts";
 const _sort = "created_at:DESC";
+const templatePath = path.join(__dirname, "templates");
 
 const readFile = async (path) => {
   const file = await fs.promises.readFile(path, "utf-8");
@@ -24,35 +25,52 @@ String.prototype.replaceAll = function (find, replace) {
 };
 
 // NOTE: focus on this function only
-const generatePostHtml = (post, template) => {
-  const { slug, title, author, description, coverUrl, content } = post;
-  const { name, avatarUrl, username, bio } = author || {};
-  if (!slug) return;
-  return replaceAllInMap(template, {
-    "{{title}}": title,
-    "{{coverUrl}}": coverUrl,
-    "{{description}}": description,
-    "{{author.username}}": username,
-    "{{author.bio}}": bio,
-    "{{content}}": marked.parse(content),
-    "{{author.name}}": name,
-    "{{author.avatarUrl}}": avatarUrl,
-  });
-};
 
-const replaceAllInMap = (template, map) => {
-  let html = template;
+const templatize = (template, map) => {
+  let content = template;
   for (const [key, value] of Object.entries(map)) {
-    html = html.replaceAll(key, value);
+    content = content.replaceAll(key, value);
   }
-  return html;
+  return content;
 };
 
 const main = async () => {
-  const postTemplate = await readFile(
-    path.join(__dirname, "post.template.html")
-  );
-  const tagTemplate = await readFile(path.join(__dirname, "tag.template.html"));
+  const postTemplate = await readFile(path.join(templatePath, "post.html"));
+  const tagTemplate = await readFile(path.join(templatePath, "tag.html"));
+
+  const generateTagHtml = (tag) => {
+    const { name, slug } = tag;
+    return templatize(tagTemplate, {
+      "{{name}}": name,
+      "{{slug}}": slug,
+    });
+  };
+
+  const generatePostHtml = (post) => {
+    const {
+      slug,
+      title,
+      author,
+      description,
+      coverUrl,
+      content,
+      tags = [],
+    } = post;
+    const { name, avatarUrl, username, bio } = author || {};
+    const tagsHtml = tags.map((tag) => generateTagHtml(tag)).join("");
+    if (!slug) return;
+    return templatize(postTemplate, {
+      "{{title}}": title,
+      "{{coverUrl}}": coverUrl,
+      "{{description}}": description,
+      "{{author.username}}": username,
+      "{{author.bio}}": bio,
+      "{{content}}": marked.parse(content),
+      "{{author.name}}": name,
+      "{{author.avatarUrl}}": avatarUrl,
+      "{{tags}}": tagsHtml,
+    });
+  };
 
   try {
     const res = await api.get(POSTS_ROUTE, { params: { _sort } });

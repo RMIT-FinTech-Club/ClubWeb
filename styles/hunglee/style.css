@@ -1,29 +1,32 @@
 html {
   font-size: 62.5%;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .sub-header-1 {
   color: #DBB968;
 }
+
 .sub-header-2 {
   color: white;
 }
 
 .main-header-1 {
   color: #2B305E;
-  font-family: "Bebas Neue", cursive;
+  font-family: 'Bebas Neue', cursive;
 }
+
 .main-header-2 {
   color: white;
-  font-family: "Bebas Neue", cursive;
+  font-family: 'Bebas Neue', cursive;
 }
 
 .paragraph {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .content-col-2 {
+  display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
@@ -37,11 +40,13 @@ html {
   border-radius: 15px;
   color: white;
   background-color: #DBB968;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   padding: 10px 24px;
   border: none;
 }
+
 .btn-primary:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)));
   background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
   cursor: pointer;
 }
@@ -52,18 +57,24 @@ html {
   background-color: none;
   border: none;
 }
+
 .btn-avatar:hover {
   opacity: 0.8;
   cursor: pointer;
 }
 
 .board {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .board > * {
-  flex: 1 0 21%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 21%;
+          flex: 1 0 21%;
   margin: 5px;
 }
 
@@ -74,20 +85,26 @@ html {
 }
 
 .tabs-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 90px;
   position: absolute;
   bottom: 0px;
 }
+
 .tabs-container > * {
-  font-family: "Bebas Neue", cursive;
+  font-family: 'Bebas Neue', cursive;
   color: white;
   height: 100px;
   width: 100px;
   text-align: center;
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
+
 .tabs-container > *:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)));
   background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
   cursor: pointer;
 }
@@ -95,12 +112,15 @@ html {
 .tab-1 {
   background-color: #2B305E;
 }
+
 .tab-2 {
   background-color: #DBB968;
 }
+
 .tab-3 {
   background-color: #C9D6EA;
 }
+
 .tab-4 {
   background-color: #77878B;
 }
@@ -128,5 +148,4 @@ html {
   background-color: #DBB968;
   z-index: 1;
 }
-
 /*# sourceMappingURL=style.css.map */
