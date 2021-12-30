@@ -1,3 +1,14 @@
+// source of spotify podcast eps
+let spotifyPodcast = [
+  "https://open.spotify.com/embed/episode/3BKByrghO9kybXv0VmDErL?utm_source=generator",
+  "https://open.spotify.com/embed/episode/2C0eiVMeNYIex5OEPQXhLm?utm_source=generator",
+  "https://open.spotify.com/embed/episode/2szc79vEhkESgNAMYInAf9?utm_source=generator",
+  "https://open.spotify.com/embed/episode/4g7tVZk3MJQNGZU14rMFzu?utm_source=generator"
+]
+
+const SPOTIFY_EPS = document.querySelector("#spotify-podcast")
+SPOTIFY_EPS.setAttribute("src", spotifyPodcast[1])
+
 //Podcast in Homepage starts here
 let previous = document.querySelector('#pre');
 let play = document.querySelector('#play');
@@ -13,7 +24,6 @@ let playing_song = false;
 
 //create a audio Element
 let track = document.createElement('audio');
-
 
 //podcast list
 let podcast = [{
@@ -88,7 +98,7 @@ function previous_song() {
   }
 }
 
-//change slider position 
+//change slider position
 function change_duration() {
   slider_position = track.duration * (slider.value / 100);
   track.currentTime = slider_position;

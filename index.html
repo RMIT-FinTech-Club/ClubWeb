@@ -40,10 +40,10 @@
   <header>
     <nav>
       <ul>
-        <li><a href="../index.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><span id="logo"><img src="../assets/images/club-logo.png" alt="fintech-logo"></span></li>
+        <li><a href="/pages/projects.html">Projects</a></li>
+        <li><span id="logo"><img src="assets/images/club-logo.png" alt="fintech-logo"></span></li>
         <li><a href="events.html" id="events">Events</a></li>
         <li><a href="#">Blog</a></li>
         <li><a href="#">More</a></li>
@@ -83,30 +83,11 @@
 
   <!--Fintech Podcast starts here-->
   <div class="fintech-podcast">
-    <div class="left-container">
       <p>FINTECH PODCAST</p>
-      <img src="assets/images/podcast-cover.jpg" alt="fintech-podcast-episode-3">
-    </div>
-    <div class="right-container">
-      <div class="info">
-        <p class="title">Episode 3: Stablecoin & Tether</p>
-
-        <div class="duration">
-          <p>0:00</p>
-          <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
-          <p>38:45</p>
-        </div>
-
-        <div class="audio-buttons">
-          <button onclick="previous_podcast()" id="pre"><i class="fa fa-backward" aria-hidden="true"></i></button>
-          <button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
-          <button onabort="next_podcast()" id="next"><i class="fa fa-forward" aria-hidden="true"></i></button>
-        </div>
-      </div>
-      <div class="buttons">
-        <button onclick="window.location.href='index.html';">SEE ALL</button>
-      </div>
-    </div>
+      <iframe id="spotify-podcast" src=""
+              width="100%" height="232" frameBorder="0" allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+      </iframe>
   </div>
 
   <!--Fintech Podcast starts here-->
