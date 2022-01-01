@@ -7,7 +7,25 @@ let spotifyPodcast = [
 ]
 
 const SPOTIFY_EPS = document.querySelector("#spotify-podcast")
-SPOTIFY_EPS.setAttribute("src", spotifyPodcast[1])
+SPOTIFY_EPS.setAttribute("src", spotifyPodcast[0])
+
+const PREVIOUS_BTN = document.querySelector("#prev-btn")
+const NEXT_BTN = document.querySelector("#next-btn")
+
+const findIdx = () => {
+  const src = SPOTIFY_EPS.getAttribute("src")
+  return spotifyPodcast.indexOf(src)
+}
+
+PREVIOUS_BTN.addEventListener("click", () => {
+  const srcIdx = findIdx()
+  SPOTIFY_EPS.src=spotifyPodcast[srcIdx - 1]
+})
+
+NEXT_BTN.addEventListener("click", () => {
+  const srcIdx = findIdx()
+  SPOTIFY_EPS.src=spotifyPodcast[srcIdx + 1]
+})
 
 //Podcast in Homepage starts here
 let previous = document.querySelector('#pre');
