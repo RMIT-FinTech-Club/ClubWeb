@@ -34,8 +34,16 @@ async function findOneById(id) {
 // Firestore is schemaless so it is up to front-end to decide which fields to save
 
 async function create(item) {
-  const { name, startDate, endDate, description } = item;
-  const dto = { name, startDate, endDate, description, members: {} };
+  const { name, startDate, endDate, description, slug, coverUrl } = item;
+  const dto = {
+    name,
+    startDate,
+    endDate,
+    description,
+    slug,
+    coverUrl,
+    members: {},
+  };
   const docRef = await addDoc(projectCollection, {
     ...dto,
   });
@@ -58,8 +66,8 @@ async function remove(id) {
 
 async function addMember(projectId, member) {
   const docRef = getDocRef(projectId);
-  const { name, email, joinedAt, rewardedtoken, role, status, kpi } = member;
-  const dto = { name, email, joinedAt, rewardedtoken, role, status, kpi };
+  const { name, email, joinedAt, rewardedToken, role, status, kpi } = member;
+  const dto = { name, email, joinedAt, rewardedToken, role, status, kpi };
 
   await updateDoc(docRef, {
     [`members.${email}`]: dto,
@@ -68,8 +76,8 @@ async function addMember(projectId, member) {
 
 async function updateMember(projectId, member) {
   const docRef = getDocRef(projectId);
-  const { name, joinedAt, rewardedtoken, role, status, kpi } = member;
-  const dto = { name, joinedAt, rewardedtoken, role, status, kpi };
+  const { name, joinedAt, rewardedToken, role, status, kpi } = member;
+  const dto = { name, joinedAt, rewardedToken, role, status, kpi };
   const updatedFields = {};
   for (const [key, value] of Object.entries(dto)) {
     if (value === undefined) continue;

@@ -1,7 +1,7 @@
 const { marked } = require("marked");
 const axios = require("axios").default;
-const fs = require("fs");
 const path = require("path");
+const { readFile, writeFile, templatize } = require("../js/util/ssg");
 
 const api = axios.create({
   baseURL: "https://fintech-blog-cms.herokuapp.com",
@@ -9,30 +9,6 @@ const api = axios.create({
 const POSTS_ROUTE = "/posts";
 const _sort = "created_at:DESC";
 const templatePath = path.join(__dirname, "templates");
-
-const readFile = async (path) => {
-  const file = await fs.promises.readFile(path, "utf-8");
-  return file.toString();
-};
-
-const writeFile = async (path, content) => {
-  await fs.promises.writeFile(path, content, "utf-8");
-};
-
-String.prototype.replaceAll = function (find, replace) {
-  const str = this;
-  return str.replace(new RegExp(find, "g"), replace);
-};
-
-// NOTE: focus on this function only
-
-const templatize = (template, map) => {
-  let content = template;
-  for (const [key, value] of Object.entries(map)) {
-    content = content.replaceAll(key, value);
-  }
-  return content;
-};
 
 const main = async () => {
   const postTemplate = await readFile(path.join(templatePath, "post.html"));
@@ -58,8 +34,8 @@ const main = async () => {
     } = post;
     const { name, avatarUrl, username, bio } = author || {};
     const tagsHtml = tags.map((tag) => generateTagHtml(tag)).join("");
-    if (!slug) return;
     return templatize(postTemplate, {
+      "{{slug}}": slug,
       "{{title}}": title,
       "{{coverUrl}}": coverUrl,
       "{{description}}": description,
