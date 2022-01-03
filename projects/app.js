@@ -4,6 +4,8 @@ const { readFile, writeFile, templatize } = require("../js/util/ssg");
 const { db } = require("../js/firebase-admin");
 
 const templatePath = path.join(__dirname, "templates");
+const pagePath = path.join(templatePath, "pages");
+const componentPath = path.join(templatePath, "components");
 
 const projectCollection = db.collection("projects");
 
@@ -14,13 +16,18 @@ const getAllProjects = async () => {
 };
 
 const main = async () => {
-  const projectTemplate = await readFile(
-    path.join(templatePath, "project.html")
+  // Pages
+  const IndexPage = await readFile(path.join(pagePath, "index.html"));
+  const ProjectPage = await readFile(path.join(pagePath, "project.html"));
+
+  // Components
+  const ProjectItem = await readFile(
+    path.join(componentPath, "ProjectItem.html")
   );
 
   const generateProjectHtml = (project) => {
     const { name, startDate, endDate, description, slug, coverUrl } = project;
-    return templatize(projectTemplate, {
+    return templatize(ProjectPage, {
       "{{name}}": name,
       "{{startDate}}": startDate,
       "{{endDate}}": endDate,
@@ -30,8 +37,34 @@ const main = async () => {
     });
   };
 
+  const generateProjectItemHtml = (project) => {
+    const { name, startDate, endDate, slug, coverUrl } = project;
+    return templatize(ProjectItem, {
+      "{{name}}": name,
+      "{{startDate}}": startDate,
+      "{{endDate}}": endDate,
+      "{{slug}}": slug,
+      "{{coverUrl}}": coverUrl,
+    });
+  };
+
+  const generateIndexPageHtml = (projects) => {
+    const projectsHtml = projects
+      .map((project) => generateProjectItemHtml(project))
+      .join("\n");
+    return templatize(IndexPage, {
+      "{{projects}}": projectsHtml,
+    });
+  };
+
   try {
     const projects = await getAllProjects();
+
+    // Generate home page
+    const indexHtml = generateIndexPageHtml(projects);
+    await writeFile(path.join(__dirname, "index.html"), indexHtml);
+
+    // Generate individual pages
     for (const project of projects) {
       const { slug } = project;
       if (!slug) continue;

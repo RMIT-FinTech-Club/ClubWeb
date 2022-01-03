@@ -2,7 +2,7 @@
   "name": "rmit-fintech-club-web",
   "version": "0.0.1",
   "description": "",
-  "keywords": "",
+  "keywords": [],
   "license": "",
   "author": "",
   "scripts": {
@@ -11,8 +11,9 @@
     "build": "parcel build index.html",
     "build:blog": "node posts/app.js",
     "build:projects": "node projects/app.js",
+    "ssg": "npm run build:blog && npm run build:projects",
     "dev": "parcel index.html --open",
-    "start": "npm run build && npm run build:blog && npm run dev",
+    "start": "npm run build && npm run ssg && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
