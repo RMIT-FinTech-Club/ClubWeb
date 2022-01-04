@@ -1,4 +1,12 @@
 .blog .content h1 {
   font-size: x-large;
 }
+
+.blog .content h2 {
+  font-size: large;
+}
+
+.tag {
+  background-color: yellow;
+}
 /*# sourceMappingURL=blog.css.map */

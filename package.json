@@ -2,7 +2,7 @@
   "name": "rmit-fintech-club-web",
   "version": "0.0.1",
   "description": "",
-  "keywords": "",
+  "keywords": [],
   "license": "",
   "author": "",
   "scripts": {
@@ -10,8 +10,10 @@
     "bundle-login": "watchify -v -t babelify js/login.js -p esmify -o js/bundles/login-bundle.js",
     "build": "parcel build index.html",
     "build:blog": "node posts/app.js",
+    "build:projects": "node projects/app.js",
+    "ssg": "npm run build:blog && npm run build:projects",
     "dev": "parcel index.html --open",
-    "start": "npm run build && npm run build:blog && npm run dev",
+    "start": "npm run build && npm run ssg && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
@@ -30,6 +32,7 @@
     "dotenv": "^10.0.0",
     "esmify": "^2.1.1",
     "firebase": "^9.6.0",
+    "firebase-admin": "^10.0.1",
     "marked": "^4.0.8",
     "uuid": "^8.3.2",
     "watchify": "^4.0.0"
