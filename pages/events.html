@@ -17,9 +17,8 @@
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="../styles/css/normalize.css" />
-  <link rel="stylesheet" href="../styles/css/navbar-footer.css" />
   <link rel="stylesheet" href="../styles/css/events.css" />
-
+  <link rel="stylesheet" href="../styles/css/navbar-footer.css" />
 
   <!--Fonts Links-->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -41,148 +40,74 @@
   <header>
     <nav>
       <ul>
-        <li><a href="../index.html">Home</a></li>
+        <li><span id="logo"><img src="../assets/images/club-logo.png" alt="fintech-logo"></span></li>
+        <li><a href="../index.html" id="home">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><span id="logo"><img src="../assets/images/club-logo.png" alt="fintech-logo"></span></li>
-        <li><a href="events.html" id="events">Events</a></li>
+        <li><a href="events.html">Events</a></li>
         <li><a href="#">Blog</a></li>
         <li><a href="#">More</a></li>
       </ul>
     </nav>
-    <button onclick="window.location.href='index.html';">Sign In</button>
+    <div class="btns">
+      <button onclick="window.location.href='index.html';">Sign In</button>
+      <button id="wallet" onclick="window.location.href='index.html';">Connect to Wallet</button>
+    </div>
   </header>
 
-  <h1>CALENDAR</h1>
-  <div class="container">
-    <div class="calendar">
-      <img src="../assets/images/Smile.png">
-      <iframe
-        src="https://outlook.office365.com/owa/calendar/3d35b30c4fee45aaadfb71c403436fd8@rmit.edu.vn/cf6b928925824c9e9ec19eb94709071813520838050078851553/calendar.html"
-        frameborder="0"></iframe>
-    </div>
-    <div class="upcoming">
-      <h2>Upcoming Events</h2>
-      <h3>Scroll to see more</h3>
-      <div class="upcoming-list">
-        <!--first event-->
-        <div class="upcoming-events">
-          <span class="event-photo">
-            <img src="../assets/images/web-training.jpg">
-          </span>
-          <p class="event-info event-name">Web Training Series</p>
-          <p class="event-info datetime">Nov 2, 9:00 AM - 10:00 AM </p>
-          <span class="event-info departments">
-            <img src="../assets/images/In-VPre.png" alt="vice president">
-            <img src="../assets/images/Head HR.png" alt="head of">
-            <img src="../assets/images/Head HR.png" alt="vice president">
-          </span>
-        </div>
-        <!--second event-->
-        <div class="upcoming-events">
-          <span class="event-photo">
-            <img src="../assets/images/blockchain-forum.png">
-          </span>
-          <p class="event-info event-name">Blockchain</p>
-          <p class="event-info datetime">Nov 12, 11:00 AM - 4:00 PM </p>
-          <span class="event-info departments">
-            <img src="../assets/images/In-VPre.png" alt="vice president">
-            <img src="../assets/images/Head HR.png" alt="head of">
-          </span>
-        </div>
-        <!--third event-->
-        <div class="upcoming-events">
-          <span class="event-photo">
-            <img src="../assets/images/podcast-cover.jpg">
-          </span>
-          <p class="event-info event-name">Podcast</p>
-          <p class="event-info datetime">Dec 5, 11:00 PM - 4:00 AM </p>
-          <span class="event-info departments">
-            <img src="../assets/images/In-VPre.png" alt="vice president">
-            <img src="../assets/images/Head HR.png" alt="head of">
-            <img src="../assets/images/Head HR.png" alt="vice president">
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="past">
-    <hr class="hl">
-    <p>PAST EVENTS</p>
+  <!--Events page starts here-->
+  <p class="title">EVENTS</p>
+  <div class="subtitle">
+    <p>UPCOMING EVENTS</p>
     <hr class="hl">
   </div>
 
-  <div class="past-list">
-    <div class="past-events">
-      <div class="left-container">
-        <p>Event Name</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia, diam pretium imperdiet mattis, orci
-          lacus varius lacus, ac commodo sapien orci vel ante. </p>
+  <div class="events-list">
+    <p class="month">January</p>
+    <div class="event">
+      <div class="left">
+        <p class="date">14</p>
+        <p class="day">Fri</p>
       </div>
-      <div class="right-container">
-        <p class="date">Sep 10, 2021</p>
-        <img src="../assets/images/event.png" alt="Event logo">
+      <div class="mid">
+        <p class="event-name">RMIT CAREER MENTORING</p>
+        <div class="event-info">
+          <i class="fa fa-clock-o" aria-hidden="true"></i>
+          <p>9:00 AM - 10:00 AM</p>
+        </div>
+        <div class="event-info">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <p> &nbsp; Teams</p>
+        </div>
       </div>
-    </div>
-    <div class="past-events" id="select-div">
-      <div class="left-container">
-        <p>Event Name</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia, diam pretium imperdiet mattis, orci
-          lacus varius lacus, ac commodo sapien orci vel ante. </p>
-      </div>
-      <div class="right-container">
-        <p>Sep 10, 2021</p>
-        <img src="../assets/images/event.png" alt="Event logo">
-      </div>
-    </div>
-    <div class="past-events">
-      <div class="left-container">
-        <p>Event Name</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia, diam pretium imperdiet mattis, orci
-          lacus varius lacus, ac commodo sapien orci vel ante. </p>
-      </div>
-      <div class="right-container">
-        <p class="date">Sep 10, 2021</p>
-        <img src="../assets/images/event.png" alt="Event logo">
+      <div class="right">
+        <button><i class="fa fa-calendar" aria-hidden="true"></i>Add to Calendar</button>
       </div>
     </div>
-    <div class="past-events" id="select-div">
-      <div class="left-container">
-        <p>Event Name</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia, diam pretium imperdiet mattis, orci
-          lacus varius lacus, ac commodo sapien orci vel ante. </p>
+    <div class="event">
+      <div class="left">
+        <p class="date">20</p>
+        <p class="day">Thu</p>
       </div>
-      <div class="right-container">
-        <p>Sep 10, 2021</p>
-        <img src="../assets/images/event.png" alt="Event logo">
+      <div class="mid">
+        <p class="event-name">BLOCKCHAIN FORUM</p>
+        <div class="event-info">
+          <i class="fa fa-clock-o" aria-hidden="true"></i>
+          <p>11:00 AM - 04:00 PM</p>
+        </div>
+        <div class="event-info">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <p> &nbsp; Teams</p>
+        </div>
       </div>
-    </div>
-    <div class="past-events">
-      <div class="left-container">
-        <p>Event Name</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia, diam pretium imperdiet mattis, orci
-          lacus varius lacus, ac commodo sapien orci vel ante. </p>
-      </div>
-      <div class="right-container">
-        <p class="date">Sep 10, 2021</p>
-        <img src="../assets/images/event.png" alt="Event logo">
-      </div>
-    </div>
-    <div class="past-events" id="select-div">
-      <div class="left-container">
-        <p>Event Name</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia, diam pretium imperdiet mattis, orci
-          lacus varius lacus, ac commodo sapien orci vel ante. </p>
-      </div>
-      <div class="right-container">
-        <p>Sep 10, 2021</p>
-        <img src="../assets/images/event.png" alt="Event logo">
+      <div class="right">
+        <button><i class="fa fa-calendar" aria-hidden="true"></i>Add to Calendar</button>
       </div>
     </div>
   </div>
 
+
+  <!--Footer starts here-->
   <footer>
     <div class="left-footer">
       <img src="../assets/images/club-logo.png" alt="club-logo">
@@ -201,6 +126,7 @@
       <p>702 Nguyen Van Linh, Tan Hung, Dist 7, Ho Chi Minh City, Viet Nam</p>
       <p>Copyright © 2021. RMIT Fintech Club. All rights reserved.</p>
     </div>
+
     <div class="right-footer">
       <i class="fa fa-facebook" aria-hidden="true" onclick="window.location.href='index.html';"></i>
       <i class="fa fa-instagram" aria-hidden="true" onclick="window.location.href='index.html';"></i>
@@ -208,18 +134,10 @@
     </div>
   </footer>
 
-  <script src="../js/vendor/modernizr-3.11.2.min.js">
+  <script src="js/vendor/modernizr-3.11.2.min.js">
   </script>
-  <script src="../js/plugins.js"></script>
-  <script>
-    document.querySelectorAll("div.past-events").forEach(function (element) {
-      element.onclick = function () {
-        element.style.border = "2px solid #DBB968";
-        element.style.borderLeft = "20px solid #DBB968";
-      };
-    })
-
-  </script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
   <script>
     window.ga = function () {
       ga.q.push(arguments);
