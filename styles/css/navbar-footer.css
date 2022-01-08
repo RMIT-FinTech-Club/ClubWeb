@@ -1,3 +1,6 @@
+*{
+  margin: 0;
+}
 /*Navbar starts here*/
 header {
   display: block;
@@ -13,7 +16,7 @@ header {
 
 header nav {
   display: flex;
-  justify-content: center;
+  justify-content:flex-start;
   align-items: center;
 }
 
@@ -40,6 +43,7 @@ header nav ul li a {
 
 header nav ul li a:hover {
   color: #DBB968;
+  
 }
 
 header nav ul li #home,
@@ -48,24 +52,38 @@ header nav ul li #events {
   color: #DBB968;
 }
 
-header>button {
-  display: block;
-  position: relative;
-  float: right;
+header>.btns {
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
   margin-top: -55px;
-  margin-right: 80px;
+  margin-right: 60px;
+}
+
+
+header>.btns button {
+  position: relative;
   text-align: center;
   text-decoration: none;
   background-color: #DBB968;
   border: none;
   border-radius: 25px;
-  width: 120px;
-  height: 40px;
+  width: 150px;
+  height: 50px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
   cursor: pointer;
+}
+
+.btns #wallet {
+  margin-left: 20px;
+  background-color: #2B305E;
+}
+
+.btns button:hover {
+  text-decoration: underline;
 }
 
 #logo {
@@ -94,7 +112,8 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
+  height: 25vh;
   background-color: #1E2833;
   margin-top: 100px;
   color: #fff;
@@ -105,16 +124,14 @@ footer {
   width: 25%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-/*TODO: Fixed font-size*/
 .left-footer>p {
   font-family: 'Bebas Neue';
   font-size: 20px;
   font-weight: 400;
-  margin-bottom: 0;
+  margin: 10px 0;
   letter-spacing: 1px;
 }
 
@@ -125,7 +142,6 @@ footer {
   padding: 0;
 }
 
-/*TODO: Fixed font-size*/
 .left-footer ul li {
   list-style: none;
   line-height: 40px;
@@ -152,7 +168,6 @@ footer {
   align-items: center;
 }
 
-/*TODO: Fixed font-size*/
 .mid-footer a {
   text-decoration: none;
   color: #fff;
@@ -171,11 +186,10 @@ footer {
   font-size: 18px;
 }
 
-/*TODO: Fixed font-size*/
 .mid-footer p:last-of-type {
   font-family: 'DM Sans', sans-serif;
   font-size: 15px;
-  line-height: 20px;
+  line-height: 80px;
 }
 
 .right-footer {
@@ -187,7 +201,6 @@ footer {
   padding-bottom: 30px;
 }
 
-/*TODO: Fixed font-size*/
 .right-footer i {
   font-size: 30px;
   cursor: pointer;
