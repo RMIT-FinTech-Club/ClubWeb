@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="apple-touch-icon" href="icon.png" />
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="../styles/css/normalize.css" />
+  <link rel="stylesheet" href="../styles/css/main.css" />
+  <link rel="stylesheet" href="../styles/css/navbar-footer.css" />
+
+  <!--Fonts Links-->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,500&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> -->
+
+  <!--Icon Links-->
+  <link rel="stylesheet" href="../assets/icons/font-awesome-4.7.0/css/font-awesome.min.css">
+  <meta name="theme-color" content="#fafafa" />
+  <script src="components/header.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+  <!--Navbar starts here-->
+  <header>
+    <nav>
+      <ul>
+        <li><span id="logo"><img src="../assets/images/club-logo.png" alt="fintech-logo"></span></li>
+        <li><a href="../index.html" id="home">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">More</a></li>
+      </ul>
+    </nav>
+    <div class="btns">
+      <button onclick="window.location.href='index.html';">Sign In</button>
+      <button id="wallet" onclick="window.location.href='index.html';">Connect to Wallet</button>
+    </div>
+  </header>
+
+
+
+  <!--Footer starts here-->
+  <footer>
+    <div class="left-footer">
+      <img src="../assets/images/club-logo.png" alt="club-logo">
+      <p>RMIT VIETNAM FINTECH CLUB</p>
+      <ul>
+        <li onclick="window.location.href='index.html';">About us</li>
+        <li onclick="window.location.href='index.html';">Projects</li>
+        <li onclick="window.location.href='index.html';">Events</li>
+        <li onclick="window.location.href='index.html';">Join us</li>
+        <li onclick="window.location.href='index.html';">Blog</li>
+      </ul>
+    </div>
+
+    <div class="mid-footer">
+      <a href="mailto:fintechclub.sgs@rmit.edu.vn">fintechclub.sgs@rmit.edu.vn</a>
+      <p>702 Nguyen Van Linh, Tan Hung, Dist 7, Ho Chi Minh City, Viet Nam</p>
+      <p>Copyright © 2021. RMIT Fintech Club. All rights reserved.</p>
+    </div>
+
+    <div class="right-footer">
+      <i class="fa fa-facebook" aria-hidden="true" onclick="window.location.href='index.html';"></i>
+      <i class="fa fa-instagram" aria-hidden="true" onclick="window.location.href='index.html';"></i>
+      <i class="fa fa-linkedin-square" aria-hidden="true" onclick="window.location.href='index.html';"></i>
+    </div>
+  </footer>
+
+  <script src="js/vendor/modernizr-3.11.2.min.js">
+  </script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    window.ga = function () {
+      ga.q.push(arguments);
+    };
+    ga.q = [];
+    ga.l = +new Date();
+    ga("create", "UA-XXXXX-Y", "auto");
+    ga("set", "anonymizeIp", true);
+    ga("set", "transport", "beacon");
+    ga("send", "pageview");
+
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
