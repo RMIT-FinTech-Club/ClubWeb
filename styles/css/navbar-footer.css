@@ -12,7 +12,7 @@ header {
 
 header nav {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
@@ -34,53 +34,36 @@ header nav ul li a {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 header nav ul li a:hover {
   color: #dbb968;
-  font-size: 20px;
 }
 
 header nav ul li #home,
-header nav ul li #projects,
-header nav ul li #events {
+header nav ul li #projects {
   color: #dbb968;
 }
 
-header > .btns {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-top: -55px;
-  margin-right: 60px;
-}
-
-header > .btns button {
+header > button {
+  display: block;
   position: relative;
+  float: right;
+  margin-top: -55px;
+  margin-right: 80px;
   text-align: center;
   text-decoration: none;
   background-color: #dbb968;
   border: none;
   border-radius: 25px;
-  width: 150px;
-  height: 50px;
+  width: 120px;
+  height: 40px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   color: #fff;
   cursor: pointer;
-}
-
-.btns #wallet {
-  margin-left: 20px;
-  background-color: #2b305e;
-  width: fit-content;
-  padding: 0 20px;
-}
-
-.btns button:hover {
-  text-decoration: underline;
 }
 
 #logo {
@@ -109,26 +92,27 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100vw;
-  height: fit-content;
+  width: 100%;
   background-color: #1e2833;
   margin-top: 100px;
   color: #fff;
-  padding: 20px 0;
+  padding-top: 20px;
 }
 
 .left-footer {
   width: 25%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
+/*TODO: Fixed font-size*/
 .left-footer > p {
   font-family: "Bebas Neue";
   font-size: 20px;
   font-weight: 400;
-  margin: 10px 0;
+  margin-bottom: 0;
   letter-spacing: 1px;
 }
 
@@ -137,9 +121,9 @@ footer {
   column-gap: 40px;
   column-width: auto;
   padding: 0;
-  margin: 0;
 }
 
+/*TODO: Fixed font-size*/
 .left-footer ul li {
   list-style: none;
   line-height: 40px;
@@ -166,6 +150,7 @@ footer {
   align-items: center;
 }
 
+/*TODO: Fixed font-size*/
 .mid-footer a {
   text-decoration: none;
   color: #fff;
@@ -182,14 +167,13 @@ footer {
 .mid-footer p:first-of-type {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
-  margin: 0;
 }
 
+/*TODO: Fixed font-size*/
 .mid-footer p:last-of-type {
   font-family: "DM Sans", sans-serif;
   font-size: 15px;
-  line-height: 80px;
-  margin: 0;
+  line-height: 20px;
 }
 
 .right-footer {
@@ -201,6 +185,7 @@ footer {
   padding-bottom: 30px;
 }
 
+/*TODO: Fixed font-size*/
 .right-footer i {
   font-size: 30px;
   cursor: pointer;
