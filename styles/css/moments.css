@@ -2,119 +2,152 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-}
-
 #moments {
   padding: 2rem;
   max-width: 100%;
   font-family: "Montserrat";
-  display: flex; /*added*/
-  flex-direction: column; /*added*/
-  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*added*/
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /*added*/
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #moments .header {
-  font-family: "Bebas Neue";
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  text-transform: uppercase;
-  color: #2b305e;
-  font-weight: 400;
-  margin: 0 auto;
-  width: 100%;
-}
-#moments .header::before,
-#moments .header::after {
-  content: "";
-  background-color: #77878b;
-  width: 20%;
-  height: 2px;
-  margin: 0 1rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 80px;
 }
 
-.moment {
+#moments .header hr.hl {
+  border: 1px solid black;
+  background-color: #000;
+  width: 30%;
+}
+
+@media only screen and (max-width: 700px) {
+  #moments .header hr.hl {
+    display: none;
+  }
+}
+
+#moments .header p {
+  font-family: "Bebas Neue";
+  text-align: center;
+  font-size: 40px;
+  color: #dbb968;
+  margin: 20px 0 0;
+}
+
+#moments .moment {
   margin: 1rem auto;
   width: 90%;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 20% 5% 75%;
+  -ms-grid-columns: 20% 5% 75%;
+      grid-template-columns: 20% 5% 75%;
 }
 
-.moment .left {
+#moments .moment .left {
   margin-right: 1rem;
 }
 
-.divider {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.moment .right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.moment .right .content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  width: 100%;
-}
-
-.moment .left h2 {
+#moments .moment .left h2 {
   font-size: 18px;
   font-weight: 900;
   text-align: center;
 }
 
-.moment .right h2 {
-  font-size: 18px;
-  align-self: flex-start;
+#moments .moment .divider {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  margin: 0 1rem;
 }
 
-.circle {
+#moments .moment .divider .circle {
   width: 25px;
   height: 25px;
   border: 1px solid #77878b;
   border-radius: 50%;
 }
 
-.line {
+#moments .moment .divider .line {
   border-left: 1px solid #77878b;
   height: 100%;
 }
 
-.moment img {
+@media only screen and (max-width: 700px) {
+  #moments .moment .divider {
+    display: none;
+  }
+}
+
+#moments .moment .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+#moments .moment .right h2 {
+  font-size: 18px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+#moments .moment .right .content {
+  margin-left: 0.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+#moments .moment img {
   border-radius: 15px;
   width: 90%;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin: 5px;
 }
 
 @media only screen and (max-width: 700px) {
-  .moment {
+  #moments .moment {
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  }
-  #moments .header::before,
-  #moments .header::after {
-    max-width: 0%;
-    margin: 0 0rem;
-  }
-  #moments {
-    padding: 1rem;
-  }
-  .divider {
-    display: none;
+    -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
 }
+/*# sourceMappingURL=moments.css.map */
