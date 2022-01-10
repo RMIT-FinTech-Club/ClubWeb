@@ -2,7 +2,6 @@
 header {
   display: block;
   margin: auto;
-  position: absolute;
   height: 80px;
   width: 100%;
   background-color: rgba(43, 48, 94, 0.85);
