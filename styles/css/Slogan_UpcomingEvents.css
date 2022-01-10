@@ -70,9 +70,13 @@ button {
   left: 0;
 }
 
+.primary_heading {
+  font-size: 4rem;
+}
+
 .secondary_heading {
   color: var(--primary-yellow);
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-family: "Montserrat";
   letter-spacing: 0.4rem;
 }
@@ -186,38 +190,36 @@ h1 {
   font-family: "Bebas Neue";
   font-size: 9rem;
   color: var(--primary-blue);
-  line-height: 8rem;
   margin-bottom: 2rem;
 }
 
 #main_description {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-family: "Montserrat";
-
   margin-bottom: 5rem;
   margin-top: 5rem;
 }
 
 #signup {
-  width: 85%;
+  width: 100%;
 }
 
 #main_email_input {
   font-family: "Montserrat";
-  font-size: 1.5rem;
+  font-size: 1rem;
 
-  flex-basis: 65%;
+  flex-basis: 70%;
   background-color: #f1f1f1;
-  padding: 1.5rem 2.5rem;
+  padding: 1rem 2rem;
 
   border-radius: 2rem 0 0 2rem;
 }
 
 #signup button {
   font-family: "Montserrat";
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: white;
-  flex-basis: 35%;
+  flex-basis: 30%;
   border-radius: 0 2rem 2rem 0;
 }
 
@@ -328,23 +330,25 @@ h1 {
 
 #upcoming_left .big_stat_titles {
   font-family: "Bebas Neue";
-  font-size: 9rem;
+  font-size: 5rem;
   color: white;
   line-height: 8rem;
 }
 
 #upcoming_left .small_stat_titles {
   font-family: "Montserrat";
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
 }
 
 #upcoming_right h1 {
   color: var(--primary-blue);
+  font-size: 7rem;
 }
 
 #upcoming_right .secondary_heading {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
 #UPCOMING_EVENTS .overlay {

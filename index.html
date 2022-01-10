@@ -36,15 +36,14 @@
   <link rel="stylesheet" href="./styles/css/normalize.css" />
   <link rel="stylesheet" href="./styles/css/main.css" />
   <link rel="stylesheet" href="./styles/css/navbar-footer.css" />
-  <link rel="stylesheet" href="./styles/hunglee/style.css" />
-  <link rel="stylesheet" href="./styles/ThangNguyen/main1.css">
+  <link rel="stylesheet" href="./styles/css/Department_ExecutiveBoard.css" />
+  <link rel="stylesheet" href="./styles/css/Slogan_UpcomingEvents.css">
   <link rel='stylesheet' href='./styles/css/moments.css'>
   <link rel='stylesheet' href='./styles/css/util.css'>
 
 
   <!-- Our JS -->
   <script src="./js/main1.js" defer></script>
-  <script src="components/header.js" type="text/javascript" defer></script>
 </head>
 
 <body>
@@ -52,21 +51,19 @@
   <header>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="/pages/projects.html">Projects</a></li>
         <li><span id="logo"><img src="assets/images/club-logo.png" alt="fintech-logo"></span></li>
-        <li><a href="events.html" id="events">Events</a></li>
-        <li><a href="#">Blog</a></li>
+        <li><a href="#UPCOMING_EVENTS" id="events">Events</a></li>
+        <li><a href="./posts">Blog</a></li>
         <li><a href="#">More</a></li>
       </ul>
     </nav>
     <button id="header-btn" onclick="window.location.href='pages/login.html';">Sign In</button>
   </header>
 
-  <!---------------------------------------------------------------------->
-  <!--HEADER-->
-
+  <!-- Slogan -->
   <div id='slogan' class="flex">
     <div id="header_left">
       <div>
@@ -83,7 +80,7 @@
 
         <div class="circle-primary-yellow-s"></div>
 
-        <div id="slogan">FinTech's Club Slogan</div>
+        <div class="primary_heading">FinTech's Club Slogan</div>
 
         <div class="secondary_heading">RMIT FINTECH CLUB</div>
 
@@ -93,13 +90,9 @@
           and scrambled it to make a type specimen book.
         </div>
         <div id="signup" class="flex">
-
-          <div id="main_email_input">Enter your email for newsletter</div>
-
+          <input id="main_email_input" placeholder="Enter your email for newsletter" />
           <button id="main_register">REGISTER</button>
-
         </div>
-
       </div>
     </div>
     <div id="header_right">
@@ -113,7 +106,6 @@
     </div>
   </div>
 
-  <!---------------------------------------------------------------------->
   <!--UPCOMING EVENTS-->
   <section id="UPCOMING_EVENTS">
 
@@ -167,6 +159,7 @@
 
   </section>
 
+  <!--Departments-->
   <div>
     <div class="content-col-2">
       <div class="col col-1">
@@ -196,10 +189,8 @@
       </div>
     </div>
 
-
+    <!--Executive board-->
     <div class="second-page-container">
-
-
       <!-- Front start -->
       <div class="front">
         <div class="content-col-2">
@@ -253,6 +244,7 @@
 
   </div>
 
+  <!--Moments-->
   <div id='moments'>
     <div class='header'>
       <hr class="hl">
