@@ -2,7 +2,6 @@
 header {
   display: block;
   margin: auto;
-  position: absolute;
   height: 80px;
   width: 100%;
   background-color: rgba(43, 48, 94, 0.85);
@@ -33,21 +32,21 @@ header nav ul li {
 header nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 18px;
 }
 
 header nav ul li a:hover {
-  color: #DBB968;
+  color: #dbb968;
 }
 
 header nav ul li #home,
 header nav ul li #projects {
-  color: #DBB968;
+  color: #dbb968;
 }
 
-header>button {
+header > button {
   display: block;
   position: relative;
   float: right;
@@ -55,12 +54,12 @@ header>button {
   margin-right: 80px;
   text-align: center;
   text-decoration: none;
-  background-color: #DBB968;
+  background-color: #dbb968;
   border: none;
   border-radius: 25px;
   width: 120px;
   height: 40px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 14px;
   color: #fff;
@@ -71,14 +70,14 @@ header>button {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   height: 70px;
   width: 85px;
 }
 
-#logo>img {
+#logo > img {
   height: 50px;
   display: block;
   margin-left: auto;
@@ -94,7 +93,7 @@ footer {
   right: 0;
   bottom: 0;
   width: 100%;
-  background-color: #1E2833;
+  background-color: #1e2833;
   margin-top: 100px;
   color: #fff;
   padding-top: 20px;
@@ -109,8 +108,8 @@ footer {
 }
 
 /*TODO: Fixed font-size*/
-.left-footer>p {
-  font-family: 'Bebas Neue';
+.left-footer > p {
+  font-family: "Bebas Neue";
   font-size: 20px;
   font-weight: 400;
   margin-bottom: 0;
@@ -128,7 +127,7 @@ footer {
 .left-footer ul li {
   list-style: none;
   line-height: 40px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 17px;
   cursor: pointer;
@@ -155,7 +154,7 @@ footer {
 .mid-footer a {
   text-decoration: none;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   padding-bottom: 70px;
   padding-top: 60px;
@@ -166,13 +165,13 @@ footer {
 }
 
 .mid-footer p:first-of-type {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
 }
 
 /*TODO: Fixed font-size*/
 .mid-footer p:last-of-type {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 15px;
   line-height: 20px;
 }

@@ -16,17 +16,12 @@
   <link rel="apple-touch-icon" href="icon.png" />
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="styles/css/normalize.css" />
-  <link rel="stylesheet" href="styles/css/main.css" />
-  <link rel="stylesheet" href="styles/css/navbar-footer.css" />
-
   <!--Fonts Links-->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link rel='stylesheet' href='./styles/css/moments.css'>
-  <link rel='stylesheet' href='./styles/css/util.css'>
+
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,500&display=swap"
     rel="stylesheet">
@@ -36,7 +31,19 @@
   <!--Icon Links-->
   <link rel="stylesheet" href="assets/icons/font-awesome-4.7.0/css/font-awesome.min.css">
   <meta name="theme-color" content="#fafafa" />
-  <script src="components/header.js" type="text/javascript" defer></script>
+
+  <!--Our CSS-->
+  <link rel="stylesheet" href="./styles/css/normalize.css" />
+  <link rel="stylesheet" href="./styles/css/main.css" />
+  <link rel="stylesheet" href="./styles/css/navbar-footer.css" />
+  <link rel="stylesheet" href="./styles/css/Department_ExecutiveBoard.css" />
+  <link rel="stylesheet" href="./styles/css/Slogan_UpcomingEvents.css">
+  <link rel='stylesheet' href='./styles/css/moments.css'>
+  <link rel='stylesheet' href='./styles/css/util.css'>
+
+
+  <!-- Our JS -->
+  <script src="./js/main1.js" defer></script>
 </head>
 
 <body>
@@ -44,18 +51,200 @@
   <header>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="/pages/projects.html">Projects</a></li>
         <li><span id="logo"><img src="assets/images/club-logo.png" alt="fintech-logo"></span></li>
-        <li><a href="events.html" id="events">Events</a></li>
-        <li><a href="#">Blog</a></li>
+        <li><a href="./pages/events-public.html" id="events">Events</a></li>
+        <li><a href="./posts">Blog</a></li>
         <li><a href="#">More</a></li>
       </ul>
     </nav>
     <button id="header-btn" onclick="window.location.href='pages/login.html';">Sign In</button>
   </header>
 
+  <!-- Slogan -->
+  <div id='slogan' class="flex">
+    <div id="header_left">
+      <div>
+
+        <div class="circle-light-blue"></div>
+
+        <div class="circle-light-blue-s"></div>
+
+        <div class="circle-primary-blue"></div>
+
+        <div class="circle-primary-blue-s"></div>
+
+        <div class="circle-primary-yellow"></div>
+
+        <div class="circle-primary-yellow-s"></div>
+
+        <div class="primary_heading">FinTech's Club Slogan</div>
+
+        <div class="secondary_heading">RMIT FINTECH CLUB</div>
+
+        <div id="main_description">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+          and scrambled it to make a type specimen book.
+        </div>
+        <div id="signup" class="flex">
+          <input id="main_email_input" placeholder="Enter your email for newsletter" />
+          <button id="main_register">REGISTER</button>
+        </div>
+      </div>
+    </div>
+    <div id="header_right">
+      <div class="overlay">
+        <div id="header_sign">
+          <div class="content_white_line"></div>
+          <p>INTRODUCTION 01</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--UPCOMING EVENTS-->
+  <section id="UPCOMING_EVENTS">
+
+    <div class="overlay flex">
+
+      <div id="upcoming_left">
+        <div id="statistic_1" class="flex_centerY">
+          <div class="statistic_container">
+            <p class="big_stat_titles">8 BILLION</p>
+            <p class="small_stat_titles">Big Number</p>
+          </div>
+
+        </div>
+        <div id="statistic_2" class="flex_centerY">
+          <div class="statistic_container">
+            <p class="big_stat_titles">95%</p>
+            <p class="small_stat_titles">Big percentages</p>
+          </div>
+        </div>
+        <div id="statistic_3" class="flex_centerY">
+          <div class="statistic_container">
+            <p class="big_stat_titles">2000+</p>
+            <p class="small_stat_titles">Big Number</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="upcoming_right">
+        <div id="upcoming_event_splotlight"></div>
+        <h1 align="right">UPCOMING EVENTS</h1>
+        <p align="right" class="secondary_heading">DON'T MISS OUT!</p>
+        <div id="upcoming_events_container" class="flex">
+          <div id="upcoming_events_content_left">
+            <img src="./assets/images/upcoming-event-temp-image-2.png" alt="">
+          </div>
+          <div id="upcoming_events_content_right">
+
+            <div id="upcoming_events_content_right_SLOT1">
+              <img src="./assets/images/upcoming-event-temp-image-2.png" alt="">
+            </div>
+
+            <div id="upcoming_events_content_right_SLOT2">
+              <img src="./assets/images/upcoming-event-temp-image-1.png" alt="">
+              <img src="./assets/images/upcoming-event-temp-image-1.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!--Departments-->
+  <div>
+    <div class="content-col-2">
+      <div class="col col-1">
+        <h2 class="sub-header-1">Our Deparments</h2>
+        <h1 class="main-header-1">BUSINESS DEPARMENT</h1>
+        <p class="paragraph">
+          Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+          looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,
+          and going through the cites of the word in classical literature, discovered the undoubtable source.
+          Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
+          (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics,
+          very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
+          comes from a line in section 1.10.32.
+        </p>
+        <button class="btn btn-primary">Join Us</button>
+
+        <div class="tabs-container">
+          <div class="tab-1">01</div>
+          <div class="tab-2">02</div>
+          <div class="tab-3">03</div>
+          <div class="tab-4">04</div>
+        </div>
+      </div>
+
+      <div class="col">
+        <img src="./assets/images/BusinessDepImg.png" class="img">
+      </div>
+    </div>
+
+    <!--Executive board-->
+    <div class="second-page-container">
+      <!-- Front start -->
+      <div class="front">
+        <div class="content-col-2">
+          <div class="col">
+            <div class="behind-container">
+              <div class="behind"></div>
+            </div>
+            <h1 class="main-header-2">EXECUTIVE BOARD</h1>
+            <h2 class="sub-header-2">MEET THE TEAM!</h2>
+            <div class="board">
+              <div class="avatar-position">
+                <img src="../assets/images/tempav.png" onclick="" class="btn-avatar">
+                <p class="position">President</p>
+              </div>
+              <div class="avatar-position">
+                <img src="../assets/images/tempav.png" onclick="" class="btn-avatar">
+                <p class="position">President</p>
+              </div>
+              <div class="avatar-position">
+                <img src="../assets/images/tempav.png" onclick="" class="btn-avatar">
+                <p class="position">President</p>
+              </div>
+              <div class="avatar-position">
+                <img src="../assets/images/tempav.png" onclick="" class="btn-avatar">
+                <p class="position">President</p>
+              </div>
+              <div class="avatar-position">
+                <img src="../assets/images/tempav.png" onclick="" class="btn-avatar">
+                <p class="position">President</p>
+              </div>
+              <div class="avatar-position">
+                <img src="../assets/images/tempav.png" onclick="" class="btn-avatar">
+                <p class="position">President</p>
+              </div>
+              <div class="avatar-position">
+                <img src="../assets/images/tempav.png" onclick="" class="btn-avatar">
+                <p class="position">President</p>
+              </div>
+              <div class="avatar-position">
+                <img src="../assets/images/tempav.png" onclick="" class="btn-avatar">
+                <p class="position">President</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col"></div>
+        </div>
+      </div>
+      <!-- Front end -->
+    </div>
+
+  </div>
+
+  <!--Moments-->
   <div id='moments'>
     <div class='header'>
       <hr class="hl">
