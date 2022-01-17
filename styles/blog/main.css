@@ -8,8 +8,10 @@ Clearly there is more you could place in variables, up to you if you want to use
   --color4: #DBB968;
   --color5: #ffffff;
   --color6: #C9D6EA;
-  --color7: #77878B;
+  --color7: var(--color9);
   --color8: #999;
+  --color9: var(--color9);
+  --color10: #333;
 }
 
 
@@ -61,8 +63,8 @@ h1 {
 }
 
 hr.hl {
-  border: 2px solid #77878B;
-  background-color: #77878B;
+  border: 2px solid var(--color9);
+  background-color: var(--color9);
   width: 35%;
   margin-top: 100px;
 }
@@ -71,7 +73,7 @@ hr.hl {
   font-family: 'Bebas Neue', serif;
   text-align: center;
   font-size: 50px;
-  color: #DBB968;
+  color: var(--color4);
   letter-spacing: 2px;
   margin: 100px 0 50px;
 }
@@ -250,7 +252,7 @@ figcaption a {
 
 .container .card .face.face1 {
   position: relative;
-  background: #333;
+  background: var(--color10);
   display: flex;
   justify-content: center;
   align-content: center;
@@ -313,21 +315,21 @@ a {
   font-size: 10pt;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: var(--color10);
 }
 
 .container .card .face.face2 .content a {
   text-decoration: none;
-  color: black;
+  color: var(--color1);
   box-sizing: border-box;
-  outline: 1px dashed #333;
+  outline: 1px dashed var(--color10);
   padding: 10px;
   margin: 15px 0 0;
   display: inline-block;
 }
 
 .container .card .face.face2 .content a:hover {
-  background: #333;
+  background: var(--color10);
   color: whitesmoke;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -357,7 +359,7 @@ p {
   background-color: var(--color3);
   border: none;
   border-radius: 50%;
-  color: white;
+  color: var(--color5);
   cursor: pointer;
   font-size: 20px;
   line-height: 48px;
