@@ -1,0 +1,427 @@
+/* colors - see style guide for docs.
+Clearly there is more you could place in variables, up to you if you want to use them. My answer does not go beyond colors to keep the code easier to read. */
+
+:root {
+  --color1: #000000;
+  --color2: #272C55;
+  --color3: #2B305E;
+  --color4: #DBB968;
+  --color5: #ffffff;
+  --color6: #C9D6EA;
+  --color7: var(--color9);
+  --color8: #999;
+  --color9: var(--color9);
+  --color10: #333;
+}
+
+
+/* generic site styles */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  min-height: 100%;
+  margin-bottom: -100px;
+  background: var(--color5);
+}
+
+h2 {
+  font-size: 3em;
+  color: var(--color2);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20vh;
+  font-family: 'Bebas Neue', serif;
+  color: var(--color2);
+  font-size: 65px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.past {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+hr.hl {
+  border: 2px solid var(--color9);
+  background-color: var(--color9);
+  width: 35%;
+  margin-top: 100px;
+}
+
+.past>p {
+  font-family: 'Bebas Neue', serif;
+  text-align: center;
+  font-size: 50px;
+  color: var(--color4);
+  letter-spacing: 2px;
+  margin: 100px 0 50px;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto 5rem auto;
+  padding: 0 1rem;
+}
+
+/*search bar*/
+.search-input-wrapper {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.search-input-wrapper.change {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s 1s;
+}
+
+.search-input {
+  width: 30rem;
+  display: flex;
+  align-items: center;
+}
+
+.search-input input {
+  width: 27rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.1rem solid var(--color8);
+  font-size: 1.5rem;
+  letter-spacing: 0.15rem;
+  outline: none;
+  color: #555;
+  margin-right: 1rem;
+}
+
+.search-input i {
+  font-size: 1.5rem;
+  color: var(--color8);
+  cursor: pointer;
+}
+
+.search-icon {
+  font-size: 2.5rem;
+  position: absolute;
+  top: 10rem;
+  left: 53rem;
+  animation: searchIconAnim2 0.5s forwards;
+}
+
+.search-icon.change {
+  animation: searchIconAnim 1s forwards;
+}
+
+.search-icon i {
+  color: var(--color8);
+  cursor: pointer;
+}
+
+@keyframes searchIconAnim {
+  0% {
+    top: 1.7rem;
+  }
+
+  40% {
+    top: 40%;
+    font-size: 25rem;
+  }
+
+  60% {
+    top: 40%;
+    right: calc(50% + 16rem);
+  }
+
+  100% {
+    top: 1.7rem;
+    right: calc(50% + 16rem);
+  }
+}
+
+@keyframes searchIconAnim2 {
+  0% {
+    right: calc(50% + 16rem);
+  }
+
+  100% {
+    right: 3rem;
+  }
+}
+
+/*end search bar*/
+
+section h2 {
+  font-size: 2.5rem;
+}
+
+section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* To keep mobile screens from being long, consider setting a max height on the images and hide the overflow.
+
+Spelled out the individual border styles so border-color could go elsewhere. Styling is the same for all borders except the color. */
+
+figure {
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+
+/* strange open space at the bottom of the box which shows through the transparent overlay - this kills it */
+
+figure img {
+  margin-bottom: -4px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 0 -150px;
+}
+
+figcaption {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.875rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* make the a have a big clickable area with display: block - the link occupies its containing element, the figcaption */
+
+figcaption a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--color1);
+}
+
+
+/* green stripe for popular images */
+.stripe {
+  color: white;
+  padding: 1rem 0 2rem 0;
+}
+
+
+/* featured image styles */
+#featured figure {
+  max-height: 650px;
+}
+
+#featured img {
+  object-position: 0;
+}
+
+/* Glow Effect */
+.container .card .face {
+  transition: 0.4s;
+}
+
+.container .card .face.face1 {
+  position: relative;
+  background: var(--color10);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+}
+
+.container .card:hover .face.face1 {
+  transform: translateY(0px);
+  box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px #f0f,
+  inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff,
+  0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+}
+
+.container .card .face.face1 .content {
+  opacity: 0.2;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.container .card:hover .face.face1 .content {
+  opacity: 1;
+}
+
+.container .card .face.face1 .content i {
+  font-size: 3em;
+  color: white;
+  display: inline-block;
+}
+
+.container .card .face.face1 .content h3 {
+  font-size: 1em;
+  color: white;
+  text-align: center;
+}
+
+.container .card .face.face1 .content a {
+  transition: 0.5s;
+}
+
+.container .card .face.face2 {
+  position: relative;
+  background: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2 {
+  transform: translateY(0px);
+}
+
+.container .card .face.face2 .content p,
+a {
+  font-size: 10pt;
+  margin: 0;
+  padding: 0;
+  color: var(--color10);
+}
+
+.container .card .face.face2 .content a {
+  text-decoration: none;
+  color: var(--color1);
+  box-sizing: border-box;
+  outline: 1px dashed var(--color10);
+  padding: 10px;
+  margin: 15px 0 0;
+  display: inline-block;
+}
+
+.container .card .face.face2 .content a:hover {
+  background: var(--color10);
+  color: whitesmoke;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* mission styles */
+p {
+  margin-left: 15rem;
+}
+
+#mission {
+  margin-bottom: 3rem;
+}
+
+.missiontext {
+  display: block;
+  line-height: 1.7;
+}
+
+.missionimg {
+  max-height: 100px;
+  display: block;
+}
+
+/*scroll to top button*/
+#scrollToTopBtn {
+  background-color: var(--color3);
+  border: none;
+  border-radius: 50%;
+  color: var(--color5);
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 48px;
+  width: 48px;
+  margin-left: 69rem;
+}
+
+/* turn on flexbox here - prior to this, elements stacked individually as blocks */
+@media (min-width: 550px) {
+  section ul,
+  footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  section li,
+  .social,
+  address {
+    flex-basis: 49.5%;
+  }
+
+  #popular li:last-child {
+    flex-basis: 100%;
+  }
+
+  #popular li:last-child figure img {
+    object-position: 0 -350px;
+  }
+
+  /* turn off object position, inherit object-fit: cover */
+  figure img {
+    object-position: 0;
+  }
+
+  /* display: flow-root clears the float!!!! max-width keeps the text line length shorter */
+  .missiontext {
+    display: flow-root;
+    max-width: 900px;
+  }
+
+  /* working with an image with a wide width so we have flexibility to set the shape-outside polygon points where we want.
+  The edges of the image limit their placement. In Firefox, you can draw with shape-outside in browser tools */
+  .missionimg {
+    float: left;
+    shape-outside: polygon(35.84% 94.87%, 34.64% 87.05%, 51.64% 4.06%, 55.1% 2.38%);
+    max-height: 211px;
+  }
+}
+
+@media (min-width: 800px) {
+  section li,
+  .social,
+  #popular li:last-child {
+    flex-basis: 32.5%;
+  }
+
+  #popular li:last-child figure img {
+    object-position: 0;
+  }
+
+  address {
+    flex-basis: 65.5%;
+  }
+}
