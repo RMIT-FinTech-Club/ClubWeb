@@ -2,6 +2,7 @@ const { marked } = require("marked");
 const axios = require("axios").default;
 const path = require("path");
 const { readFile, writeFile, templatize } = require("../js/util/ssg");
+const { dateToDMY } = require("../js/util/date");
 
 const api = axios.create({
   baseURL: "https://fintech-blog-cms.herokuapp.com",
@@ -30,6 +31,7 @@ const main = async () => {
 
   const generatePostPageHtml = (post) => {
     const {
+      created_at,
       slug,
       title,
       author,
@@ -51,11 +53,20 @@ const main = async () => {
       "{{author.name}}": name,
       "{{author.avatarUrl}}": avatarUrl,
       "{{tags}}": tagsHtml,
+      "{{createdAt}}": dateToDMY(new Date(created_at)),
     });
   };
 
   const generatePostItemHtml = (post) => {
-    const { slug, title, author, description, coverUrl, tags = [] } = post;
+    const {
+      created_at,
+      slug,
+      title,
+      author,
+      description,
+      coverUrl,
+      tags = [],
+    } = post;
     const { name, avatarUrl, username, bio } = author || {};
     const tagsHtml = tags.map((tag) => generateTagHtml(tag)).join("\n");
     return templatize(PostItem, {
@@ -68,15 +79,20 @@ const main = async () => {
       "{{author.name}}": name,
       "{{author.avatarUrl}}": avatarUrl,
       "{{tags}}": tagsHtml,
+      "{{createdAt}}": dateToDMY(new Date(created_at)),
     });
   };
 
+  const generateTopicPostsHtml = (posts, topicSlug) => {
+    const topicPosts = posts.filter((p) => p.topic?.slug === topicSlug);
+    return topicPosts.map((post) => generatePostItemHtml(post)).join("\n");
+  };
+
   const generateIndexPageHtml = (posts) => {
-    const postsHtml = posts
-      .map((post) => generatePostItemHtml(post))
-      .join("\n");
     return templatize(IndexPage, {
-      "{{posts}}": postsHtml,
+      "{{our-picks}}": generateTopicPostsHtml(posts, "our-picks"),
+      "{{collections}}": generateTopicPostsHtml(posts, "collections"),
+      "{{feature-print}}": generateTopicPostsHtml(posts, "feature-print"),
     });
   };
 
