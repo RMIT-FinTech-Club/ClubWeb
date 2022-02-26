@@ -1,12 +1,11 @@
 html {
-  font-size: 62.5%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-$yellow: #DBB968;
-$blue: #2B305E;
-$light-blue: #C9D6EA;
-$grey: #77878B;
+$yellow: #dbb968;
+$blue: #2b305e;
+$light-blue: #c9d6ea;
+$grey: #77878b;
 
 .sub-header {
   &-1 {
@@ -20,26 +19,25 @@ $grey: #77878B;
 .main-header {
   &-1 {
     color: $blue;
-    font-family: 'Bebas Neue', cursive;
+    font-family: "Bebas Neue", cursive;
   }
   &-2 {
     color: white;
-    font-family: 'Bebas Neue', cursive;
+    font-family: "Bebas Neue", cursive;
   }
 }
 
 .paragraph {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .content-col-2 {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
-
 }
 
-.col-1{
+.col-1 {
   position: relative;
 }
 
@@ -48,25 +46,25 @@ $grey: #77878B;
 // }
 
 .btn-primary {
-  &:hover{
+  &:hover {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
     cursor: pointer;
   }
   border-radius: 15px;
   color: white;
   background-color: $yellow;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding: 10px 24px;
   border: none;
 }
 
 .btn-avatar {
-  &:hover{
+  &:hover {
     opacity: 0.8;
     cursor: pointer;
   }
   width: 100px;
-  border-radius:100%;
+  border-radius: 100%;
   background-color: none;
   border: none;
 }
@@ -82,20 +80,20 @@ $grey: #77878B;
 }
 
 .img {
-  max-width:100%;
-  max-height:100%;
+  max-width: 100%;
+  max-height: 100%;
   margin: 0px;
 }
 
 .tabs-container {
-  & > *{
-    font-family: 'Bebas Neue', cursive;
+  & > * {
+    font-family: "Bebas Neue", cursive;
     color: white;
     height: 100px;
     width: 100px;
     text-align: center;
     transform: rotate(-90deg);
-    &:hover{
+    &:hover {
       background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
       cursor: pointer;
     }
@@ -127,17 +125,17 @@ $grey: #77878B;
   height: 100%;
 }
 
-.second-page-container .front{
+.second-page-container .front {
   display: block;
   z-index: 2;
   position: relative;
 }
 
-.second-page-container .behind-container{
+.second-page-container .behind-container {
   position: relative;
   background-color: $yellow;
 }
-.second-page-container .behind{
+.second-page-container .behind {
   display: block;
   height: 200px;
   background-color: $yellow;

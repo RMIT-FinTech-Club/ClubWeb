@@ -45,12 +45,7 @@ html {
 }
 
 .btn-primary:hover {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0, rgba(0, 0, 0, 0.4))
-  );
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)));
   background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
   cursor: pointer;
 }
@@ -72,13 +67,13 @@ html {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .board > * {
   -webkit-box-flex: 1;
-  -ms-flex: 1 0 21%;
-  flex: 1 0 21%;
+      -ms-flex: 1 0 21%;
+          flex: 1 0 21%;
   margin: 5px;
 }
 
@@ -104,16 +99,11 @@ html {
   width: 100px;
   text-align: center;
   -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .tabs-container > *:hover {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0, rgba(0, 0, 0, 0.4))
-  );
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)));
   background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
   cursor: pointer;
 }
