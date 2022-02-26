@@ -16,6 +16,45 @@ html {
   font-size: 1em;
   line-height: 1.4;
   height: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: rgb(175, 175, 175);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(134, 134, 134);
 }
 
 /*
