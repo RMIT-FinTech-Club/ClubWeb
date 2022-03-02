@@ -367,6 +367,9 @@ hr.hl {
   width: 70%;
   margin-top: 80px;
   margin-right: 70px;
+  text-transform: none;
+  transition: .4s;
+  padding-left: 80px;
 }
 
 .title,
@@ -452,4 +455,27 @@ hr.hl {
 
 .cafefin .left-container img {
   border-radius: 34px;
+}
+
+/*Responsive for Cafefin*/
+@media only screen and (max-width: 950px) {
+  .cafefin .left-container img {
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .cafefin .left-container img {
+    margin-left: -10px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .cafefin .left-container img {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  margin-right: -150px;
+  }
 }
