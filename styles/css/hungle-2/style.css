@@ -241,4 +241,228 @@ body {
   left: 0;
 }
 
+@media (max-width: 750px) {
+  .column-60 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .main-header-1 {
+    font-size: 50px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+  .main-header-2 {
+    font-size: 60px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .sub-header-1 {
+    font-size: 27px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 0.25rem;
+  }
+  .sub-header-2 {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 5rem;
+  }
+
+  .line {
+    width: 40px;
+  }
+
+  .department-content {
+    font-size: 13px;
+  }
+
+  .primary-btn {
+    border-radius: 13px;
+    padding: 8px 20px;
+    border: none;
+  }
+
+  .square-btn-container {
+    margin-left: 40px;
+    margin-right: 40px;
+    position: absolute;
+    bottom: 13rem;
+  }
+
+  .square-btn {
+    font-size: 50px;
+    height: 60px;
+    width: 60px;
+  }
+
+  .av-btn-container {
+    margin-bottom: 2rem;
+    margin-top: 0;
+    gap: 8px;
+  }
+
+  .av-btn-img {
+    margin-top: 0;
+    height: 80px;
+    width: 80px;
+  }
+
+  .avatar {
+    margin-top: 5rem;
+  }
+
+  .av {
+    height: 150px;
+    width: 150px;
+  }
+
+  .av-position {
+    height: 45px;
+    width: 45px;
+    right: 7rem;
+  }
+
+  .position {
+    font-size: 10px;
+  }
+
+  .info-name {
+    font-size: 20px;
+    margin-bottom: 0.3rem;
+  }
+  .info-position {
+    font-size: 10px;
+    margin-bottom: 0.55rem;
+  }
+  .info-department {
+    font-size: 10px;
+  }
+  .info-contact {
+    font-size: 10px;
+    margin-top: 0;
+  }
+
+  .information {
+    font-size: 13px;
+  }
+
+  .behind {
+    height: 160px;
+  }
+}
+@media (max-width: 500px) {
+  .column-60 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .main-header-1 {
+    font-size: 35px;
+    margin-top: 0.3rem;
+    margin-bottom: 0.125rem;
+  }
+  .main-header-2 {
+    font-size: 40px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .sub-header-1 {
+    font-size: 19px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 0.25rem;
+  }
+  .sub-header-2 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 5rem;
+  }
+
+  .line {
+    width: 20px;
+  }
+
+  .department-content {
+    font-size: 10px;
+  }
+
+  .primary-btn {
+    font-size: 10px;
+    border-radius: 11px;
+    padding: 6px 15px;
+    border: none;
+  }
+
+  .square-btn-container {
+    margin-left: 20px;
+    margin-right: 20px;
+    position: absolute;
+    bottom: 22rem;
+  }
+
+  .square-btn {
+    font-size: 30px;
+    height: 40px;
+    width: 40px;
+  }
+
+  .av-btn-container {
+    margin-bottom: 1rem;
+    margin-top: 0;
+    gap: 6px;
+  }
+
+  .av-btn-img {
+    margin-top: 0;
+    height: 60px;
+    width: 60px;
+  }
+
+  .avatar {
+    margin-top: 5rem;
+  }
+
+  .av {
+    height: 100px;
+    width: 100px;
+  }
+
+  .av-position {
+    height: 30px;
+    width: 30px;
+    right: 8.5rem;
+  }
+
+  .position {
+    font-size: 8px;
+  }
+
+  .info-name {
+    font-size: 15px;
+    margin-bottom: 0.3rem;
+  }
+  .info-position {
+    font-size: 8px;
+    margin-bottom: 0.55rem;
+  }
+  .info-department {
+    font-size: 8px;
+  }
+  .info-contact {
+    font-size: 8px;
+    margin-top: 0;
+  }
+
+  .information {
+    font-size: 9px;
+  }
+
+  .behind {
+    height: 130px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
