@@ -205,7 +205,7 @@ footer .mid .copyright {
 }
 
 @media screen and (max-width: 768px) {
-  footer {
+  footer .mid {
     width: 100%;
     text-align: center;
   }

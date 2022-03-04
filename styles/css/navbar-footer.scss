@@ -147,11 +147,10 @@ footer {
       font-size: 15px;
       line-height: 20px;
     }
-  }
-
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    text-align: center;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      text-align: center;
+    }
   }
   .right {
     display: flex;
