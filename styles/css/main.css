@@ -455,27 +455,34 @@ hr.hl {
 
 .cafefin .left-container img {
   border-radius: 34px;
+  flex-direction: row;
 }
 
 /*Responsive for Cafefin*/
-@media only screen and (max-width: 950px) {
-  .cafefin .left-container img {
-    margin-left: 0px;
-  }
+
+div.left-container{
+  display: flex;
+  flex-direction: column;
 }
 
-@media only screen and (max-width: 800px) {
-  .cafefin .left-container img {
-    margin-left: -10px;
-  }
+div.right-container{
+  display: flex;
+  flex-direction: column;
 }
 
-@media only screen and (max-width: 750px) {
-  .cafefin .left-container img {
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
-  margin-right: -150px;
+div.cafefin{
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 850px){
+  .cafefin{
+  flex-wrap: wrap;
+  text-align: center;
+  }
+
+/* Buttons responsive*/
+  .buttons .button{
+  padding: 100px;
   }
 }
