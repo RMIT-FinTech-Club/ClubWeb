@@ -337,19 +337,13 @@ hr.hl {
 .fintech-magazine {
   display: flex;
   height: fit-content;
-  width: 100vw;
-  margin-top: 40px;
-}
-
-.left-container {
-  margin-left: 50px;
+  padding: 3rem 6rem;
 }
 
 /*TODO: Fixed font-size*/
 .left-container p {
   font-family: "Bebas Neue";
   font-size: 40px;
-  margin-left: 40px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -357,35 +351,12 @@ hr.hl {
 .left-container img {
   width: 300px;
   height: fit-content;
-  margin: 20px 0 0 40px;
+  margin-top: 1rem;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .right-container {
-  margin: 80px 70px 0 20px;
-}
-
-@media only screen and (max-width: 1080px) {
-  .fintech-magazine {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .left-container {
-    margin-left: 0;
-  }
-
-  .left-container img {
-    margin: 20px 0 0;
-  }
-
-  .right-container {
-    margin: 40px 70px 40px 90px;
-  }
-
-  .title, .subtitle {
-    text-align: center;
-  }
+  padding-left: 1.5rem;
 }
 
 .title,
@@ -452,7 +423,7 @@ hr.hl {
   flex-direction: column;
   justify-content: space-between;
   height: fit-content;
-  margin: 100px 70px 0 90px;
+  padding: 3rem 6rem;
 }
 
 .fintech-podcast p {
@@ -471,4 +442,41 @@ hr.hl {
 
 .cafefin .left-container img {
   border-radius: 34px;
+}
+@media only screen and (max-width: 1080px) {
+  .fintech-magazine {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  .fintech-magazine p {
+    text-align: center;
+  }
+
+  .left-container {
+    margin-left: 0;
+  }
+
+  .left-container img {
+    margin-bottom: 1rem;
+  }
+
+  .right-container {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .title,
+  .subtitle {
+    text-align: center;
+  }
+
+  .fintech-podcast {
+    padding: 1rem;
+  }
+  .fintech-podcast p {
+    text-align: center;
+  }
 }
