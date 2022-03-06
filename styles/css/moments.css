@@ -20,7 +20,13 @@ body {
           justify-content: center;
 }
 
-#moments .header {
+@media only screen and (max-width: 900px) {
+  #moments {
+    padding: 1rem;
+  }
+}
+
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,19 +39,19 @@ body {
   margin-top: 80px;
 }
 
-#moments .header hr.hl {
+.header hr.hl {
   border: 1px solid black;
   background-color: #000;
   width: 30%;
 }
 
 @media only screen and (max-width: 700px) {
-  #moments .header hr.hl {
+  .header hr.hl {
     display: none;
   }
 }
 
-#moments .header p {
+.header p {
   font-family: "Bebas Neue";
   text-align: center;
   font-size: 40px;
@@ -53,7 +59,7 @@ body {
   margin: 20px 0 0;
 }
 
-#moments .moment {
+.moment {
   margin: 1rem auto;
   width: 90%;
   display: -ms-grid;
@@ -62,17 +68,21 @@ body {
       grid-template-columns: 20% 5% 75%;
 }
 
-#moments .moment .left {
-  margin-right: 1rem;
+.moment .left h2 {
+  font-family: "Bebas Neue";
+  font-size: 32px;
+  font-weight: 500;
+  text-align: right;
+  text-transform: uppercase;
 }
 
-#moments .moment .left h2 {
-  font-size: 18px;
-  font-weight: 900;
-  text-align: center;
+@media only screen and (max-width: 900px) {
+  .moment .left h2 {
+    text-align: center;
+  }
 }
 
-#moments .moment .divider {
+.moment .divider {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -88,25 +98,25 @@ body {
   margin: 0 1rem;
 }
 
-#moments .moment .divider .circle {
+.moment .divider .circle {
   width: 25px;
   height: 25px;
   border: 1px solid #77878b;
   border-radius: 50%;
 }
 
-#moments .moment .divider .line {
+.moment .divider .line {
   border-left: 1px solid #77878b;
   height: 100%;
 }
 
-@media only screen and (max-width: 700px) {
-  #moments .moment .divider {
+@media only screen and (max-width: 900px) {
+  .moment .divider {
     display: none;
   }
 }
 
-#moments .moment .right {
+.moment .right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -120,13 +130,13 @@ body {
   width: 100%;
 }
 
-#moments .moment .right h2 {
+.moment .right h2 {
   font-size: 18px;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
 
-#moments .moment .right .content {
+.moment .right .content {
   margin-left: 0.5rem;
   display: -ms-grid;
   display: grid;
@@ -134,7 +144,13 @@ body {
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-#moments .moment img {
+@media only screen and (max-width: 900px) {
+  .moment .right {
+    margin-top: 1rem;
+  }
+}
+
+.moment img {
   border-radius: 15px;
   width: 90%;
   height: auto;
@@ -143,11 +159,11 @@ body {
   margin: 5px;
 }
 
-@media only screen and (max-width: 700px) {
-  #moments .moment {
+@media only screen and (max-width: 900px) {
+  .moment {
     width: 100%;
-    -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    -ms-grid-columns: (minmax(450px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   }
 }
 /*# sourceMappingURL=moments.css.map */
