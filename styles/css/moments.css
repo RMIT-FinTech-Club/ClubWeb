@@ -36,13 +36,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 80px;
 }
 
 .header hr.hl {
   border: 1px solid black;
   background-color: #000;
-  width: 30%;
+  width: 25%;
 }
 
 .header p {
@@ -50,7 +49,6 @@ body {
   text-align: center;
   font-size: 40px;
   color: #dbb968;
-  margin: 20px 0 0;
 }
 
 .moment {
@@ -73,6 +71,7 @@ body {
 @media only screen and (max-width: 900px) {
   .moment .left h2 {
     text-align: center;
+    font-size: 36px;
   }
 }
 
@@ -111,6 +110,7 @@ body {
 }
 
 .moment .right {
+  padding-left: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,13 +121,21 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
 }
 
 .moment .right h2 {
   font-size: 18px;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .moment .right h2 {
+    text-align: center;
+  }
 }
 
 .moment .right .content {
@@ -139,8 +147,28 @@ body {
 }
 
 @media only screen and (max-width: 900px) {
+  .moment .right .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .moment .right .content img {
+    margin: 1rem 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
   .moment .right {
     margin-top: 1rem;
+    padding-left: 0;
   }
 }
 
