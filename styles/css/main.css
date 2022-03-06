@@ -462,7 +462,7 @@ div.cafefin {
   flex-direction: row;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1080px) {
   .cafefin {
     flex-wrap: wrap;
     padding: 1rem;
