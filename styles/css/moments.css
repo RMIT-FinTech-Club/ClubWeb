@@ -45,12 +45,6 @@ body {
   width: 30%;
 }
 
-@media only screen and (max-width: 700px) {
-  .header hr.hl {
-    display: none;
-  }
-}
-
 .header p {
   font-family: "Bebas Neue";
   text-align: center;
