@@ -18,6 +18,7 @@
 
   <!--Fonts Links-->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -36,10 +37,10 @@
   <link rel="stylesheet" href="./styles/css/normalize.css" />
   <link rel="stylesheet" href="./styles/css/main.css" />
   <link rel="stylesheet" href="./styles/css/navbar-footer.css" />
-  <link rel="stylesheet" href="./styles/css/Department_ExecutiveBoard.css" />
   <link rel="stylesheet" href="./styles/css/Slogan_UpcomingEvents.css">
   <link rel='stylesheet' href='./styles/css/moments.css'>
   <link rel='stylesheet' href='./styles/css/util.css'>
+  <link rel='stylesheet' href='./styles/css/dep-and-board.css'>
 
 
   <!-- Our JS -->
@@ -160,89 +161,127 @@
   </section>
 
   <!--Departments-->
-  <div>
-    <div class="content-col-2">
-      <div class="col col-1">
-        <h2 class="sub-header-1">Our Deparments</h2>
-        <h1 class="main-header-1">BUSINESS DEPARMENT</h1>
-        <p class="paragraph">
-          Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
-          looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,
-          and going through the cites of the word in classical literature, discovered the undoubtable source.
-          Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
-          (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics,
-          very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
-          comes from a line in section 1.10.32.
-        </p>
-        <button class="btn btn-primary">Join Us</button>
+  <!-- FIRST PAGE -->
+  <div class="grid-2">
 
-        <div class="tabs-container">
-          <div class="tab-1">01</div>
-          <div class="tab-2">02</div>
-          <div class="tab-3">03</div>
-          <div class="tab-4">04</div>
-        </div>
+    <!-- Column 1 -->
+    <div class="column">
+      <div class="sub-h-w-lines">
+        <div class="line"></div>
+        <h1 class="sub-header-1">Our Departments</h1>
+        <div class="line"></div>
       </div>
 
-      <div class="col">
-        <img src="./assets/images/BusinessDepImg.png" class="img">
+      <div class="column-60">
+        <h1 id="mainHeader1" class="main-header-1">BUSINESS DEPARMENT</h1>
+        <p class="department-content">
+          This is the content for the Business Department of the Fintech
+          club. This is for testing purposes only, not finalized.
+        </p>
+        <button class="primary-btn">Join Us</button>
+      </div>
+      
+      <div class="square-btn-container">
+        <button id="squareBtn1" class="square-btn">01</button> 
+        <button id="squareBtn2" class="square-btn">02</button>
+        <button id="squareBtn3" class="square-btn">03</button>
+        <button id="squareBtn4" class="square-btn">04</button>
       </div>
     </div>
+    <!-- End column 1 -->
 
-    <!--Executive board-->
-    <div class="second-page-container">
-      <!-- Front start -->
-      <div class="front">
-        <div class="content-col-2">
-          <div class="col">
-            <div class="behind-container">
-              <div class="behind"></div>
-            </div>
-            <h1 class="main-header-2">EXECUTIVE BOARD</h1>
-            <h2 class="sub-header-2">MEET THE TEAM!</h2>
-            <div class="board">
-              <div class="avatar-position">
-                <img src="../assets/images/tempav.png" onclick="" class="btn-avatar">
-                <p class="position">President</p>
-              </div>
-              <div class="avatar-position">
-                <img src="../assets/images/tempav.png" onclick="" class="btn-avatar">
-                <p class="position">President</p>
-              </div>
-              <div class="avatar-position">
-                <img src="../assets/images/tempav.png" onclick="" class="btn-avatar">
-                <p class="position">President</p>
-              </div>
-              <div class="avatar-position">
-                <img src="../assets/images/tempav.png" onclick="" class="btn-avatar">
-                <p class="position">President</p>
-              </div>
-              <div class="avatar-position">
-                <img src="../assets/images/tempav.png" onclick="" class="btn-avatar">
-                <p class="position">President</p>
-              </div>
-              <div class="avatar-position">
-                <img src="../assets/images/tempav.png" onclick="" class="btn-avatar">
-                <p class="position">President</p>
-              </div>
-              <div class="avatar-position">
-                <img src="../assets/images/tempav.png" onclick="" class="btn-avatar">
-                <p class="position">President</p>
-              </div>
-              <div class="avatar-position">
-                <img src="../assets/images/tempav.png" onclick="" class="btn-avatar">
-                <p class="position">President</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col"></div>
-        </div>
-      </div>
-      <!-- Front end -->
+    <div class="column">
+      <img src="../assets/images/BusinessDepImg.png" class="img" />
     </div>
 
   </div>
+  
+  <!-- END FIRST PAGE -->
+
+  <!-- SECOND PAGE -->
+  <div class="second-page-container">
+    <!-- The yellow box behind -->
+    <div class="behind"></div>
+
+    <!-- The content infront -->
+    <div class="grid-2 front">
+      <!-- Column 1 -->
+      <div class="column">
+        
+        <div class="page-2-header">
+          <h1 class="main-header-2">EXECUTIVE BOARD</h1>
+          <h1 class="sub-header-2">MEET THE TEAM!</h1>
+        </div>
+
+        <div class="av-btn-container">
+          <div class="board">
+            <button id="avBtn1" class="av-btn"><img src="../assets/images/pre.png" class="av-btn-img"/></button>
+            <h1 class="position">President</h1>
+          </div>
+          <div class="board">
+            <button id="avBtn2" class="av-btn"><img src="../assets/images/i-v-pre.png" class="av-btn-img"/></button>
+            <h1 class="position">Internal Vice President</h1>
+          </div>
+          <div class="board">
+            <button id="avBtn3" class="av-btn"><img src="../assets/images/e-v-pre.png" class="av-btn-img"/></button>
+            <h1 class="position">External Vice President</h1>
+          </div>
+          <div class="board">
+            <button id="avBtn4" class="av-btn"><img src="../assets/images/cfo.png" class="av-btn-img"/></button>
+            <h1 class="position">CFO</h1>
+          </div>
+        </div>
+        <div class="av-btn-container">
+          <div class="board">
+            <button id="avBtn5" class="av-btn"><img src="../assets/images/head-tech.png" class="av-btn-img"/></button>
+            <h1 class="position">Head of Technology</h1>
+          </div>
+          <div class="board">
+            <button id="avBtn6" class="av-btn"><img src="../assets/images/head-bus.png" class="av-btn-img"/></button>
+            <h1 class="position">Head of Business</h1>
+          </div>
+          <div class="board">
+            <button id="avBtn7" class="av-btn"><img src="../assets/images/head-mk.png" class="av-btn-img"/></button>
+            <h1 class="position">Head of Marketing</h1>
+          </div>
+          <div class="board">
+            <button id="avBtn8" class="av-btn"><img src="../assets/images/head-hr.png" class="av-btn-img"/></button>
+            <h1 class="position">Head of HR</h1>
+          </div>
+        </div>
+      </div>
+      <!-- End column 1 -->
+
+      <!-- Column 2 -->
+      <div class="column">
+
+        <div class="avatar">
+          <img src="../assets/images/pre.png" id="avatar" class="av"/>
+          <img src="../assets/images/pre.png" id="avPosition" class="av-position"/>
+        </div>
+
+        <div class="column-60">
+          <div class="board-info-mid">
+            <h1 id="infoName" class="info-name">PHAN LE MINH AN</h1>
+            <h1 id="infoPosition" class="info-position">PRESIDENT</h1>
+  
+            <h1 id="infoDepartment" class="info-department">Department: Unknown</h1>
+            <h1 id="infoContact" class="info-contact">Contact: example@gmail.com</h1>
+          </div>
+          <p class="information">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At, quia odit quasi voluptas, 
+            ullam libero vel laborum perspiciatis minus atque dolores quibusdam voluptates maiores error, 
+            modi vitae repellendus quo. Iusto, iste ratione laboriosam quo porro ad soluta ea, 
+            saepe eligendi eos aspernatur repellat. Consectetur optio ut vel voluptate accusamus 
+            voluptatem perferendis delectus facere sit a, possimus magnam mollitia ex similique!
+          </p>
+        </div>
+        
+      </div>
+      <!-- End column 2 -->
+    </div>
+  </div>
+  <!-- END SECOND PAGE -->
 
   <!--Moments-->
   <div id='moments'>
