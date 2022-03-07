@@ -91,12 +91,12 @@ footer {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    text-align: center;
     > p {
       font-family: "Bebas Neue";
-      font-size: 20px;
-      font-weight: 400;
-      margin-bottom: 0;
+      font-size: 26px;
       letter-spacing: 1px;
+      margin-top: 0.5rem;
     }
     ul {
       column-count: 2;
@@ -147,11 +147,10 @@ footer {
       font-size: 15px;
       line-height: 20px;
     }
-  }
-
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    text-align: center;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      text-align: center;
+    }
   }
   .right {
     display: flex;
