@@ -10,5 +10,5 @@ dist
 /projects/*.html
 !/projects/index.html
 
-/blog/*.html
-!/blog/index.html
+/posts/*.html
+!/posts/index.html
