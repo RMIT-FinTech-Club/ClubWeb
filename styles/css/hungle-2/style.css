@@ -1,0 +1,484 @@
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.grid-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+
+.column {
+  height: 100%;
+  width: 100%;
+}
+
+.column-60 {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.main-header-1 {
+  color: #2B305E;
+  font-size: 90px;
+  font-style: normal;
+  font-weight: 400;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.main-header-2 {
+  color: white;
+  font-size: 90px;
+  font-style: normal;
+  font-weight: 400;
+  font-family: 'Bebas Neue', cursive;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.sub-header-1 {
+  color: #DBB968;
+  font-style: normal;
+  font-size: 40px;
+  font-weight: 700;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.sub-header-2 {
+  color: white;
+  font-style: normal;
+  font-size: 40px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 10rem;
+}
+
+.line {
+  width: 100px;
+  height: 0px;
+  border-bottom: 2px solid #77878B;
+}
+
+.sub-h-w-lines {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-2-header {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.primary-btn {
+  border-radius: 15px;
+  color: white;
+  background-color: #DBB968;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px 24px;
+  border: none;
+}
+
+.primary-btn:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+  cursor: pointer;
+}
+
+.square-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 60px;
+  margin-right: 60px;
+  position: absolute;
+  bottom: -7rem;
+}
+
+.square-btn {
+  border-radius: 0;
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 90px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  height: 100px;
+  width: 100px;
+  border: none;
+}
+
+.square-btn:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+  cursor: pointer;
+}
+
+#squareBtn1 {
+  background-color: #2B305E;
+}
+
+#squareBtn2 {
+  background-color: #DBB968;
+}
+
+#squareBtn3 {
+  background-color: #C9D6EA;
+}
+
+#squareBtn4 {
+  background-color: #77878B;
+}
+
+.av-btn-container {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 5rem;
+  gap: 10px;
+}
+
+.av-btn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 2.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.av-btn-img {
+  margin: 0;
+  height: 120px;
+  width: 120px;
+  border-radius: 2.5rem;
+}
+
+.av-btn-img:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.avatar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 7rem;
+}
+
+.av {
+  height: 250px;
+  width: 250px;
+  position: relative;
+}
+
+.av-position {
+  height: 75px;
+  width: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 9;
+  position: absolute;
+  bottom: 0;
+  right: 11rem;
+}
+
+.board {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.position {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.board-info-mid {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+}
+
+.info-name {
+  color: #2B305E;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 30px;
+  margin-bottom: 0.5rem;
+}
+
+.info-position {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.info-department {
+  font-size: 14px;
+  margin-top: 0;
+}
+
+.info-contact {
+  font-size: 14px;
+  margin-top: 0;
+}
+
+.img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.second-page-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.front {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  z-index: 9;
+  position: relative;
+}
+
+.behind {
+  background-color: #DBB968;
+  width: 100%;
+  height: 230px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 750px) {
+  .column-60 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .main-header-1 {
+    font-size: 50px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+  .main-header-2 {
+    font-size: 60px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+  .sub-header-1 {
+    font-size: 27px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 0.25rem;
+  }
+  .sub-header-2 {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 5rem;
+  }
+  .line {
+    width: 40px;
+  }
+  .department-content {
+    font-size: 13px;
+  }
+  .primary-btn {
+    border-radius: 13px;
+    padding: 8px 20px;
+    border: none;
+  }
+  .square-btn-container {
+    margin-left: 40px;
+    margin-right: 40px;
+    position: absolute;
+    bottom: 13rem;
+  }
+  .square-btn {
+    font-size: 50px;
+    height: 60px;
+    width: 60px;
+  }
+  .av-btn-container {
+    margin-bottom: 2rem;
+    margin-top: 0;
+    gap: 8px;
+  }
+  .av-btn-img {
+    margin-top: 0;
+    height: 80px;
+    width: 80px;
+  }
+  .avatar {
+    margin-top: 5rem;
+  }
+  .av {
+    height: 150px;
+    width: 150px;
+  }
+  .av-position {
+    height: 45px;
+    width: 45px;
+    right: 7rem;
+  }
+  .position {
+    font-size: 10px;
+  }
+  .info-name {
+    font-size: 20px;
+    margin-bottom: 0.3rem;
+  }
+  .info-position {
+    font-size: 10px;
+    margin-bottom: 0.55rem;
+  }
+  .info-department {
+    font-size: 10px;
+  }
+  .info-contact {
+    font-size: 10px;
+    margin-top: 0;
+  }
+  .information {
+    font-size: 13px;
+  }
+  .behind {
+    height: 160px;
+  }
+}
+
+@media (max-width: 500px) {
+  .column-60 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .main-header-1 {
+    font-size: 35px;
+    margin-top: 0.3rem;
+    margin-bottom: 0.125rem;
+  }
+  .main-header-2 {
+    font-size: 40px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+  .sub-header-1 {
+    font-size: 19px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 0.25rem;
+  }
+  .sub-header-2 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 5rem;
+  }
+  .line {
+    width: 20px;
+  }
+  .department-content {
+    font-size: 10px;
+  }
+  .primary-btn {
+    font-size: 10px;
+    border-radius: 11px;
+    padding: 6px 15px;
+    border: none;
+  }
+  .square-btn-container {
+    margin-left: 20px;
+    margin-right: 20px;
+    position: absolute;
+    bottom: 22rem;
+  }
+  .square-btn {
+    font-size: 30px;
+    height: 40px;
+    width: 40px;
+  }
+  .av-btn-container {
+    margin-bottom: 1rem;
+    margin-top: 0;
+    gap: 6px;
+  }
+  .av-btn-img {
+    margin-top: 0;
+    height: 60px;
+    width: 60px;
+  }
+  .avatar {
+    margin-top: 5rem;
+  }
+  .av {
+    height: 100px;
+    width: 100px;
+  }
+  .av-position {
+    height: 30px;
+    width: 30px;
+    right: 8.5rem;
+  }
+  .position {
+    font-size: 8px;
+  }
+  .info-name {
+    font-size: 15px;
+    margin-bottom: 0.3rem;
+  }
+  .info-position {
+    font-size: 8px;
+    margin-bottom: 0.55rem;
+  }
+  .info-department {
+    font-size: 8px;
+  }
+  .info-contact {
+    font-size: 8px;
+    margin-top: 0;
+  }
+  .information {
+    font-size: 9px;
+  }
+  .behind {
+    height: 130px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
