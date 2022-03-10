@@ -23,21 +23,21 @@ button {
   display: flex;
 }
 
-.flex_centerX {
-  display: flex;
-  justify-content: center;
-}
+/*.flex_centerX {*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*}*/
 
-.flex_centerY {
-  display: flex;
-  align-items: center;
-}
+/*.flex_centerY {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*}*/
 
-.flex_centerXY {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/*.flex_centerXY {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*}*/
 
 .overlay {
   background-color: rgb(0, 0, 0, 0.5);
@@ -102,7 +102,7 @@ button {
 
 #slogan {
   height: 100%;
-  box-shadow: 0 0 5rem 0rem black;
+  box-shadow: 0 0 5rem 0 black;
   z-index: 2;
   position: relative;
 }
@@ -129,7 +129,7 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
 
-  box-shadow: 0 0 5rem 0rem black;
+  box-shadow: 0 0 5rem 0 black;
 }
 
 #header_sign {
@@ -229,97 +229,58 @@ button {
 /* ------------------------------------------------- */
 /* Upcoming Events */
 
-#UPCOMING_EVENTS {
-  position: relative;
-  height: 75rem;
-  width: 100%;
-
-  background-image: url(../../assets/images/upcoming-events-main-image-4.jpg);
-  background-size: cover;
-
-  z-index: 1;
-  overflow: hidden;
-}
-
-#upcoming_left {
-  width: 25%;
-  height: 100%;
-}
-
-#upcoming_right {
-  width: 75%;
-  height: 100%;
-  padding: 10rem;
-}
-
-#statistic_1 {
-  height: 33.3333333%;
-  width: 100%;
-  background-color: var(--primary-yellow);
-  transform: translateY(-100%);
-  transition-duration: 1s;
-  box-shadow: 0 0 5rem 0 black;
-  position: relative;
-  z-index: 3;
-
-  border-radius: 0 0 5rem 0;
-}
-
-#statistic_2 {
-  height: 33.3333333%;
-  width: 100%;
-  background-color: var(--light-blue);
-  transform: translateY(-200%);
-  transition-duration: 1s;
-  box-shadow: 0 0 5rem 0 black;
-  position: relative;
-  z-index: 2;
-
-  border-radius: 0 5rem 5rem 0;
-}
-
-#statistic_3 {
-  height: 33.3333333%;
-  width: 100%;
-  background-color: var(--primary-grey);
-  transform: translateY(-300%);
-  transition-duration: 1s;
-  box-shadow: 0 0 5rem 0 black;
-  position: relative;
-  z-index: 1;
-
-  border-radius: 0 5rem 5rem 0;
-}
-
 .statistic_container {
-  margin-left: 7.5rem;
-}
-
-#upcoming_left .big_stat_titles {
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-family: "Bebas Neue";
-  font-size: 5rem;
-  color: white;
-  line-height: 8rem;
+  margin: 5rem 5rem 10rem;
 }
 
-#upcoming_left .small_stat_titles {
-  font-family: "Montserrat";
-  font-size: 1.5rem;
-  color: white;
+#stats1 {
+  color: var(--primary-yellow);
 }
 
-#upcoming_right h1 {
+#stats2 {
   color: var(--primary-blue);
-  font-size: 7rem;
 }
 
-#upcoming_right .secondary_heading {
+#stats3 {
+  color: var(--primary-grey);
+
+}
+
+.stats {
+  text-align: center;
+  margin-top: 4em;
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.big_stat_titles {
+  font-size: 5em;
+}
+
+.small_stat_titles {
+  font-size: 2em;
+}
+
+#UPCOMING_EVENTS h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#UPCOMING_EVENTS .secondary_heading {
   margin-bottom: 1rem;
-  font-size: 2rem;
-}
-
-#UPCOMING_EVENTS .overlay {
-  background-color: rgb(0, 0, 0, 0.4);
+  text-align: center;
 }
 
 #upcoming_event_splotlight {
@@ -337,51 +298,85 @@ button {
 }
 
 #upcoming_events_container {
-  width: 100%;
-  height: 70%;
-  margin-top: 8rem;
+  margin: 2rem 5rem 10rem;
+  justify-content: space-between;
 }
 
 #upcoming_events_content_left {
   flex-basis: 60%;
-  margin-right: 2rem;
-}
-
-#upcoming_events_content_right_SLOT1 img,
-#upcoming_events_content_left img {
-  height: 100%;
-  width: 100%;
-  border-radius: 2.5rem;
-  box-shadow: 0 0 5rem 0 black;
-  transition-duration: 0.5s;
-}
-
-#upcoming_events_content_right_SLOT2 img {
-  height: 100%;
-  width: 47%;
-  border-radius: 2.5rem;
-  box-shadow: 0 0 5rem 0 black;
-  transition-duration: 0.5s;
-}
-
-#upcoming_right img:hover {
-  box-shadow: 0 0 5rem 0 white;
-}
-
-#upcoming_events_content_right_SLOT2 img:nth-child(1) {
-  margin-right: 2rem;
 }
 
 #upcoming_events_content_right {
   flex-basis: 38%;
 }
 
-#upcoming_events_content_right_SLOT1,
-#upcoming_events_content_right_SLOT2 {
-  height: 47.75%;
-  width: 100%;
-}
-
 #upcoming_events_content_right_SLOT1 {
   margin-bottom: 2rem;
 }
+
+#upcoming_events_content_right_SLOT2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+#upcoming_events_content_right_SLOT1 img,
+#upcoming_events_content_left img,
+#upcoming_events_content_right_SLOT2 img {
+  height: fit-content;
+  border-radius: 2rem;
+  transition-duration: 0.5s;
+}
+
+#upcoming_events_content_right_SLOT1 img,
+#upcoming_events_content_left img {
+  width: 100%;
+}
+
+#upcoming_events_content_right_SLOT2 img {
+  width: 45%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .stats {
+    font-size: smaller;
+  }
+
+  #upcoming_events_container {
+    flex-direction: column;
+  }
+
+  #upcoming_events_content_left {
+    margin-bottom: 2rem;
+  }
+
+  #upcoming_events_content_right_SLOT1 img,
+  #upcoming_events_content_left img,
+  #upcoming_events_content_right_SLOT2 img {
+    border-radius: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .statistic_container {
+    flex-direction: column;
+  }
+
+  .stats {
+    font-size: initial;
+  }
+
+  #UPCOMING_EVENTS h1 {
+    font-size: 2rem;
+  }
+
+  #UPCOMING_EVENTS .secondary_heading {
+    font-size: 1.25rem;
+  }
+
+  #upcoming_events_container {
+    margin: 2rem 3rem 10rem;
+  }
+}
+
+
+
