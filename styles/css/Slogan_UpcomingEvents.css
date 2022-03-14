@@ -108,13 +108,14 @@ button {
 }
 
 #header_left {
-  width: 50%;
+  width: auto;
   height: 100%;
-
   padding: 18rem 15rem;
   overflow: hidden;
-
   position: relative;
+  text-align: center;
+  padding-right: 0rem;
+  padding-top: 8rem;
 }
 
 #header_right {
