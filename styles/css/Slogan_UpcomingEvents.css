@@ -49,13 +49,9 @@ button {
   left: 0;
 }
 
-.primary_heading {
-  font-size: 4rem;
-}
-
-.secondary_heading {
+.primary-heading {
   color: var(--primary-yellow);
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Montserrat";
   letter-spacing: 0.4rem;
 }
@@ -109,13 +105,11 @@ button {
 
 #header_left {
   width: auto;
-  height: 100%;
-  padding: 18rem 15rem;
+  padding: 1rem;
+  padding-top: 8rem;
   overflow: hidden;
   position: relative;
   text-align: center;
-  padding-right: 0rem;
-  padding-top: 8rem;
 }
 
 #header_right {
@@ -156,16 +150,15 @@ button {
 
 #slogan {
   font-family: "Bebas Neue";
-  font-size: 9rem;
   color: var(--primary-blue);
-  margin-bottom: 2rem;
 }
 
 #main_description {
   font-size: 1.25rem;
   font-family: "Montserrat";
-  margin-bottom: 5rem;
-  margin-top: 5rem;
+  margin: 5rem auto;
+  display: flex;
+  width: 75%;
 }
 
 #signup {
@@ -191,6 +184,20 @@ button {
   border-radius: 0 2rem 2rem 0;
 }
 
+@media screen and (max-width: 768px) {
+  .primary-heading {
+    font-size: 2rem;
+  }
+  #main_description {
+    margin-left: auto;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .circles {
+    display: none;
+  }
+}
 #header_left .circle-light-blue {
   top: 4rem;
   left: -5rem;
@@ -216,7 +223,7 @@ button {
 
 #header_left .circle-primary-blue-s {
   top: 9rem;
-  left: 12rem;
+  left: 10rem;
 }
 
 #header_left .circle-primary-yellow-s {
@@ -252,7 +259,6 @@ button {
 
 #stats3 {
   color: var(--primary-grey);
-
 }
 
 .stats {
@@ -262,8 +268,12 @@ button {
 }
 
 @keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .big_stat_titles {
@@ -378,6 +388,3 @@ button {
     margin: 2rem 3rem 10rem;
   }
 }
-
-
-
