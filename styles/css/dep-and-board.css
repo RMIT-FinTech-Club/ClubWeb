@@ -33,6 +33,7 @@
 
 .sub-header-1 {
   color: #dbb968;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-size: 40px;
   font-weight: 700;
@@ -41,6 +42,7 @@
 }
 .sub-header-2 {
   color: white;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-size: 40px;
   font-weight: 400;
@@ -74,6 +76,7 @@
   font-family: "Montserrat", sans-serif;
   padding: 10px 24px;
   border: none;
+  margin-top: 2rem;
 }
 .primary-btn:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
@@ -251,7 +254,7 @@
   }
 
   .sub-header-1 {
-    font-size: 27px;
+    font-size: 25px;
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: 0.25rem;
@@ -262,17 +265,18 @@
     margin-bottom: 5rem;
   }
 
-  .line {
-    width: 40px;
+  .grid-2 .line {
+    width: 50px;
   }
 
   .department-content {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .primary-btn {
     border-radius: 13px;
     padding: 8px 20px;
+    margin-top: 0.5rem;
     border: none;
   }
 
@@ -362,7 +366,7 @@
   }
 
   .sub-header-1 {
-    font-size: 19px;
+    font-size: 16.5px;
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: 0.25rem;
@@ -373,12 +377,12 @@
     margin-bottom: 5rem;
   }
 
-  .line {
-    width: 20px;
+  .grid-2 .line {
+    width: 30.5px;
   }
 
   .department-content {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .primary-btn {
@@ -434,23 +438,23 @@
   }
 
   .info-name {
-    font-size: 15px;
+    font-size: 17px;
     margin-bottom: 0.3rem;
   }
   .info-position {
-    font-size: 8px;
+    font-size: 10px;
     margin-bottom: 0.55rem;
   }
   .info-department {
-    font-size: 8px;
+    font-size: 10px;
   }
   .info-contact {
-    font-size: 8px;
+    font-size: 10px;
     margin-top: 0;
   }
 
   .information {
-    font-size: 9px;
+    font-size: 12px;
   }
 
   .behind {

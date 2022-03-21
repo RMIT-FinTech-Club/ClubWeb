@@ -7,18 +7,22 @@ let btn4 = document.querySelector('#squareBtn4');
 let header = document.querySelector('#mainHeader1');
 
 btn1.addEventListener('click', () => {
+  depImg.src = '../assets/images/dep-and-board/BUS.svg';
   header.innerText = 'BUSINESS DEPARTMENT';
 });
 
 btn2.addEventListener('click', () => {
+  depImg.src = '../assets/images/dep-and-board/TECH.svg';
   header.innerText = 'TECHNOLOGY DEPARTMENT';
 });
 
 btn3.addEventListener('click', () => {
+  depImg.src = '../assets/images/dep-and-board/HR.svg';
   header.innerText = 'HR DEPARTMENT';
 });
 
 btn4.addEventListener('click', () => {
+  depImg.src = '../assets/images/dep-and-board/MK.svg';
   header.innerText = 'MARKETING DEPARTMENT';
 });
 
@@ -38,48 +42,56 @@ let infoName = document.querySelector('#infoName');
 let infoPosition = document.querySelector('#infoPosition');
 
 avBtn1.addEventListener('click', () => {
+  avatar.src = '../assets/images/dep-and-board/Pres.svg'
   avPosition.src = '../assets/images/pre.png';
   infoName.innerText = 'PHAN LE MINH AN';
   infoPosition.innerText = 'PRESIDENT';
 });
 
 avBtn2.addEventListener('click', () => {
+  avatar.src = '../assets/images/dep-and-board/PresInternal.svg'
   avPosition.src = '../assets/images/i-v-pre.png';
   infoName.innerText = 'HUYNH PHUONG VY';
   infoPosition.innerText = 'INTERNAL VICE PRESIDENT';
 });
 
 avBtn3.addEventListener('click', () => {
+  avatar.src = '../assets/images/dep-and-board/PresExternal.svg'
   avPosition.src = '../assets/images/e-v-pre.png';
   infoName.innerText = 'NGUYEN CAO MINH DUC';
   infoPosition.innerText = 'EXTERNAL VICE PRESIDENT';
 });
 
 avBtn4.addEventListener('click', () => {
+  avatar.src = '../assets/images/dep-and-board/CFO.svg'
   avPosition.src = '../assets/images/cfo.png';
   infoName.innerText = 'HUYNH PHUONG VY';
   infoPosition.innerText = 'CFO';
 });
 
 avBtn5.addEventListener('click', () => {
+  avatar.src = '../assets/images/dep-and-board/HeadTech.svg'
   avPosition.src = '../assets/images/head-tech.png';
   infoName.innerText = 'CHUNG QUAN TIN';
   infoPosition.innerText = 'HEAD OF TECHNOLOGY';
 });
 
 avBtn6.addEventListener('click', () => {
+  avatar.src = '../assets/images/dep-and-board/HeadBus.svg'
   avPosition.src = '../assets/images/head-bus.png';
   infoName.innerText = 'VUONG ANH CHIEN';
   infoPosition.innerText = 'HEAD OF BUSINESS';
 });
 
 avBtn7.addEventListener('click', () => {
+  avatar.src = '../assets/images/dep-and-board/HeadMK.svg'
   avPosition.src = '../assets/images/head-mk.png';
   infoName.innerText = 'DO PHUONG ANH';
   infoPosition.innerText = 'HEAD OF MARKETING';
 });
 
 avBtn8.addEventListener('click', () => {
+  avatar.src = '../assets/images/dep-and-board/HeadHR.svg'
   avPosition.src = '../assets/images/head-hr.png';
   infoName.innerText = 'HUYNH PHUONG VY';
   infoPosition.innerText = 'HEAD OF HR';
