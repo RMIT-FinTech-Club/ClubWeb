@@ -312,10 +312,6 @@ footer .right a:hover, footer .right a:visited, footer .right a:active {
         height: 125px;
     }
 
-    p{
-      display: none;
-    }
-
     div.content_white_line{
     display: none;
     }
@@ -349,64 +345,3 @@ footer .right a:hover, footer .right a:visited, footer .right a:active {
       display: none;
     }
   }
-
-/*Fintech Club Slogan Resposive (fixed)*/
-
-div.primary_heading{
-  margin-top: -100px;
-  margin-left: -90px;
-}
-
-div.secondary_heading{
-  margin-top: 30px;
-  margin-left: -90px;
-}
-
-div#main_description{
-  margin-left: -90px;
-}
-
-div#header_left{
-  padding-bottom: 50px;
-}
-
-@media screen and (max-width: 360px){
-
-  div.circle-primary-blue{
-    display: none;
-  }
-
-  div.primary_heading{
-    margin-top: -20px;
-    margin-left: -150px;
-  }
-
-  div.secondary_heading{
-    margin-top: 30px;
-    margin-left: -150px;
-  }
-
-  div#main_description{
-    margin-left: -150px;
-  }
-}
-/* 1 2 3 4 button*/
-
-@media screen and (max-width: 750px){
-
-  button#squareBtn1.square-btn{
-    display: none;
-  }
-
-  button#squareBtn2.square-btn{
-    display: none;
-  }
-
-  button#squareBtn3.square-btn{
-    display: none;
-  }
-
-  button#squareBtn4.square-btn{
-    display: none;
-  }
-}
