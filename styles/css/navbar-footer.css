@@ -241,3 +241,172 @@ footer .right a:hover, footer .right a:visited, footer .right a:active {
   }
 }
 /*# sourceMappingURL=navbar-footer.css.map */
+
+/*Navbar fixed responive*/
+
+@media screen and (max-width: 1100px) {
+  header > button {
+    margin-right: 50px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  header > button {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .af{
+    margin-left: -100px;
+    width: 50px;
+  }
+
+  .bf{
+    margin-left: -100px;
+    width: 50px;
+  }
+
+  #logo {
+    margin-left: -100px;
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #logo {
+    width: 0.000000000001px;
+  }
+
+  #logo > img {
+    display: none;
+  }
+  
+  .af {
+    margin-right: 90px;
+  }
+
+  .bf{
+    margin-right: 90px;
+  }
+}
+
+/*Phone screen size*/
+
+/*Navbar*/
+@media screen and (max-width: 570px) {
+    .bf {
+      padding-right: 10px;
+      padding-left: 10px; 
+    }
+  
+    .af {
+      padding-left: 10px;
+      padding-right: 15px;
+    }
+
+    li{
+      margin-left: 10px;
+    }
+    header{
+        height: 125px;
+    }
+
+    p{
+      display: none;
+    }
+
+    div.content_white_line{
+    display: none;
+    }
+
+    header > button {
+      margin-top: -5px;
+      margin-right: 200px;
+    }
+  }
+
+  @media screen and (max-width: 860px){
+    .circle-primary-blue-s {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 600px){
+    .af {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .bf {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  @media screen and (max-width: 479px){
+    header{
+      display: none;
+    }
+  }
+
+/*Fintech Club Slogan Resposive (fixed)*/
+
+div.primary_heading{
+  margin-top: -100px;
+  margin-left: -90px;
+}
+
+div.secondary_heading{
+  margin-top: 30px;
+  margin-left: -90px;
+}
+
+div#main_description{
+  margin-left: -90px;
+}
+
+div#header_left{
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 360px){
+
+  div.circle-primary-blue{
+    display: none;
+  }
+
+  div.primary_heading{
+    margin-top: -20px;
+    margin-left: -150px;
+  }
+
+  div.secondary_heading{
+    margin-top: 30px;
+    margin-left: -150px;
+  }
+
+  div#main_description{
+    margin-left: -150px;
+  }
+}
+/* 1 2 3 4 button*/
+
+@media screen and (max-width: 750px){
+
+  button#squareBtn1.square-btn{
+    display: none;
+  }
+
+  button#squareBtn2.square-btn{
+    display: none;
+  }
+
+  button#squareBtn3.square-btn{
+    display: none;
+  }
+
+  button#squareBtn4.square-btn{
+    display: none;
+  }
+}
