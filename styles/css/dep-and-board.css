@@ -16,7 +16,7 @@
 
 .main-header-1 {
   color: #2b305e;
-  font-size: 90px;
+  font-size: 80px;
   font-style: normal;
   font-weight: 400;
   font-family: "Bebas Neue", cursive;
@@ -243,7 +243,7 @@
   }
 
   .main-header-1 {
-    font-size: 50px;
+    font-size: 45px;
     margin-top: 0.5rem;
     margin-bottom: 0.25rem;
   }
@@ -270,12 +270,13 @@
   }
 
   .department-content {
-    font-size: 15px;
+    font-size: 12.5px;
   }
 
   .primary-btn {
+    font-size: 13px;
     border-radius: 13px;
-    padding: 8px 20px;
+    padding: 8px 18px;
     margin-top: 0.5rem;
     border: none;
   }
@@ -355,7 +356,7 @@
   }
 
   .main-header-1 {
-    font-size: 35px;
+    font-size: 25px;
     margin-top: 0.3rem;
     margin-bottom: 0.125rem;
   }
@@ -366,7 +367,7 @@
   }
 
   .sub-header-1 {
-    font-size: 16.5px;
+    font-size: 13px;
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: 0.25rem;
@@ -382,7 +383,7 @@
   }
 
   .department-content {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .primary-btn {
@@ -397,7 +398,7 @@
     margin-left: 20px;
     margin-right: 20px;
     position: absolute;
-    bottom: 470rem;
+    bottom: 332.5rem;
   }
 
   .square-btn {
@@ -430,7 +431,7 @@
   .av-position {
     height: 30px;
     width: 30px;
-    right: 8.5rem;
+    right: 2.5rem;
   }
 
   .position {
