@@ -56,6 +56,10 @@ avBtn1.addEventListener('click', () => {
   infoPosition.innerText = 'PRESIDENT';
   infoDepartment.innerText = 'Technology';
   infoContact.innerText = 's3918702@rmit.edu.vn';
+  infoFact1.innerText = '● Studied at an International school for 10 years.'
+  infoFact2.innerText = '● Spent the last 2 years of Highschool in America.'
+  infoFact3.innerText = '● Hobbies: Arts, Arduino programming, Basketball, web development, smart contract programming.'
+  infoFact4.innerText = ''
 });
 
 avBtn2.addEventListener('click', () => {
@@ -65,6 +69,10 @@ avBtn2.addEventListener('click', () => {
   infoPosition.innerText = 'INTERNAL VICE PRESIDENT';
   infoDepartment.innerText = 'Business';
   infoContact.innerText = 's3917936@rmit.edu.vn';
+  infoFact1.innerText = '● Born in Thanh Hoa and got a chance to study internationally.'
+  infoFact2.innerText = '● Currently studying in RMIT due to Covid.'
+  infoFact3.innerText = ''
+  infoFact4.innerText = ''
 });
 
 avBtn3.addEventListener('click', () => {
@@ -74,6 +82,10 @@ avBtn3.addEventListener('click', () => {
   infoPosition.innerText = 'EXTERNAL VICE PRESIDENT';
   infoDepartment.innerText = 'International Business';
   infoContact.innerText = 's3928201@student.rmit.edu.au';
+  infoFact1.innerText = '● Worked for many non-profit organizations in Vietnam.'
+  infoFact2.innerText = '● Director at VietAbroader Club HCM.'
+  infoFact3.innerText = ''
+  infoFact4.innerText = ''
 });
 
 avBtn4.addEventListener('click', () => {
@@ -83,6 +95,10 @@ avBtn4.addEventListener('click', () => {
   infoPosition.innerText = 'CFO';
   infoDepartment.innerText = 'Digital Business';
   infoContact.innerText = 's3836586@rmit.edu.vn';
+  infoFact1.innerText = '● Used to attend some clubs at RMIT such as MarCom, Volleyball club as secretary, English Club as Operation member.'
+  infoFact2.innerText = ''
+  infoFact3.innerText = ''
+  infoFact4.innerText = ''
 });
 
 avBtn5.addEventListener('click', () => {
@@ -92,6 +108,10 @@ avBtn5.addEventListener('click', () => {
   infoPosition.innerText = 'HEAD OF TECHNOLOGY';
   infoDepartment.innerText = 'Engineering';
   infoContact.innerText = 's3927212@rmit.edu.vn';
+  infoFact1.innerText = '● Studied at Nguyen Thuong Hien high school.'
+  infoFact2.innerText = '● 2-year experience at Chairman.'
+  infoFact3.innerText = '● Hobbies: Reading, Trading, Arduino Programming, Anime.'
+  infoFact4.innerText = ''
 });
 
 avBtn6.addEventListener('click', () => {
@@ -101,6 +121,10 @@ avBtn6.addEventListener('click', () => {
   infoPosition.innerText = 'HEAD OF BUSINESS';
   infoDepartment.innerText = 'Economics and Finance';
   infoContact.innerText = 's3864152@rmit.edu.vn';
+  infoFact1.innerText = '● 50% RMIT scholarship.'
+  infoFact2.innerText = '● Spent 1 year in participating in almost all business case competition.'
+  infoFact3.innerText = '● Usually research about the potential of Vietnamese stock in semester break.'
+  infoFact4.innerText = '● Hobbies: Arts, Trading card games, Stocks/Crypto, Reading, Music.'
 });
 
 avBtn7.addEventListener('click', () => {
@@ -110,6 +134,10 @@ avBtn7.addEventListener('click', () => {
   infoPosition.innerText = 'HEAD OF MARKETING';
   infoDepartment.innerText = 'Digital Business';
   infoContact.innerText = 's3891420@rmit.edu.vn';
+  infoFact1.innerText = '● A sporty person who loves to go running  and swimming to help maintain body health, increasing work productivity.'
+  infoFact2.innerText = '● Hobbies: Traveling, Listening to music, discovering scientific mysteries.'
+  infoFact3.innerText = ''
+  infoFact4.innerText = ''
 });
 
 avBtn8.addEventListener('click', () => {
@@ -119,4 +147,8 @@ avBtn8.addEventListener('click', () => {
   infoPosition.innerText = 'HEAD OF HR';
   infoDepartment.innerText = 'Professional Communication';
   infoContact.innerText = 's3865196@rmit.edu.vn';
+  infoFact1.innerText = '● 5 years as a designer in the automotive industry.'
+  infoFact2.innerText = '● Love trying out new things.'
+  infoFact3.innerText = '● Unpredictable.'
+  infoFact4.innerText = '● Currently on a spiritual journey, practicing yoga and heels, exploring the culture and shooting on the streets of Saigon among others.'
 });
