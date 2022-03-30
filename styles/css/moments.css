@@ -135,11 +135,16 @@
 }
 
 .moment .right .content {
+  width: 100%;
   margin-left: 0.5rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.moment .right .content p {
+  font-size: 22px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -158,6 +163,10 @@
   .moment .right .content img {
     margin: 1rem 0;
     width: 100%;
+  }
+  .moment .right .content p {
+    font-size: 18px;
+    text-align: center;
   }
 }
 

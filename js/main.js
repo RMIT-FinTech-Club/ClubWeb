@@ -1,41 +1,34 @@
-// source of spotify podcast eps
-let spotifyPodcast = [
-  "https://open.spotify.com/embed/episode/3BKByrghO9kybXv0VmDErL?utm_source=generator",
-  "https://open.spotify.com/embed/episode/2C0eiVMeNYIex5OEPQXhLm?utm_source=generator",
+// source of spotify podcast eps (1 to latest)
+const spotifyPodcasts = [
+  "https://open.spotify.com/embed/episode/4g7tVZk3MJQNGZU14rMFzu?utm_source=generator",
   "https://open.spotify.com/embed/episode/2szc79vEhkESgNAMYInAf9?utm_source=generator",
-  "https://open.spotify.com/embed/episode/4g7tVZk3MJQNGZU14rMFzu?utm_source=generator"
-]
+  "https://open.spotify.com/embed/episode/2C0eiVMeNYIex5OEPQXhLm?utm_source=generator",
+  "https://open.spotify.com/embed/episode/3BKByrghO9kybXv0VmDErL?utm_source=generator",
+  "https://open.spotify.com/embed/episode/5601Q6WjtD2VWSxwy7PJT3?utm_source=generator",
+];
+let idx = spotifyPodcasts.length - 1;
 
-const PREVIOUS_BTN = document.querySelector("#prev-btn")
-const NEXT_BTN = document.querySelector("#next-btn")
-const SPOTIFY_EPS = document.querySelector("#spotify-podcast")
-// set latest podcast ep as the default ep when page first loads
-SPOTIFY_EPS.setAttribute("src", spotifyPodcast[0])
+const prevBtn = document.getElementById("prev-btn");
+const nextBtn = document.getElementById("next-btn");
+const spotifyPodcastPlayer = document.getElementById("spotify-podcast");
 
-// find index of the current source within the array
-const findIdx = () => {
-  const src = SPOTIFY_EPS.getAttribute("src")
-  return spotifyPodcast.indexOf(src)
+if (idx >= 0) {
+  updatePodcastPlayer(idx);
 }
 
-PREVIOUS_BTN.addEventListener("click", (event) => {
-  const srcIdx = findIdx()
-  // disable button if the current ep is the first ep in the array
-  if (srcIdx === 0) {
-    event.preventDefault()
-  } else {
-    // switch to previous ep
-    SPOTIFY_EPS.src=spotifyPodcast[srcIdx - 1]
-  }
-})
+prevBtn.addEventListener("click", (event) => {
+  if (idx === 0) return;
+  updatePodcastPlayer(--idx);
+});
 
-NEXT_BTN.addEventListener("click", (event) => {
-  const srcIdx = findIdx()
-  // disable button if the current ep is the last ep in the array
-  if (srcIdx === spotifyPodcast.length - 1) {
-    event.preventDefault()
-  } else {
-    // switch to next ep
-    SPOTIFY_EPS.src=spotifyPodcast[srcIdx + 1]
-  }
-})
+nextBtn.addEventListener("click", (event) => {
+  if (idx === spotifyPodcasts.length - 1) return;
+  updatePodcastPlayer(++idx);
+});
+
+function updatePodcastPlayer(srcIdx) {
+  spotifyPodcastPlayer.src = spotifyPodcasts[srcIdx];
+  prevBtn.style.visibility = idx === 0 ? "hidden" : "visible";
+  nextBtn.style.visibility =
+    idx === spotifyPodcasts.length - 1 ? "hidden" : "visible";
+}
