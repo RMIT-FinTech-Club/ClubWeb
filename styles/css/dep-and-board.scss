@@ -11,7 +11,10 @@ $grey: #77878b;
 
 .column {
   height: 100%;
+  max-height: 800px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .column-60 {
@@ -42,16 +45,17 @@ $grey: #77878b;
 .sub-header {
   &-1 {
     color: $yellow;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-size: 40px;
     font-weight: 700;
     margin-left: 20px;
     margin-right: 20px;
+    text-align: center;
   }
   &-2 {
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-size: 40px;
     font-weight: 400;
@@ -94,16 +98,17 @@ $grey: #77878b;
   padding: 10px 24px;
   border: none;
   margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 // Square buttons
 .square-btn-container {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 60px;
-  margin-right: 60px;
-  position: absolute;
-  bottom: 250rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: auto;
+  margin-bottom: 2rem;
 }
 
 .square-btn {
@@ -295,7 +300,6 @@ $grey: #77878b;
       width: 50px;
     }
   }
-  
 
   .department-content {
     font-size: 12.5px;
@@ -308,14 +312,6 @@ $grey: #77878b;
     padding: 8px 18px;
     margin-top: 0.5rem;
     border: none;
-  }
-
-  // Square buttons
-  .square-btn-container {
-    margin-left: 40px;
-    margin-right: 40px;
-    position: absolute;
-    bottom: 356.5rem;
   }
 
   .square-btn {
@@ -417,7 +413,7 @@ $grey: #77878b;
     }
   }
 
-  .grid-2{
+  .grid-2 {
     .line {
       width: 30.5px;
     }
@@ -434,14 +430,6 @@ $grey: #77878b;
     padding: 6px 15px;
     border: none;
     margin-bottom: 1rem;
-  }
-
-  // Square buttons
-  .square-btn-container {
-    margin-left: 20px;
-    margin-right: 20px;
-    position: absolute;
-    bottom: 332.5rem;
   }
 
   .square-btn {
