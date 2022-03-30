@@ -23,7 +23,7 @@ $grey: #77878b;
 .main-header {
   &-1 {
     color: $blue;
-    font-size: 90px;
+    font-size: 80px;
     font-style: normal;
     font-weight: 400;
     font-family: "Bebas Neue", cursive;
@@ -42,6 +42,7 @@ $grey: #77878b;
 .sub-header {
   &-1 {
     color: $yellow;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-size: 40px;
     font-weight: 700;
@@ -50,6 +51,7 @@ $grey: #77878b;
   }
   &-2 {
     color: white;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-size: 40px;
     font-weight: 400;
@@ -91,6 +93,7 @@ $grey: #77878b;
   font-family: "Montserrat", sans-serif;
   padding: 10px 24px;
   border: none;
+  margin-top: 2rem;
 }
 
 // Square buttons
@@ -100,7 +103,7 @@ $grey: #77878b;
   margin-left: 60px;
   margin-right: 60px;
   position: absolute;
-  bottom: -7rem;
+  bottom: 250rem;
 }
 
 .square-btn {
@@ -262,7 +265,7 @@ $grey: #77878b;
   // HEADERS SECTION
   .main-header {
     &-1 {
-      font-size: 50px;
+      font-size: 45px;
       margin-top: 0.5rem;
       margin-bottom: 0.25rem;
     }
@@ -275,7 +278,7 @@ $grey: #77878b;
 
   .sub-header {
     &-1 {
-      font-size: 27px;
+      font-size: 25px;
       margin-left: 15px;
       margin-right: 15px;
       margin-bottom: 0.25rem;
@@ -287,18 +290,23 @@ $grey: #77878b;
     }
   }
 
-  .line {
-    width: 40px;
+  .grid-2 {
+    .line {
+      width: 50px;
+    }
   }
+  
 
   .department-content {
-    font-size: 13px;
+    font-size: 12.5px;
   }
 
   // MISC
   .primary-btn {
+    font-size: 13px;
     border-radius: 13px;
-    padding: 8px 20px;
+    padding: 8px 18px;
+    margin-top: 0.5rem;
     border: none;
   }
 
@@ -307,7 +315,7 @@ $grey: #77878b;
     margin-left: 40px;
     margin-right: 40px;
     position: absolute;
-    bottom: 13rem;
+    bottom: 356.5rem;
   }
 
   .square-btn {
@@ -384,7 +392,7 @@ $grey: #77878b;
   // HEADERS SECTION
   .main-header {
     &-1 {
-      font-size: 35px;
+      font-size: 25px;
       margin-top: 0.3rem;
       margin-bottom: 0.125rem;
     }
@@ -397,7 +405,7 @@ $grey: #77878b;
 
   .sub-header {
     &-1 {
-      font-size: 19px;
+      font-size: 13px;
       margin-left: 15px;
       margin-right: 15px;
       margin-bottom: 0.25rem;
@@ -409,8 +417,10 @@ $grey: #77878b;
     }
   }
 
-  .line {
-    width: 20px;
+  .grid-2{
+    .line {
+      width: 30.5px;
+    }
   }
 
   .department-content {
@@ -423,6 +433,7 @@ $grey: #77878b;
     border-radius: 11px;
     padding: 6px 15px;
     border: none;
+    margin-bottom: 1rem;
   }
 
   // Square buttons
@@ -430,7 +441,7 @@ $grey: #77878b;
     margin-left: 20px;
     margin-right: 20px;
     position: absolute;
-    bottom: 22rem;
+    bottom: 332.5rem;
   }
 
   .square-btn {
@@ -464,7 +475,7 @@ $grey: #77878b;
   .av-position {
     height: 30px;
     width: 30px;
-    right: 8.5rem;
+    right: 2.5rem;
   }
 
   .position {
@@ -473,24 +484,24 @@ $grey: #77878b;
 
   .info {
     &-name {
-      font-size: 15px;
+      font-size: 17px;
       margin-bottom: 0.3rem;
     }
     &-position {
-      font-size: 8px;
+      font-size: 10px;
       margin-bottom: 0.55rem;
     }
     &-department {
-      font-size: 8px;
+      font-size: 10px;
     }
     &-contact {
-      font-size: 8px;
+      font-size: 10px;
       margin-top: 0;
     }
   }
 
   .information {
-    font-size: 9px;
+    font-size: 12px;
   }
 
   .behind {
