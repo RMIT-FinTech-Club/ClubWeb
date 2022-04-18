@@ -1,12 +1,7 @@
 header {
-  display: block;
-  margin: auto;
-  height: 80px;
   width: 100%;
   background-color: #2b305e;
-  top: 0;
-  left: 0;
-  right: 0;
+  padding-bottom: 0.5rem;
 }
 
 header nav {
