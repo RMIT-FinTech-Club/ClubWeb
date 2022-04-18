@@ -14,7 +14,7 @@ body {
 h1 {
   font-size: 3em;
   margin: 2em -10em;
-  color: #272C55;
+  color: #272c55;
 }
 
 .dialog-container {
@@ -28,11 +28,11 @@ h1 {
 }
 
 .dialog-container input[type="submit"] {
-  background: #272C55;
+  background: #272c55;
   display: block;
   margin: 20px auto;
   text-align: center;
-  border: 1px solid #272C55;
+  border: 1px solid #272c55;
   padding: 14px 10px;
   width: 200px;
   outline: none;
@@ -62,12 +62,12 @@ h1 {
 .dialog-container input[type="password"]:hover,
 .dialog-container input[type="password"]:focus {
   width: 280px;
-  border-color: #272C55;
+  border-color: #272c55;
   background: #fff;
 }
 
 .dialog-container input[type="submit"]:hover {
-  background: #DBB968;
+  background: #dbb968;
 }
 
 .level {
@@ -77,17 +77,17 @@ h1 {
 
 .level a {
   margin: 0 10px;
-  color: #2B305E;
+  color: #2b305e;
 }
 
 /* mouse over link */
 .level a:hover {
-  color: #77878B;
+  color: #77878b;
 }
 
 /* selected link */
 .level a:active {
-  color: #DBB968;
+  color: #dbb968;
 }
 
 .toggle-password-visibility {
@@ -98,7 +98,6 @@ h1 {
   margin: 0 auto;
 }
 
-
 /* Responsive dialog */
 @media only screen and (max-width: 767px) {
   .dialog-container {
@@ -108,11 +107,13 @@ h1 {
     padding-right: 0;
   }
 
-  .dialog-container input[type="text"], .dialog-container input[type="password"] {
+  .dialog-container input[type="text"],
+  .dialog-container input[type="password"] {
     width: 70%;
   }
 
-  .dialog-container input[type="text"]:focus, .dialog-container input[type="password"]:focus {
+  .dialog-container input[type="text"]:focus,
+  .dialog-container input[type="password"]:focus {
     width: 60%;
   }
 }

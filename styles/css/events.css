@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap");
 
 .title {
   text-align: center;
   margin-top: 120px;
   margin-bottom: 0;
-  font-family: 'Bebas Neue';
-  color: #2B305E;
+  font-family: "Bebas Neue";
+  color: #2b305e;
   font-size: 60px;
   letter-spacing: 3px;
 }
@@ -18,9 +18,9 @@
   margin-left: 70px;
 }
 
-.subtitle>p {
-  font-family: 'Bebas Neue';
-  color: #DBB968;
+.subtitle > p {
+  font-family: "Bebas Neue";
+  color: #dbb968;
   font-size: 40px;
   letter-spacing: 2px;
   margin-bottom: 0;
@@ -33,9 +33,9 @@
 
 .subtitle .hl {
   width: 80%;
-  background-color: #DBB968;
+  background-color: #dbb968;
   height: 1px;
-  border: 1px solid #DBB968;
+  border: 1px solid #dbb968;
   border-radius: 50px;
   margin-right: 70px;
 }
@@ -49,12 +49,12 @@
 }
 
 .month {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 600;
   font-size: 30px;
   margin: 0;
-  color: #2B305E;
-  margin-top: 20px
+  color: #2b305e;
+  margin-top: 20px;
 }
 
 .event {
@@ -66,7 +66,7 @@
   border-radius: 10px;
   margin: 20px 0;
   padding: 20px 0;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
 .event .left {
@@ -75,7 +75,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .left .date {
@@ -102,7 +101,7 @@
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 10px;
-  color: #2B305E;
+  color: #2b305e;
 }
 
 .mid .event-info {
@@ -112,18 +111,18 @@
   height: 40px;
 }
 
-.mid .event-info>p {
+.mid .event-info > p {
   font-size: 25px;
   font-weight: 400;
 }
 
-.mid .event-info>i {
-  color: #DBB968;
+.mid .event-info > i {
+  color: #dbb968;
   font-size: 30px;
   margin-right: 20px;
 }
 
-.mid .event-info:last-child>i {
+.mid .event-info:last-child > i {
   margin-left: 4px;
   padding-right: 5px;
 }
@@ -142,7 +141,7 @@
 .right button {
   border: none;
   border-radius: 50px;
-  background: #DBB968;
+  background: #dbb968;
   color: #fff;
   height: 60px;
   width: 150px;
@@ -155,7 +154,7 @@
   width: fit-content;
   margin-left: 20px;
   padding: 0 20px;
-  background-color: #2B305ED9;
+  background-color: #2b305ed9;
 }
 
 .right button:first-child:hover {
@@ -163,14 +162,13 @@
 }
 
 .right button:last-child:hover {
-  color: #DBB968;
+  color: #dbb968;
 }
 
 .right button i {
   margin-right: 13px;
   font-size: 25px;
 }
-
 
 /*Popup window starts here*/
 .modal {
@@ -189,25 +187,25 @@
 
 .modal-content {
   position: relative;
-  background-color: #2B305E;
+  background-color: #2b305e;
   margin: auto;
   margin-top: 100px;
   padding: 0;
   border: 1px solid #888;
   border-radius: 10px 10px 0px 0px;
   width: 90%;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
-  animation-duration: 0.4s
+  animation-duration: 0.4s;
 }
 
 .modal-header {
   padding: 1px 16px;
-  background-color: #2B305E;
-  color: #DBB968;
+  background-color: #2b305e;
+  color: #dbb968;
   letter-spacing: 2px;
   border-radius: 10px 10px 0px 0px;
   margin-left: 30px;
@@ -222,13 +220,13 @@
   color: #fff;
 }
 
-.modal-body>p {
+.modal-body > p {
   width: 75%;
   text-align: justify;
   padding-left: 30px;
 }
 
-.modal-body>img {
+.modal-body > img {
   width: 20%;
 }
 
@@ -237,15 +235,15 @@
   flex-direction: row;
   align-items: center;
   padding: 1px 16px;
-  background-color: #2B305E;
+  background-color: #2b305e;
   color: white;
   margin-left: 30px;
   margin-bottom: 15px;
 }
 
-.modal-footer>i {
+.modal-footer > i {
   font-size: 30px;
-  color: #DBB968;
+  color: #dbb968;
 }
 
 .modal-footer a {
@@ -270,47 +268,46 @@
 @-webkit-keyframes slideIn {
   from {
     bottom: -300px;
-    opacity: 0
+    opacity: 0;
   }
 
   to {
     bottom: 0;
-    opacity: 1
+    opacity: 1;
   }
 }
 
 @keyframes slideIn {
   from {
     bottom: -300px;
-    opacity: 0
+    opacity: 0;
   }
 
   to {
     bottom: 0;
-    opacity: 1
+    opacity: 1;
   }
 }
 
 @-webkit-keyframes fadeIn {
   from {
-    opacity: 0
+    opacity: 0;
   }
 
   to {
-    opacity: 1
+    opacity: 1;
   }
 }
 
 @keyframes fadeIn {
   from {
-    opacity: 0
+    opacity: 0;
   }
 
   to {
-    opacity: 1
+    opacity: 1;
   }
 }
-
 
 .close {
   color: #fff;
@@ -322,7 +319,7 @@
 
 .close:hover,
 .close:focus {
-  color: #DBB968;
+  color: #dbb968;
   text-decoration: none;
   cursor: pointer;
 }

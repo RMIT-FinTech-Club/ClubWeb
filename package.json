@@ -14,14 +14,10 @@
     "ssg": "npm run ssg:blog && npm run ssg:projects",
     "dev": "parcel index.html --open",
     "start": "npm run build && npm run ssg && npm run dev",
+    "format": "prettier --write **/*.{js,json,md,html,scss,css} !{assets,node_modules,.cache}/** !js/bundles/** !bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
-  },
   "devDependencies": {
-    "husky": "^7.0.4",
-    "lint-staged": "^12.1.2",
     "parcel-bundler": "^1.12.4",
     "prettier": "2.4.1",
     "sass": "^1.43.4"

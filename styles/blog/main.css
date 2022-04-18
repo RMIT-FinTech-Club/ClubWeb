@@ -3,17 +3,16 @@ Clearly there is more you could place in variables, up to you if you want to use
 
 :root {
   --color1: #000000;
-  --color2: #272C55;
-  --color3: #2B305E;
-  --color4: #DBB968;
+  --color2: #272c55;
+  --color3: #2b305e;
+  --color4: #dbb968;
   --color5: #ffffff;
-  --color6: #C9D6EA;
+  --color6: #c9d6ea;
   --color7: var(--color9);
   --color8: #999;
   --color9: var(--color9);
   --color10: #333;
 }
-
 
 /* generic site styles */
 
@@ -47,7 +46,7 @@ h2 {
 h1 {
   text-align: center;
   margin-top: 20vh;
-  font-family: 'Bebas Neue', serif;
+  font-family: "Bebas Neue", serif;
   color: var(--color2);
   font-size: 65px;
   font-weight: 600;
@@ -69,8 +68,8 @@ hr.hl {
   margin-top: 100px;
 }
 
-.past>p {
-  font-family: 'Bebas Neue', serif;
+.past > p {
+  font-family: "Bebas Neue", serif;
   text-align: center;
   font-size: 50px;
   color: var(--color4);
@@ -198,7 +197,6 @@ figure {
   position: relative;
 }
 
-
 /* strange open space at the bottom of the box which shows through the transparent overlay - this kills it */
 
 figure img {
@@ -218,7 +216,6 @@ figcaption {
   padding: 0;
 }
 
-
 /* make the a have a big clickable area with display: block - the link occupies its containing element, the figcaption */
 
 figcaption a {
@@ -228,13 +225,11 @@ figcaption a {
   color: var(--color1);
 }
 
-
 /* green stripe for popular images */
 .stripe {
   color: white;
   padding: 1rem 0 2rem 0;
 }
-
 
 /* featured image styles */
 #featured figure {
@@ -264,8 +259,8 @@ figcaption a {
 .container .card:hover .face.face1 {
   transform: translateY(0px);
   box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px #f0f,
-  inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff,
-  0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+    inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff,
+    0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
 }
 
 .container .card .face.face1 .content {
@@ -333,7 +328,6 @@ a {
   color: whitesmoke;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
-
 
 /* mission styles */
 p {
@@ -405,7 +399,12 @@ p {
   The edges of the image limit their placement. In Firefox, you can draw with shape-outside in browser tools */
   .missionimg {
     float: left;
-    shape-outside: polygon(35.84% 94.87%, 34.64% 87.05%, 51.64% 4.06%, 55.1% 2.38%);
+    shape-outside: polygon(
+      35.84% 94.87%,
+      34.64% 87.05%,
+      51.64% 4.06%,
+      55.1% 2.38%
+    );
     max-height: 211px;
   }
 }
