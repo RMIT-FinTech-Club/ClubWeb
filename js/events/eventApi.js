@@ -6,13 +6,12 @@ const event = {
   title: "Kieran birthday",
   description: "Get ready for the party of your life!",
   location: "Microsoft Teams",
-  busy: true
+  busy: true,
 };
 
-const ADD_EVENT_BTN = document.querySelectorAll(".add-calendar")
-ADD_EVENT_BTN.forEach(btn => {
+const ADD_EVENT_BTN = document.querySelectorAll(".add-calendar");
+ADD_EVENT_BTN.forEach((btn) => {
   btn.addEventListener("click", () => {
-    window.open(office365(event))
-  })
-})
-
+    window.open(office365(event));
+  });
+});

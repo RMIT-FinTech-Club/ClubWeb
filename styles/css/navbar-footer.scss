@@ -162,12 +162,12 @@ footer {
       font-size: 30px;
       padding: 15px;
       text-decoration: none;
+      color: white;
     }
     a {
       &:hover,
       &:visited,
       &:active {
-        color: inherit;
         text-decoration: none;
       }
     }

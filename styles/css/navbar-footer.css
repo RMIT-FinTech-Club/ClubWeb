@@ -1,7 +1,12 @@
 header {
+  display: block;
+  margin: auto;
+  height: 80px;
   width: 100%;
   background-color: #2b305e;
-  padding-bottom: 0.5rem;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 header nav {
@@ -53,6 +58,26 @@ header nav ul li #home {
 
 header nav ul li #projects {
   color: #dbb968;
+}
+
+header > button {
+  display: block;
+  position: relative;
+  float: right;
+  margin-top: -55px;
+  margin-right: 80px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #dbb968;
+  border: none;
+  border-radius: 25px;
+  width: 120px;
+  height: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
 }
 
 #logo {
@@ -203,12 +228,13 @@ footer .right {
 footer .right a {
   font-size: 30px;
   padding: 15px;
+  text-decoration: none;
+  color: white;
 }
 
 footer .right a:hover,
 footer .right a:visited,
 footer .right a:active {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -218,109 +244,3 @@ footer .right a:active {
   }
 }
 /*# sourceMappingURL=navbar-footer.css.map */
-
-/*Navbar fixed responive*/
-
-@media screen and (max-width: 850px) {
-  .af {
-    margin-left: -100px;
-    width: 50px;
-  }
-
-  .bf {
-    margin-left: -100px;
-    width: 50px;
-  }
-
-  #logo {
-    margin-left: -100px;
-    width: 80px;
-  }
-}
-
-@media screen and (max-width: 830px) {
-  #logo {
-    width: 0.000000000001px;
-  }
-
-  #logo > img {
-    display: none;
-  }
-
-  .af {
-    margin-right: 90px;
-  }
-
-  .bf {
-    margin-right: 90px;
-  }
-}
-
-/*Phone screen size*/
-
-/*Navbar*/
-@media screen and (max-width: 570px) {
-  .bf {
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-
-  .af {
-    padding-left: 10px;
-    padding-right: 15px;
-  }
-
-  li {
-    margin-left: 10px;
-  }
-
-  div.content_white_line {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .af {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 15px;
-  }
-
-  .bf {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .bf {
-    font-size: 15px;
-  }
-
-  .af {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 460px) {
-  .bf {
-    font-size: 12.5px;
-    padding-left: 20px;
-  }
-
-  .af {
-    font-size: 12.5px;
-  }
-}
-
-@media screen and (max-width: 390px) {
-  .bf {
-    font-size: 12px;
-  }
-
-  .af {
-    font-size: 12px;
-    flex-wrap: wrap-reverse;
-  }
-}
