@@ -6,6 +6,3 @@ dist
 .cache
 .DS_Store
 .env
-
-/projects/*.html
-!/projects/index.html
