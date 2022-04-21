@@ -12,16 +12,16 @@
   display: inline-block;
 }
 
-.dropdown>select,
-.registration>button {
+.dropdown > select,
+.registration > button {
   width: 250px;
   height: 60px;
   border-radius: 15px;
-  border-color: #77878B;
+  border-color: #77878b;
   border-width: 3px;
   border-style: solid;
-  color: #2B305E;
-  font-family: 'Montserrat';
+  color: #2b305e;
+  font-family: "Montserrat";
   font-weight: 600;
   font-size: 16px;
   background-color: #fff;
@@ -29,7 +29,7 @@
   padding-left: 20px;
 }
 
-.dropdown>select {
+.dropdown > select {
   position: relative;
   display: inline-block;
   -webkit-appearance: none;
@@ -51,15 +51,14 @@ select option[value="0"] {
   display: flex;
 }
 
-
-.registration>img {
+.registration > img {
   margin-top: -63px;
   width: 100px;
   height: fit-content;
   margin-left: 70px;
 }
 
-.registration>button {
+.registration > button {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -86,9 +85,9 @@ select option[value="0"] {
 }
 
 .form-group {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   line-height: 50px;
-  color: #2B305E;
+  color: #2b305e;
   font-size: 20px;
   font-weight: 600;
 }
@@ -97,12 +96,12 @@ select option[value="0"] {
   width: 100%;
   height: 45px;
   border-radius: 25px;
-  border-color: #77878B;
+  border-color: #77878b;
   border-width: 2px;
   border-style: solid;
   padding-left: 20px;
-  color: #77878B;
-  font-family: 'Montserrat';
+  color: #77878b;
+  font-family: "Montserrat";
   font-weight: 600;
   font-size: 16px;
 }
@@ -125,10 +124,10 @@ input:focus::placeholder {
 
 .dept {
   padding: 10px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
-.registration-form button[type=submit] {
+.registration-form button[type="submit"] {
   height: 50px;
   width: fit-content;
   padding: 0 40px;
@@ -137,7 +136,7 @@ input:focus::placeholder {
   border: none;
   background-color: #2b305e;
   color: #fff;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 500;
   letter-spacing: 1px;
   border-radius: 15px;
@@ -147,12 +146,12 @@ input:focus::placeholder {
   width: 107%;
   height: 50px;
   border-radius: 25px;
-  border-color: #77878B;
+  border-color: #77878b;
   border-width: 2px;
   border-style: solid;
   padding-left: 20px;
-  color: #77878B;
-  font-family: 'Montserrat';
+  color: #77878b;
+  font-family: "Montserrat";
   font-weight: 600;
   font-size: 16px;
   -webkit-appearance: none;
