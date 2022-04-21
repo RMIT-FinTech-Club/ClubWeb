@@ -52,8 +52,17 @@ let infoPosition = document.querySelector("#infoPosition");
 let infoDepartment = document.querySelector("#infoDepartment");
 let infoContact = document.querySelector("#infoContact");
 let info = document.querySelector("#info");
+let infoList = document.querySelector("#infoList")
 
 avBtn1.addEventListener("click", () => {
+  facts = ["fact 1","fact 2"]
+  infoList.innerHTML = ""
+  for (const s of facts){
+    const li = document.createElement("li")
+    li.innerText = s
+    infoList.appendChild(li)
+  }
+
   avatar.src = "./assets/images/dep-and-board/Pres.svg";
   avPosition.src = "./assets/images/pre.png";
   infoName.innerText = " Nguyen Vu Cong Thang";
