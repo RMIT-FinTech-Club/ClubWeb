@@ -19,27 +19,18 @@
     <link rel="stylesheet" href="../styles/css/main.css" />
 
     <!--Fonts Links-->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,500&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet" />
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> -->
 
     <!--Icon Links-->
-    <link
-      rel="stylesheet"
-      href="assets/icons/font-awesome-4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="assets/icons/font-awesome-4.7.0/css/font-awesome.min.css" />
     <meta name="theme-color" content="#fafafa" />
     <script src="../components/header.js" type="text/javascript" defer></script>
 
@@ -50,10 +41,7 @@
     <link rel="stylesheet" href="../styles/css/login/login.css" />
     <link rel="stylesheet" href="../styles/css/navbar-footer.css" />
 
-    <script
-      src="https://kit.fontawesome.com/492245eeb1.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/492245eeb1.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -65,21 +53,14 @@
           <li><a href="#">About</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li>
-            <span id="logo"
-              ><img src="../assets/images/club-logo.png" alt="fintech-logo"
-            /></span>
+            <span id="logo"><img src="../assets/images/club-logo.png" alt="fintech-logo" /></span>
           </li>
           <li><a href="events.html" id="events">Events</a></li>
           <li><a href="#">Blog</a></li>
           <li><a href="#">More</a></li>
         </ul>
       </nav>
-      <button
-        id="header-btn"
-        onclick="window.location.href='pages/login.html';"
-      >
-        Sign In
-      </button>
+      <button id="header-btn" onclick="window.location.href='pages/login.html';">Sign In</button>
     </header>
 
     <main class="dialog-container">
@@ -87,30 +68,12 @@
         <h1>LOGIN FOR FINTECH MEMBERS</h1>
         <img src="../assets/gif/Bear.gif" alt="Flowers in Chania" />
 
+        <label><input type="text" name="email" placeholder="Email" id="email" required /> </label>
         <label
-          ><input
-            type="text"
-            name="email"
-            placeholder="Email"
-            id="email"
-            required
-          />
-        </label>
-        <label
-          ><input
-            class="password-field"
-            type="password"
-            name="password"
-            placeholder="Password"
-            id="pwd"
-            required
-          />
+          ><input class="password-field" type="password" name="password" placeholder="Password" id="pwd" required />
         </label>
         <div class="toggle-password-visibility"><i class="fas fa-eye"></i></div>
-        <div id="wrong-pwd">
-          The email or password is incorrect. Please try again or reset your
-          password.
-        </div>
+        <div id="wrong-pwd">The email or password is incorrect. Please try again or reset your password.</div>
         <input type="submit" name="" value="LOGIN" />
       </form>
 
@@ -122,9 +85,7 @@
         </div>
         <div id="create-account">
           <div>
-            <a href="../pages/main1.html"
-              >Not a FinTech internal member? Register for our latest news</a
-            >
+            <a href="../pages/main1.html">Not a FinTech internal member? Register for our latest news</a>
           </div>
         </div>
       </section>
@@ -144,28 +105,14 @@
       </div>
 
       <div class="mid-footer">
-        <a href="mailto:fintechclub.sgs@rmit.edu.vn"
-          >fintechclub.sgs@rmit.edu.vn</a
-        >
+        <a href="mailto:fintechclub.sgs@rmit.edu.vn">fintechclub.sgs@rmit.edu.vn</a>
         <p>702 Nguyen Van Linh, Tan Hung, Dist 7, Ho Chi Minh City, Viet Nam</p>
         <p>Copyright © 2021. RMIT Fintech Club. All rights reserved.</p>
       </div>
       <div class="right-footer">
-        <i
-          class="fa fa-facebook"
-          aria-hidden="true"
-          onclick="window.location.href='index.html';"
-        ></i>
-        <i
-          class="fa fa-instagram"
-          aria-hidden="true"
-          onclick="window.location.href='index.html';"
-        ></i>
-        <i
-          class="fa fa-linkedin-square"
-          aria-hidden="true"
-          onclick="window.location.href='index.html';"
-        ></i>
+        <i class="fa fa-facebook" aria-hidden="true" onclick="window.location.href='index.html';"></i>
+        <i class="fa fa-instagram" aria-hidden="true" onclick="window.location.href='index.html';"></i>
+        <i class="fa fa-linkedin-square" aria-hidden="true" onclick="window.location.href='index.html';"></i>
       </div>
     </footer>
 
@@ -174,14 +121,14 @@
     <script src="js/main.js"></script>
     <script>
       window.ga = function () {
-        ga.q.push(arguments);
-      };
-      ga.q = [];
-      ga.l = +new Date();
-      ga("create", "UA-XXXXX-Y", "auto");
-      ga("set", "anonymizeIp", true);
-      ga("set", "transport", "beacon");
-      ga("send", "pageview");
+        ga.q.push(arguments)
+      }
+      ga.q = []
+      ga.l = +new Date()
+      ga("create", "UA-XXXXX-Y", "auto")
+      ga("set", "anonymizeIp", true)
+      ga("set", "transport", "beacon")
+      ga("send", "pageview")
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async></script>
     <script src="../js/login.js"></script>

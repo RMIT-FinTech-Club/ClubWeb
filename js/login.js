@@ -1,4 +1,4 @@
-import { sendResetPwdEmail } from "./firebase/script";
+import { sendResetPwdEmail } from "./firebase/script"
 
 /*
  * In the current document, if the amount of .toggle-password-visibility elements matches that of .password-field
@@ -8,48 +8,46 @@ import { sendResetPwdEmail } from "./firebase/script";
  * Each .toggle-password-visibility element works as a button that listens for "click" event to toggle its matching
  * .password-field type between type="text" and type="password". I.e. toggling the password visibility.
  * */
-const PWD_VIS_TOGGLES = document.querySelectorAll(
-  ".toggle-password-visibility"
-);
-const PWD_FIELDS = document.querySelectorAll(".password-field");
+const PWD_VIS_TOGGLES = document.querySelectorAll(".toggle-password-visibility")
+const PWD_FIELDS = document.querySelectorAll(".password-field")
 
 if (PWD_FIELDS.length === PWD_VIS_TOGGLES.length) {
   // Setting up eventListeners and handler logic for all .password-field elements
   for (let index = 0; index < PWD_FIELDS.length; index++) {
     PWD_FIELDS[index].addEventListener("input", function () {
-      PWD_VIS_TOGGLES[index].setAttribute("style", "display: inline;");
-    });
+      PWD_VIS_TOGGLES[index].setAttribute("style", "display: inline;")
+    })
   }
 
   // Setting up eventListeners and handler logic for all .toggle-password-visibility elements
   for (let index = 0; index < PWD_VIS_TOGGLES.length; index++) {
     PWD_VIS_TOGGLES[index].addEventListener("click", function () {
       if (PWD_FIELDS[index].getAttribute("type") === "password") {
-        PWD_FIELDS[index].setAttribute("type", "text");
+        PWD_FIELDS[index].setAttribute("type", "text")
       } else if (PWD_FIELDS[index].getAttribute("type") === "text") {
-        PWD_FIELDS[index].setAttribute("type", "password");
+        PWD_FIELDS[index].setAttribute("type", "password")
       }
-    });
+    })
   }
 } else {
   // Disable password toggling feature and display a console error message
   console.log(
     "ERROR: Number of .password-field elements must be equal to number of .toggle-password-visibility elements. All .toggle-password-visibility elements are disabled."
-  );
+  )
 }
 
-const RESET_PASSWORD_FORM = document.querySelector("#forgot-pw-input");
-console.log(RESET_PASSWORD_FORM);
+const RESET_PASSWORD_FORM = document.querySelector("#forgot-pw-input")
+console.log(RESET_PASSWORD_FORM)
 if (RESET_PASSWORD_FORM) {
   RESET_PASSWORD_FORM.addEventListener("submit", (e) => {
-    e.preventDefault();
-    console.log(e);
-    const emailInput = document.querySelector("#email-phone-input").value;
-    console.log(emailInput);
+    e.preventDefault()
+    console.log(e)
+    const emailInput = document.querySelector("#email-phone-input").value
+    console.log(emailInput)
     if (emailInput) {
-      sendResetPwdEmail(emailInput);
+      sendResetPwdEmail(emailInput)
     }
-  });
+  })
 }
 // // localStorage initialization
 // if (localStorage.getItem("isLoggedIn") === null) {

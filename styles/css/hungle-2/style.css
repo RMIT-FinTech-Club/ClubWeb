@@ -100,12 +100,7 @@ body {
 }
 
 .primary-btn:hover {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0, rgba(0, 0, 0, 0.4))
-  );
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)));
   background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
   cursor: pointer;
 }
@@ -135,12 +130,7 @@ body {
 }
 
 .square-btn:hover {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0, rgba(0, 0, 0, 0.4))
-  );
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)));
   background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
   cursor: pointer;
 }
