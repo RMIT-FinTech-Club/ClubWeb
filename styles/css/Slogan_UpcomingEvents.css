@@ -188,16 +188,19 @@ button {
   .primary-heading {
     font-size: 2rem;
   }
+
   #main_description {
     margin-left: auto;
     width: 100%;
   }
 }
+
 @media screen and (max-width: 1000px) {
   .circles {
     display: none;
   }
 }
+
 #header_left .circle-light-blue {
   top: 4rem;
   left: -5rem;
@@ -271,6 +274,7 @@ button {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -309,44 +313,46 @@ button {
 }
 
 #upcoming_events_container {
-  margin: 2rem 5rem 10rem;
+  width: 96vw;
+  height: 70vh;
+  margin: 5vh 2vw;
   justify-content: space-between;
-  gap: 1rem;
+}
+
+#upcoming_events_container img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #upcoming_events_content_left {
-  flex-basis: 66%;
+  width: 65%;
+  height: 100%;
 }
 
 #upcoming_events_content_right {
-  flex-basis: 34%;
+  width: 33%;
+  margin-left: 2%;
+  height: 100%;
 }
 
 #upcoming_events_content_right_SLOT1 {
-  margin-bottom: 1rem;
+  width: 100%;
+  height: 55%;
+  margin-bottom: 4%;
 }
 
 #upcoming_events_content_right_SLOT2 {
+  width: 100%;
+  height: 40%;
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
-}
-
-#upcoming_events_content_right_SLOT1 img,
-#upcoming_events_content_left img,
-#upcoming_events_content_right_SLOT2 img {
-  height: fit-content;
-  border-radius: 2rem;
-  transition-duration: 0.5s;
-}
-
-#upcoming_events_content_right_SLOT1 img,
-#upcoming_events_content_left img {
-  width: 100%;
 }
 
 #upcoming_events_content_right_SLOT2 img {
-  width: 50%;
+  width: 48%;
+  height: 100%;
 }
 
 @media only screen and (max-width: 1024px) {
