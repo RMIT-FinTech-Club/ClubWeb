@@ -337,10 +337,14 @@ button {
   height: 100%;
 }
 
+#upcoming_events_content_right img {
+  width: 100%;
+  height: 90%;
+}
+
 #upcoming_events_content_right_SLOT1 {
   width: 100%;
-  height: 55%;
-  margin-bottom: 4%;
+  height: 60%;
 }
 
 #upcoming_events_content_right_SLOT2 {
