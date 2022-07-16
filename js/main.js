@@ -31,3 +31,11 @@ function updatePodcastPlayer(srcIdx) {
   prevBtn.style.visibility = idx === 0 ? "hidden" : "visible"
   nextBtn.style.visibility = idx === spotifyPodcasts.length - 1 ? "hidden" : "visible"
 }
+
+function openNewTab(href) {
+  Object.assign(document.createElement('a'), {
+    target: '_blank',
+    rel: 'noopener noreferrer',
+    href: href,
+  }).click();
+}

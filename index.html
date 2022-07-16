@@ -42,15 +42,13 @@
   <header>
     <nav>
       <ul>
-        <li><a href="#" class="bf">Home</a></li>
-        <li><a href="#" class="bf">About</a></li>
-        <li><a href="#" class="bf">Projects</a></li>
+        <li><a href="#slogan" class="bf">Home</a></li>
+        <li><a href="#events" class="bf">Events</a></li>
         <li>
           <span id="logo"><img src="assets/images/club-logo.png" alt="fintech-logo" /></span>
         </li>
-        <li><a href="#" id="events" class="af">Events</a></li>
-        <li><a href="#" class="af">Blog</a></li>
-        <li><a href="#" class="af">More</a></li>
+        <li><a href="#departments" class="bf">Departments</a></li>
+        <li><a href="#projects" class="bf">Projects</a></li>
       </ul>
     </nav>
   </header>
@@ -90,15 +88,15 @@
     </div>
   </div>
   <!--UPCOMING EVENTS-->
-  <section id="UPCOMING_EVENTS">
+  <section id="events">
     <div class="statistic_container">
       <div class="stats" id="stats1">
-        <p class="big_stat_titles">20+</p>
-        <p class="small_stat_titles">Projects per sem</p>
+        <p class="big_stat_titles">20</p>
+        <p class="small_stat_titles">Projects</p>
       </div>
       <div class="stats" id="stats2">
-        <p class="big_stat_titles">75%</p>
-        <p class="small_stat_titles">Active members</p>
+        <p class="big_stat_titles">75</p>
+        <p class="small_stat_titles">Members</p>
       </div>
       <div class="stats" id="stats3">
         <p class="big_stat_titles">4</p>
@@ -127,7 +125,7 @@
 
   <!--Departments-->
   <!-- FIRST PAGE -->
-  <div class="grid-2">
+  <div id="departments" class="grid-2">
     <!-- Column 1 -->
     <div class="column">
       <div class="sub-h-w-lines">
@@ -340,7 +338,7 @@
   </div>
 
   <!--Research & Projects start here-->
-  <div class="project-research-header">
+  <div id="projects" class="project-research-header">
     <hr class="hl" />
     <p>OUR PROJECTS & RESEARCH</p>
     <hr class="hl" />
@@ -362,11 +360,12 @@
         </p>
       </div>
       <div class="buttons">
-        <button
-          onclick="window.location.href='https://issuu.com/rmitfintechclub/docs/fintech_magazine_-_special_edition-2-59';">
+       <button onclick="openNewTab('https://issuu.com/rmitfintechclub/docs/fintech_magazine_-_special_edition-2-59')">
           READ NOW
         </button>
-        <button onclick="window.location.href='https://issuu.com/rmitfintechclub';">SEE ALL</button>
+        <button onclick="openNewTab('https://issuu.com/rmitfintechclub')">
+          SEE ALL
+        </button>
       </div>
     </div>
   </div>
@@ -399,12 +398,10 @@
         </p>
       </div>
       <div class="buttons">
-        <button
-          onclick="window.location.href='https://www.facebook.com/rmitfintechclub/photos/a.287261069527134/417750456478194';">
+       <button onclick="openNewTab('https://www.facebook.com/rmitfintechclub/photos/a.287261069527134/417750456478194')">
           READ NOW
         </button>
-        <button
-          onclick="window.location.href='https://www.facebook.com/media/set/?vanity=rmitfintechclub&set=a.287261069527134';">
+        <button onclick="openNewTab('https://www.facebook.com/media/set/?vanity=rmitfintechclub&set=a.287261069527135')">
           SEE ALL
         </button>
       </div>
@@ -419,15 +416,15 @@
 
     <div class="mid">
       <p class="email">
-        <a href="mailto:fintechclub.sgs@rmit.edu.vn">fintechclub.sgs@rmit.edu.vn</a>
+        <a target="_blank" href="mailto:fintechclub.sgs@rmit.edu.vn">fintechclub.sgs@rmit.edu.vn</a>
       </p>
       <p class="address">702 Nguyen Van Linh, Tan Hung, Dist 7, Ho Chi Minh City, Viet Nam</p>
       <p class="copyright">Copyright © 2021. RMIT Fintech Club. All rights reserved.</p>
     </div>
     <div class="right">
-      <a class="fa fa-facebook" aria-hidden="true" href="https://www.facebook.com/rmitfintechclub/"></a>
-      <a class="fa fa-instagram" aria-hidden="true" href="https://www.instagram.com/rmitfintechclub/"></a>
-      <a class="fa fa-linkedin-square" aria-hidden="true"
+      <a target="_blank" class="fa fa-facebook" aria-hidden="true" href="https://www.facebook.com/rmitfintechclub/"></a>
+      <a target="_blank" class="fa fa-instagram" aria-hidden="true" href="https://www.instagram.com/rmitfintechclub/"></a>
+      <a target="_blank" class="fa fa-linkedin-square" aria-hidden="true"
         href="https://www.linkedin.com/company/rmit-vietnam-fintech-club/"></a>
     </div>
   </footer>

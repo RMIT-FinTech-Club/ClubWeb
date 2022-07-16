@@ -249,7 +249,7 @@ button {
   align-items: center;
   justify-content: space-between;
   font-family: "Bebas Neue";
-  margin: 5rem 5rem 10rem;
+  margin: 2rem 10rem 5rem 10rem;
 }
 
 #stats1 {
@@ -288,12 +288,12 @@ button {
   font-size: 2em;
 }
 
-#UPCOMING_EVENTS h1 {
+#events h1 {
   font-size: 3rem;
   text-align: center;
 }
 
-#UPCOMING_EVENTS .secondary_heading {
+#events .secondary_heading {
   margin-bottom: 1rem;
   text-align: center;
 }
@@ -388,11 +388,11 @@ button {
     font-size: initial;
   }
 
-  #UPCOMING_EVENTS h1 {
+  #events h1 {
     font-size: 2rem;
   }
 
-  #UPCOMING_EVENTS .secondary_heading {
+  #events .secondary_heading {
     font-size: 1.25rem;
   }
 
