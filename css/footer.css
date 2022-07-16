@@ -1,0 +1,145 @@
+footer {
+  padding: 2rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #1e2833;
+  color: #fff;
+}
+
+footer .left {
+  padding: 1rem;
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+footer .left > p {
+  font-family: "Bebas Neue";
+  font-size: 26px;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+}
+
+footer .left ul {
+  -webkit-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 40px;
+  column-gap: 40px;
+  -webkit-column-width: auto;
+  column-width: auto;
+  padding: 0;
+}
+
+footer .left ul li {
+  list-style: none;
+  line-height: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+footer .left ul li:hover {
+  text-decoration: underline;
+}
+
+footer .left img {
+  height: 100px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@media screen and (max-width: 768px) {
+  footer .left {
+    width: 100%;
+  }
+}
+
+footer .mid {
+  padding: 1rem;
+  width: 50%;
+}
+
+footer .mid a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+footer .mid .email {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+footer .mid .address {
+  margin-top: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+footer .mid .copyright {
+  margin-top: 1rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  footer .mid {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+footer .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  padding: 1rem;
+  width: 25%;
+}
+
+footer .right a {
+  font-size: 30px;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+footer .right a:hover,
+footer .right a:visited,
+footer .right a:active {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  footer .right {
+    width: 100%;
+  }
+}
