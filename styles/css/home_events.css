@@ -96,7 +96,7 @@ button {
 /* ------------------------------------------------- */
 /* Header */
 
-#slogan {
+#home {
   height: 100%;
   box-shadow: 0 0.1rem 1rem 0 black;
   z-index: 2;
@@ -148,7 +148,7 @@ button {
   margin: 2rem 0;
 }
 
-#slogan {
+#home {
   font-family: "Bebas Neue";
   color: var(--primary-blue);
 }
