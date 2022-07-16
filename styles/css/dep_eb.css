@@ -1,7 +1,5 @@
 .grid-2 {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   height: 100%;
 }
@@ -10,12 +8,7 @@
   height: 100%;
   max-height: 800px;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -31,7 +24,6 @@
   font-weight: 400;
   font-family: "Bebas Neue", cursive;
 }
-
 .main-header-2 {
   color: white;
   font-size: 90px;
@@ -52,7 +44,6 @@
   margin-right: 20px;
   text-align: center;
 }
-
 .sub-header-2 {
   color: white;
   font-family: "Montserrat", sans-serif;
@@ -70,25 +61,14 @@
 }
 
 .sub-h-w-lines {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .page-2-header {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   text-align: center;
 }
@@ -103,18 +83,13 @@
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
-
 .primary-btn:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)));
   background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
   cursor: pointer;
 }
 
 .square-btn-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-left: 2rem;
   margin-right: 2rem;
@@ -127,15 +102,12 @@
   color: white;
   font-family: "Bebas Neue", cursive;
   font-size: 90px;
-  -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
   height: 100px;
   width: 100px;
   border: none;
 }
-
 .square-btn:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)));
   background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
   cursor: pointer;
 }
@@ -143,24 +115,19 @@
 #squareBtn1 {
   background-color: #2b305e;
 }
-
 #squareBtn2 {
   background-color: #dbb968;
 }
-
 #squareBtn3 {
   background-color: #c9d6ea;
 }
-
 #squareBtn4 {
   background-color: #77878b;
 }
 
 .av-btn-container {
-  display: -ms-grid;
   display: grid;
   width: 100%;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-bottom: 5rem;
   gap: 10px;
@@ -171,8 +138,6 @@
   background-color: transparent;
   border: none;
   border-radius: 2.5rem;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
 }
@@ -183,7 +148,6 @@
   width: 120px;
   border-radius: 2.5rem;
 }
-
 .av-btn-img:hover {
   opacity: 0.7;
   cursor: pointer;
@@ -191,14 +155,8 @@
 
 .avatar {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   margin-top: 7rem;
 }
@@ -212,8 +170,6 @@
 .av-position {
   height: 75px;
   width: 75px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   z-index: 9;
   position: absolute;
@@ -222,9 +178,7 @@
 }
 
 .board {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   text-align: center;
 }
@@ -236,7 +190,6 @@
 }
 
 .board-info-mid {
-  display: -ms-grid;
   display: grid;
   text-align: center;
 }
@@ -247,18 +200,15 @@
   font-size: 30px;
   margin-bottom: 0.5rem;
 }
-
 .info-position {
   font-size: 14px;
   margin-top: 0;
   margin-bottom: 0.75rem;
 }
-
 .info-department {
   font-size: 14px;
   margin-top: 0;
 }
-
 .info-contact {
   font-size: 14px;
   margin-top: 0;
@@ -276,10 +226,7 @@
 }
 
 .front {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   z-index: 9;
   position: relative;
@@ -385,7 +332,6 @@
     height: 160px;
   }
 }
-
 @media (max-width: 500px) {
   .column-60 {
     padding-left: 20px;
@@ -476,5 +422,4 @@
   .behind {
     height: 130px;
   }
-}
-/*# sourceMappingURL=dep-and-board.css.map */
+}/*# sourceMappingURL=dep_eb.css.map */

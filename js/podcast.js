@@ -6,7 +6,14 @@ const spotifyPodcasts = [
   "https://open.spotify.com/embed/episode/3BKByrghO9kybXv0VmDErL?utm_source=generator",
   "https://open.spotify.com/embed/episode/5601Q6WjtD2VWSxwy7PJT3?utm_source=generator",
 ]
+
 let idx = spotifyPodcasts.length - 1
+
+function updatePodcastPlayer(srcIdx) {
+  spotifyPodcastPlayer.src = spotifyPodcasts[srcIdx]
+  prevBtn.style.visibility = idx === 0 ? "hidden" : "visible"
+  nextBtn.style.visibility = idx === spotifyPodcasts.length - 1 ? "hidden" : "visible"
+}
 
 const prevBtn = document.getElementById("prev-btn")
 const nextBtn = document.getElementById("next-btn")
@@ -25,17 +32,3 @@ nextBtn.addEventListener("click", (event) => {
   if (idx === spotifyPodcasts.length - 1) return
   updatePodcastPlayer(++idx)
 })
-
-function updatePodcastPlayer(srcIdx) {
-  spotifyPodcastPlayer.src = spotifyPodcasts[srcIdx]
-  prevBtn.style.visibility = idx === 0 ? "hidden" : "visible"
-  nextBtn.style.visibility = idx === spotifyPodcasts.length - 1 ? "hidden" : "visible"
-}
-
-function openNewTab(href) {
-  Object.assign(document.createElement('a'), {
-    target: '_blank',
-    rel: 'noopener noreferrer',
-    href: href,
-  }).click();
-}
